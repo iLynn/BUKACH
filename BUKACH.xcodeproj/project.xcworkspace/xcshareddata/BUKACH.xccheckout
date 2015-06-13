@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B41AF412-D4D4-42E2-9B92-239AC775EA7F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5168D0BF7C9B2A51D2808754FBB4054559037297</key>
+		<string>https://github.com/iLynn/BUKACH.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>BUKACH.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5168D0BF7C9B2A51D2808754FBB4054559037297</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/iLynn/BUKACH.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5168D0BF7C9B2A51D2808754FBB4054559037297</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5168D0BF7C9B2A51D2808754FBB4054559037297</string>
+			<key>IDESourceControlWCCName</key>
+			<string>BUKACH</string>
+		</dict>
+	</array>
+</dict>
+</plist>

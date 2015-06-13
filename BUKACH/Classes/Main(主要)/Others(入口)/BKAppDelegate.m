@@ -6,17 +6,28 @@
 //  Copyright (c) 2015年 Lynn. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "BKAppDelegate.h"
+#import "BKTabBarController.h"
 
-@interface AppDelegate ()
+@interface BKAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation BKAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    //1.创建窗口
+    self.window = [[UIWindow alloc]init];
+    self.window.frame = [UIScreen mainScreen].bounds;
+    
+    //2.设置窗口可见
+    [self.window makeKeyAndVisible];
+    
+    //3.设置根控制器
+    self.window.rootViewController = [[BKTabBarController alloc] init];
+    
     return YES;
 }
 

@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  BKGraceController.h
 //  BUKACH
 //
 //  Created by Lynn on 15/6/13.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface BKGraceController : UIViewController
 
 @end
-
