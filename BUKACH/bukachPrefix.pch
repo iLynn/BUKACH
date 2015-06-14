@@ -9,7 +9,33 @@
 #ifndef BUKACH_bukachPrefix_pch
 #define BUKACH_bukachPrefix_pch
 
-// Include any system framework and library headers here that should be included in all compilation units.
-// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+//1.公共引用类
+#import "UIBarButtonItem+ButtonImageExt.h"
+#import "UIImage+ResizeExt.h"
+#import "UIView+ViewFrameExt.h"
+
+
+//2.打印设置
+//当调试状态（debug）时，打印；当发布状态（release）时，不打印
+#ifdef DEBUG
+#define BKLog(...) NSLog(__VA_ARGS__)
+#else
+#define BKLog(...)
+#endif
+
+
+//3.基础设置
+
+//导航的字体颜色
+#define BKNavigatorColor [UIColor blackColor]
+//导航的字体大小
+#define BKNavigatorFont [UIFont boldSystemFontOfSize:20]
+
+//屏幕的宽
+#define BKScreenWidth [UIScreen mainScreen].bounds.size.width
+//屏幕的高
+#define BKScreenHeight  [UIScreen mainScreen].bounds.size.height
+
+
 
 #endif

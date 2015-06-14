@@ -7,31 +7,126 @@
 //
 
 #import "BKNavigationController.h"
+#import "BKCallTool.h"
 
-@interface BKNavigationController ()
+@interface BKNavigationController ()<UIAlertViewDelegate>
 
 @end
 
 @implementation BKNavigationController
 
-- (void)viewDidLoad {
+/**
+ *  当第一次调用这个类的时候，此函数运行一次。将appearence放在这里设置，优化了内存。
+ */
++ (void)initialize
+{
+    //设置UINavigationBar的主题
+    [self setNavigationBarTheme];
+    
+    //设置UIBarButtonItem的主题
+    [self setUIBarButtonTheme];
+    
+}
+
+/**
+ *  设置UINavigationBar的主题
+ */
++ (void)setNavigationBarTheme
+{
+    UINavigationBar * barApperence = [UINavigationBar appearance];
+    
+    //设置文字属性
+    NSMutableDictionary * dict = [NSMutableDictionary dictionary];
+    dict[NSForegroundColorAttributeName] = BKNavigatorColor;
+    dict[NSFontAttributeName] = BKNavigatorFont;
+    
+    [barApperence setTitleTextAttributes:dict];
+}
+
+/**
+ *  设置UIBarButtonItem的主题
+ */
++ (void)setUIBarButtonTheme
+{
+    //appearence一次设置，全局可用！
+    
+    //通过appearence对象设置整个项目中所有UIBarButtonItem的样式
+    UIBarButtonItem * itemAppearence = [UIBarButtonItem appearance];
+    
+    //设置普通状态下的文字属性
+    NSMutableDictionary * normalDict = [NSMutableDictionary dictionary];
+    normalDict[NSForegroundColorAttributeName] = [UIColor orangeColor];
+    normalDict[NSFontAttributeName] = [UIFont systemFontOfSize:15];
+    [itemAppearence setTitleTextAttributes:normalDict forState:UIControlStateNormal];
+    
+    //设置选中状态下的文字属性
+    NSMutableDictionary * highlightedDict = [NSMutableDictionary dictionary];
+    highlightedDict[NSForegroundColorAttributeName] = [UIColor redColor];
+    highlightedDict[NSFontAttributeName] = [UIFont systemFontOfSize:15];
+    [itemAppearence setTitleTextAttributes:highlightedDict forState:UIControlStateHighlighted];
+    
+    //设置不可用状态下的文字属性
+    NSMutableDictionary * disableDict = [NSMutableDictionary dictionary];
+    disableDict[NSForegroundColorAttributeName] = [UIColor lightGrayColor];
+    disableDict[NSFontAttributeName] = [UIFont systemFontOfSize:15];
+    [itemAppearence setTitleTextAttributes:disableDict forState:UIControlStateDisabled];
+    
+}
+
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+/**
+ *  拦截所有push进来的子控制器
+ *
+ *  @param viewController 新的控制器
+ *  @param animated       动画
+ */
+-(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    //不是navi的根（根是栈底的那个控制器），就隐藏底部tabbar导航
+    if (self.viewControllers.count > 0)
+    {
+        viewController.hidesBottomBarWhenPushed = YES;
+        
+    }
+    
+    //每一个vc的右边都是快捷联系
+    viewController.navigationItem.rightBarButtonItem = [UIBarButtonItem buttonItemWithImageName:@"phone" andSelectedImageName:@"phone_hl" andTarget:self andAction:@selector(contactBUKACH)];
+    
+    
+    [super pushViewController:viewController animated:animated];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)contactBUKACH
+{
+    BKLog(@"contact");
+    
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"拨打客服电话" message:@"拨打客服电话，立刻咨询课程详情。" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+    
+    [alert show];
+    
 }
-*/
+
+#pragma mark - UIAlertViewDelegate
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0)
+    {
+        BKLog(@"取消");
+    }
+    else if (buttonIndex == 1)
+    {
+        BKLog(@"拨号");
+        
+        [BKCallTool callAtViewController:self withTelNO:@"10010"];
+        
+    }
+}
 
 @end
