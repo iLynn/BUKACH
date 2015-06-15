@@ -68,6 +68,8 @@
 		BAFC54241B2EE2D400184B6B /* BKProfileAboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFC54231B2EE2D400184B6B /* BKProfileAboutController.m */; };
 		BAFC54271B2EEC1400184B6B /* BKProfileJoinController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFC54261B2EEC1400184B6B /* BKProfileJoinController.m */; };
 		BAFC542A1B2EEC4700184B6B /* BKProfileSuggestionController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFC54291B2EEC4700184B6B /* BKProfileSuggestionController.m */; };
+		BAFC54621B2EFCCD00184B6B /* BKAdsView.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFC54611B2EFCCD00184B6B /* BKAdsView.m */; };
+		BAFC54651B2F17B700184B6B /* LYAdsView.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFC54641B2F17B700184B6B /* LYAdsView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -205,6 +207,10 @@
 		BAFC54261B2EEC1400184B6B /* BKProfileJoinController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKProfileJoinController.m; sourceTree = "<group>"; };
 		BAFC54281B2EEC4700184B6B /* BKProfileSuggestionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKProfileSuggestionController.h; sourceTree = "<group>"; };
 		BAFC54291B2EEC4700184B6B /* BKProfileSuggestionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKProfileSuggestionController.m; sourceTree = "<group>"; };
+		BAFC54601B2EFCCD00184B6B /* BKAdsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKAdsView.h; sourceTree = "<group>"; };
+		BAFC54611B2EFCCD00184B6B /* BKAdsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKAdsView.m; sourceTree = "<group>"; };
+		BAFC54631B2F17B700184B6B /* LYAdsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYAdsView.h; sourceTree = "<group>"; };
+		BAFC54641B2F17B700184B6B /* LYAdsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYAdsView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -355,6 +361,10 @@
 		BA9BF3131B2C17410073F660 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BAFC54631B2F17B700184B6B /* LYAdsView.h */,
+				BAFC54641B2F17B700184B6B /* LYAdsView.m */,
+				BAFC54601B2EFCCD00184B6B /* BKAdsView.h */,
+				BAFC54611B2EFCCD00184B6B /* BKAdsView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -748,6 +758,7 @@
 				BAD2E8961B2D92CC00AA6C45 /* MBProgressHUD.m in Sources */,
 				BAD2E8911B2D92CC00AA6C45 /* AFURLRequestSerialization.m in Sources */,
 				BA9BF3371B2C1A450073F660 /* BKProfileController.m in Sources */,
+				BAFC54621B2EFCCD00184B6B /* BKAdsView.m in Sources */,
 				BAD2E8931B2D92CC00AA6C45 /* AFURLSessionManager.m in Sources */,
 				BAD2E8AA1B2D92CD00AA6C45 /* UIImage+GIF.m in Sources */,
 				BA9BF3281B2C182B0073F660 /* BKTabBarController.m in Sources */,
@@ -759,6 +770,7 @@
 				BAD2E8A51B2D92CC00AA6C45 /* SDWebImageDownloader.m in Sources */,
 				BAD2E8AC1B2D92CD00AA6C45 /* UIImage+WebP.m in Sources */,
 				BAD2E8D51B2DBC7400AA6C45 /* UIView+ViewFrameExt.m in Sources */,
+				BAFC54651B2F17B700184B6B /* LYAdsView.m in Sources */,
 				BAD2E8D31B2DBC7400AA6C45 /* UIBarButtonItem+ButtonImageExt.m in Sources */,
 				BAD2E8AB1B2D92CD00AA6C45 /* UIImage+MultiFormat.m in Sources */,
 				BAD2E88C1B2D92CC00AA6C45 /* AFHTTPRequestOperationManager.m in Sources */,
