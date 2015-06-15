@@ -55,20 +55,20 @@
     
     //设置普通状态下的文字属性
     NSMutableDictionary * normalDict = [NSMutableDictionary dictionary];
-    normalDict[NSForegroundColorAttributeName] = [UIColor orangeColor];
-    normalDict[NSFontAttributeName] = [UIFont systemFontOfSize:15];
+    normalDict[NSForegroundColorAttributeName] = [UIColor blackColor];
+    normalDict[NSFontAttributeName] = [UIFont systemFontOfSize:18];
     [itemAppearence setTitleTextAttributes:normalDict forState:UIControlStateNormal];
     
     //设置选中状态下的文字属性
     NSMutableDictionary * highlightedDict = [NSMutableDictionary dictionary];
     highlightedDict[NSForegroundColorAttributeName] = [UIColor redColor];
-    highlightedDict[NSFontAttributeName] = [UIFont systemFontOfSize:15];
+    highlightedDict[NSFontAttributeName] = [UIFont systemFontOfSize:18];
     [itemAppearence setTitleTextAttributes:highlightedDict forState:UIControlStateHighlighted];
     
     //设置不可用状态下的文字属性
     NSMutableDictionary * disableDict = [NSMutableDictionary dictionary];
     disableDict[NSForegroundColorAttributeName] = [UIColor lightGrayColor];
-    disableDict[NSFontAttributeName] = [UIFont systemFontOfSize:15];
+    disableDict[NSFontAttributeName] = [UIFont systemFontOfSize:18];
     [itemAppearence setTitleTextAttributes:disableDict forState:UIControlStateDisabled];
     
 }

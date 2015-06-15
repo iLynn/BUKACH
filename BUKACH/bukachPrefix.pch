@@ -26,6 +26,11 @@
 
 //3.基础设置
 
+//简便的颜色写法
+#define BKColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+//随机色
+#define BKRandomColor BKColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
+
 //导航的字体颜色
 #define BKNavigatorColor [UIColor blackColor]
 //导航的字体大小

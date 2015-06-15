@@ -60,6 +60,14 @@
 		BAD2E8D41B2DBC7400AA6C45 /* UIImage+ResizeExt.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD2E8CF1B2DBC7400AA6C45 /* UIImage+ResizeExt.m */; };
 		BAD2E8D51B2DBC7400AA6C45 /* UIView+ViewFrameExt.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD2E8D11B2DBC7400AA6C45 /* UIView+ViewFrameExt.m */; };
 		BAD2E8D81B2DC3E300AA6C45 /* BKCallTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD2E8D71B2DC3E300AA6C45 /* BKCallTool.m */; };
+		BAFC54121B2ED14E00184B6B /* BKProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFC54111B2ED14E00184B6B /* BKProfileCell.m */; };
+		BAFC54151B2ED1C200184B6B /* BKProfileItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFC54141B2ED1C200184B6B /* BKProfileItem.m */; };
+		BAFC54181B2ED49D00184B6B /* BKProfileGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFC54171B2ED49D00184B6B /* BKProfileGroup.m */; };
+		BAFC541B1B2EDD1F00184B6B /* BKProfileTextItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFC541A1B2EDD1F00184B6B /* BKProfileTextItem.m */; };
+		BAFC541E1B2EDD3F00184B6B /* BKProfileArrowItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFC541D1B2EDD3F00184B6B /* BKProfileArrowItem.m */; };
+		BAFC54241B2EE2D400184B6B /* BKProfileAboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFC54231B2EE2D400184B6B /* BKProfileAboutController.m */; };
+		BAFC54271B2EEC1400184B6B /* BKProfileJoinController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFC54261B2EEC1400184B6B /* BKProfileJoinController.m */; };
+		BAFC542A1B2EEC4700184B6B /* BKProfileSuggestionController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFC54291B2EEC4700184B6B /* BKProfileSuggestionController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -181,6 +189,22 @@
 		BAD2E8D11B2DBC7400AA6C45 /* UIView+ViewFrameExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewFrameExt.m"; sourceTree = "<group>"; };
 		BAD2E8D61B2DC3E300AA6C45 /* BKCallTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKCallTool.h; sourceTree = "<group>"; };
 		BAD2E8D71B2DC3E300AA6C45 /* BKCallTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKCallTool.m; sourceTree = "<group>"; };
+		BAFC54101B2ED14E00184B6B /* BKProfileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKProfileCell.h; sourceTree = "<group>"; };
+		BAFC54111B2ED14E00184B6B /* BKProfileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKProfileCell.m; sourceTree = "<group>"; };
+		BAFC54131B2ED1C200184B6B /* BKProfileItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKProfileItem.h; sourceTree = "<group>"; };
+		BAFC54141B2ED1C200184B6B /* BKProfileItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKProfileItem.m; sourceTree = "<group>"; };
+		BAFC54161B2ED49D00184B6B /* BKProfileGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKProfileGroup.h; sourceTree = "<group>"; };
+		BAFC54171B2ED49D00184B6B /* BKProfileGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKProfileGroup.m; sourceTree = "<group>"; };
+		BAFC54191B2EDD1F00184B6B /* BKProfileTextItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKProfileTextItem.h; sourceTree = "<group>"; };
+		BAFC541A1B2EDD1F00184B6B /* BKProfileTextItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKProfileTextItem.m; sourceTree = "<group>"; };
+		BAFC541C1B2EDD3F00184B6B /* BKProfileArrowItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKProfileArrowItem.h; sourceTree = "<group>"; };
+		BAFC541D1B2EDD3F00184B6B /* BKProfileArrowItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKProfileArrowItem.m; sourceTree = "<group>"; };
+		BAFC54221B2EE2D400184B6B /* BKProfileAboutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKProfileAboutController.h; sourceTree = "<group>"; };
+		BAFC54231B2EE2D400184B6B /* BKProfileAboutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKProfileAboutController.m; sourceTree = "<group>"; };
+		BAFC54251B2EEC1400184B6B /* BKProfileJoinController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKProfileJoinController.h; sourceTree = "<group>"; };
+		BAFC54261B2EEC1400184B6B /* BKProfileJoinController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKProfileJoinController.m; sourceTree = "<group>"; };
+		BAFC54281B2EEC4700184B6B /* BKProfileSuggestionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKProfileSuggestionController.h; sourceTree = "<group>"; };
+		BAFC54291B2EEC4700184B6B /* BKProfileSuggestionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKProfileSuggestionController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -453,6 +477,12 @@
 			children = (
 				BA9BF3351B2C1A450073F660 /* BKProfileController.h */,
 				BA9BF3361B2C1A450073F660 /* BKProfileController.m */,
+				BAFC54281B2EEC4700184B6B /* BKProfileSuggestionController.h */,
+				BAFC54291B2EEC4700184B6B /* BKProfileSuggestionController.m */,
+				BAFC54221B2EE2D400184B6B /* BKProfileAboutController.h */,
+				BAFC54231B2EE2D400184B6B /* BKProfileAboutController.m */,
+				BAFC54251B2EEC1400184B6B /* BKProfileJoinController.h */,
+				BAFC54261B2EEC1400184B6B /* BKProfileJoinController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -460,6 +490,14 @@
 		BA9BF3231B2C17410073F660 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BAFC54131B2ED1C200184B6B /* BKProfileItem.h */,
+				BAFC54141B2ED1C200184B6B /* BKProfileItem.m */,
+				BAFC541C1B2EDD3F00184B6B /* BKProfileArrowItem.h */,
+				BAFC541D1B2EDD3F00184B6B /* BKProfileArrowItem.m */,
+				BAFC54191B2EDD1F00184B6B /* BKProfileTextItem.h */,
+				BAFC541A1B2EDD1F00184B6B /* BKProfileTextItem.m */,
+				BAFC54161B2ED49D00184B6B /* BKProfileGroup.h */,
+				BAFC54171B2ED49D00184B6B /* BKProfileGroup.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -467,6 +505,8 @@
 		BA9BF3241B2C17410073F660 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BAFC54101B2ED14E00184B6B /* BKProfileCell.h */,
+				BAFC54111B2ED14E00184B6B /* BKProfileCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -702,6 +742,8 @@
 				BAD2E88B1B2D92CC00AA6C45 /* AFHTTPRequestOperation.m in Sources */,
 				BAD2E8C91B2DAC9A00AA6C45 /* NSString+MJExtension.m in Sources */,
 				BAD2E8C61B2DAC9A00AA6C45 /* NSObject+MJCoding.m in Sources */,
+				BAFC542A1B2EEC4700184B6B /* BKProfileSuggestionController.m in Sources */,
+				BAFC54271B2EEC1400184B6B /* BKProfileJoinController.m in Sources */,
 				BAD2E88D1B2D92CC00AA6C45 /* AFHTTPSessionManager.m in Sources */,
 				BAD2E8961B2D92CC00AA6C45 /* MBProgressHUD.m in Sources */,
 				BAD2E8911B2D92CC00AA6C45 /* AFURLRequestSerialization.m in Sources */,
@@ -721,21 +763,27 @@
 				BAD2E8AB1B2D92CD00AA6C45 /* UIImage+MultiFormat.m in Sources */,
 				BAD2E88C1B2D92CC00AA6C45 /* AFHTTPRequestOperationManager.m in Sources */,
 				BA9BF3311B2C1A010073F660 /* BKGraceController.m in Sources */,
+				BAFC54151B2ED1C200184B6B /* BKProfileItem.m in Sources */,
 				BAD2E8941B2D92CC00AA6C45 /* MBProgressHUD+LY.m in Sources */,
 				BAD2E8A31B2D92CC00AA6C45 /* SDWebImageCompat.m in Sources */,
 				BAD2E8C81B2DAC9A00AA6C45 /* NSObject+MJProperty.m in Sources */,
 				BAD2E8921B2D92CC00AA6C45 /* AFURLResponseSerialization.m in Sources */,
 				BAD2E8A41B2D92CC00AA6C45 /* SDWebImageDecoder.m in Sources */,
+				BAFC541E1B2EDD3F00184B6B /* BKProfileArrowItem.m in Sources */,
+				BAFC54121B2ED14E00184B6B /* BKProfileCell.m in Sources */,
 				BAD2E8A21B2D92CC00AA6C45 /* SDImageCache.m in Sources */,
 				BAD2E8A01B2D92CC00AA6C45 /* MKAnnotationView+WebCache.m in Sources */,
+				BAFC541B1B2EDD1F00184B6B /* BKProfileTextItem.m in Sources */,
 				BA9BF32E1B2C199B0073F660 /* BKHomeController.m in Sources */,
 				BA9BF2E81B2C14D30073F660 /* main.m in Sources */,
 				BAD2E8C21B2DAC9A00AA6C45 /* MJConst.m in Sources */,
+				BAFC54241B2EE2D400184B6B /* BKProfileAboutController.m in Sources */,
 				BAD2E8A11B2D92CC00AA6C45 /* NSData+ImageContentType.m in Sources */,
 				BAD2E8C51B2DAC9A00AA6C45 /* MJType.m in Sources */,
 				BAD2E8D21B2DBC7400AA6C45 /* Foundation+Log.m in Sources */,
 				BAD2E8AD1B2D92CD00AA6C45 /* UIImageView+HighlightedWebCache.m in Sources */,
 				BAD2E83A1B2D926900AA6C45 /* BKHttpTool.m in Sources */,
+				BAFC54181B2ED49D00184B6B /* BKProfileGroup.m in Sources */,
 				BA9BF3341B2C1A320073F660 /* BKHotController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
