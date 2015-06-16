@@ -27,6 +27,9 @@
 		BAAB0F4D1B2FFEB9001DA224 /* BKLeftRightView.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAB0F4C1B2FFEB9001DA224 /* BKLeftRightView.m */; };
 		BAAB0F501B2FFF1B001DA224 /* BKUpDownView.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAB0F4F1B2FFF1B001DA224 /* BKUpDownView.m */; };
 		BAAB0F531B30014C001DA224 /* BKCategoriesView.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAB0F521B30014C001DA224 /* BKCategoriesView.m */; };
+		BAAB0F561B301A84001DA224 /* BKCategoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAB0F551B301A84001DA224 /* BKCategoryController.m */; };
+		BAAB0F591B301D16001DA224 /* BKAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAB0F581B301D16001DA224 /* BKAdView.m */; };
+		BAAB0F5C1B30233F001DA224 /* BKAdsController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAB0F5B1B30233F001DA224 /* BKAdsController.m */; };
 		BAD2E83A1B2D926900AA6C45 /* BKHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD2E8391B2D926900AA6C45 /* BKHttpTool.m */; };
 		BAD2E88B1B2D92CC00AA6C45 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD2E83D1B2D92CC00AA6C45 /* AFHTTPRequestOperation.m */; };
 		BAD2E88C1B2D92CC00AA6C45 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD2E83F1B2D92CC00AA6C45 /* AFHTTPRequestOperationManager.m */; };
@@ -131,6 +134,12 @@
 		BAAB0F4F1B2FFF1B001DA224 /* BKUpDownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKUpDownView.m; sourceTree = "<group>"; };
 		BAAB0F511B30014C001DA224 /* BKCategoriesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKCategoriesView.h; sourceTree = "<group>"; };
 		BAAB0F521B30014C001DA224 /* BKCategoriesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKCategoriesView.m; sourceTree = "<group>"; };
+		BAAB0F541B301A84001DA224 /* BKCategoryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKCategoryController.h; sourceTree = "<group>"; };
+		BAAB0F551B301A84001DA224 /* BKCategoryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKCategoryController.m; sourceTree = "<group>"; };
+		BAAB0F571B301D16001DA224 /* BKAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKAdView.h; sourceTree = "<group>"; };
+		BAAB0F581B301D16001DA224 /* BKAdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKAdView.m; sourceTree = "<group>"; };
+		BAAB0F5A1B30233F001DA224 /* BKAdsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKAdsController.h; sourceTree = "<group>"; };
+		BAAB0F5B1B30233F001DA224 /* BKAdsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKAdsController.m; sourceTree = "<group>"; };
 		BAD2E8381B2D926900AA6C45 /* BKHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKHttpTool.h; sourceTree = "<group>"; };
 		BAD2E8391B2D926900AA6C45 /* BKHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKHttpTool.m; sourceTree = "<group>"; };
 		BAD2E83C1B2D92CC00AA6C45 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -371,6 +380,10 @@
 			children = (
 				BA9BF32C1B2C199B0073F660 /* BKHomeController.h */,
 				BA9BF32D1B2C199B0073F660 /* BKHomeController.m */,
+				BAAB0F541B301A84001DA224 /* BKCategoryController.h */,
+				BAAB0F551B301A84001DA224 /* BKCategoryController.m */,
+				BAAB0F5A1B30233F001DA224 /* BKAdsController.h */,
+				BAAB0F5B1B30233F001DA224 /* BKAdsController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -395,6 +408,8 @@
 			children = (
 				BAFC54601B2EFCCD00184B6B /* BKAdsView.h */,
 				BAFC54611B2EFCCD00184B6B /* BKAdsView.m */,
+				BAAB0F571B301D16001DA224 /* BKAdView.h */,
+				BAAB0F581B301D16001DA224 /* BKAdView.m */,
 				BAAB0F511B30014C001DA224 /* BKCategoriesView.h */,
 				BAAB0F521B30014C001DA224 /* BKCategoriesView.m */,
 				BAAB0F481B2FFE38001DA224 /* BKCategoryView.h */,
@@ -794,7 +809,9 @@
 				BAD2E88B1B2D92CC00AA6C45 /* AFHTTPRequestOperation.m in Sources */,
 				BAD2E8C91B2DAC9A00AA6C45 /* NSString+MJExtension.m in Sources */,
 				BAD2E8C61B2DAC9A00AA6C45 /* NSObject+MJCoding.m in Sources */,
+				BAAB0F5C1B30233F001DA224 /* BKAdsController.m in Sources */,
 				BAFC542A1B2EEC4700184B6B /* BKProfileSuggestionController.m in Sources */,
+				BAAB0F591B301D16001DA224 /* BKAdView.m in Sources */,
 				BAFC54271B2EEC1400184B6B /* BKProfileJoinController.m in Sources */,
 				BAD2E88D1B2D92CC00AA6C45 /* AFHTTPSessionManager.m in Sources */,
 				BAD2E8961B2D92CC00AA6C45 /* MBProgressHUD.m in Sources */,
@@ -834,6 +851,7 @@
 				BA9BF32E1B2C199B0073F660 /* BKHomeController.m in Sources */,
 				BA9BF2E81B2C14D30073F660 /* main.m in Sources */,
 				BAD2E8C21B2DAC9A00AA6C45 /* MJConst.m in Sources */,
+				BAAB0F561B301A84001DA224 /* BKCategoryController.m in Sources */,
 				BAFC54241B2EE2D400184B6B /* BKProfileAboutController.m in Sources */,
 				BAD2E8A11B2D92CC00AA6C45 /* NSData+ImageContentType.m in Sources */,
 				BAD2E8C51B2DAC9A00AA6C45 /* MJType.m in Sources */,

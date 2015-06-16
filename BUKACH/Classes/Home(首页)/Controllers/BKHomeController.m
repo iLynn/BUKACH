@@ -14,8 +14,13 @@
 #import "BKCategoryResponse.h"
 #import "BKCategoriesView.h"
 
+#import "BKCategoryModel.h"
+#import "BKCategoryController.h"
+#import "BKAdsModel.h"
+#import "BKAdsController.h"
 
-@interface BKHomeController ()
+
+@interface BKHomeController ()<BKCategoriesViewDelegate, BKAdsViewDelegate>
 
 @property (nonatomic, weak) BKAdsView * adsView;
 
@@ -41,6 +46,9 @@
     BKAdsView * adsView = [[BKAdsView alloc] initWithFrame:CGRectMake(0, 0, BKScreenWidth, 200)];
     
     self.adsView = adsView;
+    
+    //设置代理
+    self.adsView.delegate = self;
   
     [self.view addSubview:adsView];
     
@@ -49,11 +57,14 @@
     CGFloat categoriesX = BKMargin;
     CGFloat categoriesY = CGRectGetMaxY(self.adsView.frame) + BKMargin;
     CGFloat categoriesW = BKScreenWidth - 2 * BKMargin;
-    CGFloat categoriesH = BKScreenHeight - categoriesY - 20 - 44 - 49;
+    CGFloat categoriesH = BKScreenHeight - categoriesY - 20 - 44 - 49 - BKMargin;
     
     BKCategoriesView * categoriesView = [[BKCategoriesView alloc] initWithFrame:CGRectMake(categoriesX, categoriesY, categoriesW, categoriesH)];
     
     self.categoriesView = categoriesView;
+    
+    //设置代理
+    self.categoriesView.delegate = self;
     
     [self.view addSubview:categoriesView];
     
@@ -100,8 +111,6 @@
     
     [BKHttpTool post:urlStr params:params success:^(NSDictionary * categoryResponse) {
         
-        //BKLog(@"%@", categoryResponse);
-        
         BKCategoryResponse * response = [BKCategoryResponse categoryResponseWithDict:categoryResponse];
         
         self.categoriesView.categories = response.data;
@@ -115,5 +124,32 @@
 
 }
 
+#pragma mark - BKCategoriesViewDelegate代理方法
+
+- (void)jumpToCategoryWithModel:(BKCategoryModel *)category
+{
+    BKCategoryController * vc = [[BKCategoryController alloc] init];
+    
+    // 设置导航标题
+    vc.navigationItem.title = category.category_name;
+    
+    [self.navigationController pushViewController:vc animated:YES];
+    
+    
+}
+
+
+#pragma mark - BKAdsViewDelegate代理方法
+
+- (void)jumpToAdsWithModel:(BKAdsModel *)ad
+{
+    BKAdsController * vc = [[BKAdsController alloc] init];
+    
+    // 设置导航标题
+    vc.navigationItem.title = ad.ads_title;
+    
+    [self.navigationController pushViewController:vc animated:YES];
+    
+}
 
 @end

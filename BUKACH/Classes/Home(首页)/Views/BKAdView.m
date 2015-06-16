@@ -1,16 +1,16 @@
 //
-//  BKCategoryView.m
+//  BKAdView.m
 //  BUKACH
 //
 //  Created by Lynn on 15/6/16.
 //  Copyright (c) 2015年 Lynn. All rights reserved.
 //
 
-#import "BKCategoryView.h"
-#import "BKCategoryModel.h"
+#import "BKAdView.h"
+#import "BKAdsModel.h"
 #import "UIButton+WebCache.h"
 
-@implementation BKCategoryView
+@implementation BKAdView
 
 //重写初始化方法
 -(id)initWithFrame:(CGRect)frame
@@ -30,15 +30,13 @@
     return self;
 }
 
--(void)setCategory:(BKCategoryModel *)category
+-(void)setAd:(BKAdsModel *)ad
 {
-    _category = category;
+    _ad = ad;
     
-    [self setTitle:category.category_name forState:UIControlStateNormal];
+    NSString * urlStr = [NSString stringWithFormat:@"%@%@", BKUrlStr, ad.ads_photo];
     
-    NSString * urlStr = [NSString stringWithFormat:@"%@%@", BKUrlStr, category.category_photo];
-    
-    [self sd_setImageWithURL:[NSURL URLWithString:urlStr] forState:UIControlStateNormal];
+    [self sd_setBackgroundImageWithURL:[NSURL URLWithString:urlStr] forState:UIControlStateNormal];
     
 }
 

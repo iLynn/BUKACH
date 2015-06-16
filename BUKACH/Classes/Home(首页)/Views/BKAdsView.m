@@ -7,7 +7,8 @@
 //
 
 #import "BKAdsView.h"
-#import "UIImageView+WebCache.h"
+#import "BKAdView.h"
+//#import "UIImageView+WebCache.h"
 #import "BKAdsModel.h"
 
 #define BKCurrentWidth self.bounds.size.width
@@ -19,9 +20,9 @@
 @property (nonatomic, weak) UIPageControl * pageControl;
 @property (nonatomic, strong) NSTimer * timer;
 
-@property (nonatomic, weak) UIImageView * currentImageView;
-@property (nonatomic, weak) UIImageView * nextImageView;
-@property (nonatomic, weak) UIImageView * preImageView;
+@property (nonatomic, weak) BKAdView * currentAdView;
+@property (nonatomic, weak) BKAdView * nextAdView;
+@property (nonatomic, weak) BKAdView * preAdView;
 
 @property (nonatomic, assign) NSInteger index;
 
@@ -105,33 +106,36 @@
     
     //3.无限轮播设定
     //3.1.当前图片的初始化处理
-    UIImageView * currentImageView =[[UIImageView alloc] init];
-    BKAdsModel * ads0 = self.ads[0];
-    [self getImageFromModel:ads0 withInImageView:currentImageView];
+    BKAdView * currentAdView =[[BKAdView alloc] init];
+    currentAdView.ad = self.ads[0];
     
-    [self.scrollView addSubview:currentImageView];
-    self.currentImageView = currentImageView;
+    [self.scrollView addSubview:currentAdView];
+    self.currentAdView = currentAdView;
     
-    self.currentImageView.frame = CGRectMake(BKCurrentWidth, 0, BKCurrentWidth, BKCurrentHeight);
-    self.currentImageView.contentMode = UIViewContentModeScaleAspectFill;
+    self.currentAdView.frame = CGRectMake(BKCurrentWidth, 0, BKCurrentWidth, BKCurrentHeight);
+    self.currentAdView.contentMode = UIViewContentModeScaleAspectFill;
+    
+    //添加响应事件
+    [currentAdView addTarget:self action:@selector(adTouch:) forControlEvents:UIControlEventTouchUpInside];
+    
     
     //3.2.初始化下一个视图
-    UIImageView *nextImageView = [[UIImageView alloc] init];
+    BKAdView *nextAdView = [[BKAdView alloc] init];
     
-    [self.scrollView addSubview:nextImageView];
-    self.nextImageView = nextImageView;
+    [self.scrollView addSubview:nextAdView];
+    self.nextAdView = nextAdView;
     
-    self.nextImageView.frame = CGRectMake(BKCurrentWidth * 2, 0, BKCurrentWidth, BKCurrentHeight);
-    self.nextImageView.contentMode = UIViewContentModeScaleAspectFill;
+    self.nextAdView.frame = CGRectMake(BKCurrentWidth * 2, 0, BKCurrentWidth, BKCurrentHeight);
+    self.nextAdView.contentMode = UIViewContentModeScaleAspectFill;
     
     //3.3.初始化上一个视图
-    UIImageView *preImageView = [[UIImageView alloc] init];
+    BKAdView *preAdView = [[BKAdView alloc] init];
     
-    [self.scrollView addSubview:preImageView];
-    self.preImageView = preImageView;
+    [self.scrollView addSubview:preAdView];
+    self.preAdView = preAdView;
     
-    preImageView.frame = CGRectMake(0, 0, BKCurrentWidth, BKCurrentHeight);
-    self.preImageView.contentMode = UIViewContentModeScaleAspectFill;
+    preAdView.frame = CGRectMake(0, 0, BKCurrentWidth, BKCurrentHeight);
+    self.preAdView.contentMode = UIViewContentModeScaleAspectFill;
     
     
     //4.默认先滚动一下
@@ -140,25 +144,22 @@
 
 }
 
-/**
- *  封装一个从模型取image的url，再赋值给imageView的方法
- *
- *  @param ads       模型
- *  @param imageView 需要被图片填充的view
- */
--(void)getImageFromModel:(BKAdsModel *)ads withInImageView:(UIImageView *)imageView
+
+-(void)adTouch:(BKAdView *)adView
 {
-    NSString * photo_url = [NSString stringWithFormat:@"%@%@", BKUrlStr, ads.ads_photo];
-    
-    [imageView sd_setImageWithURL:[NSURL URLWithString:photo_url]];
-    
+    //通知代理响应操作
+    if ([self.delegate respondsToSelector:@selector(jumpToAdsWithModel:)])
+    {
+        [self.delegate jumpToAdsWithModel:adView.ad];
+    }
 }
+
 
 #pragma mark - 定时器的方法
 
 -(void)startTimer
 {
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(autoScroll) userInfo:nil repeats:YES];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(autoScroll) userInfo:nil repeats:YES];
     
     [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
     
@@ -205,25 +206,26 @@
     //1.只有3个image的宽度，offset要细细计算，不能直接与page绑定了
     CGFloat offset = self.scrollView.contentOffset.x;
     
-    if (self.nextImageView.image == nil || self.preImageView.image == nil)
+    //if (self.nextAdView.image == nil || self.preAdView.image == nil)
+    if (self.nextAdView.ad == nil || self.preAdView.ad == nil)
     {
         // 加载下一个视图
         NSInteger nextIndex = (self.index == self.ads.count - 1) ? 0 : self.index + 1;
-        BKAdsModel * adsNext = self.ads[nextIndex];
-        [self getImageFromModel:adsNext withInImageView:_nextImageView];
+        _nextAdView.ad = self.ads[nextIndex];
         
         // 加载上一个视图
         NSInteger preIndex = (self.index == 0) ? self.ads.count - 1 : self.index - 1;
-        BKAdsModel * adsPre = self.ads[preIndex];
-        [self getImageFromModel:adsPre withInImageView:_preImageView];
+        _preAdView.ad = self.ads[preIndex];
         
     }
     
     if(offset == 0)
     {
-        _currentImageView.image = _preImageView.image;
+        _currentAdView.ad = _preAdView.ad;
+
         scrollView.contentOffset = CGPointMake(scrollView.bounds.size.width, 0);
-        _preImageView.image = nil;
+
+        _preAdView.ad = nil;
         
         if (self.index == 0)
         {
@@ -236,9 +238,11 @@
     }
     if (offset == scrollView.bounds.size.width * 2)
     {
-        _currentImageView.image = _nextImageView.image;
+        _currentAdView.ad = _nextAdView.ad;
+
         scrollView.contentOffset = CGPointMake(scrollView.bounds.size.width, 0);
-        _nextImageView.image = nil;
+
+        _nextAdView.ad = nil;
         
         if (self.index == self.ads.count - 1)
         {

@@ -27,7 +27,7 @@
 //3.基础设置
 
 //简便的颜色写法
-#define BKColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define BKColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:0.5]
 //随机色
 #define BKRandomColor BKColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
 
@@ -42,7 +42,7 @@
 #define BKScreenHeight  [UIScreen mainScreen].bounds.size.height
 
 //margin
-#define BKMargin 10
+#define BKMargin 5
 
 
 //4.网络设置

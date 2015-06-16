@@ -24,11 +24,7 @@
 //只要是alloc方式创建的View,这个一定会被调用
 - (id)initWithFrame:(CGRect)frame
 {
-    if (self = [super initWithFrame:frame])
-    {
-        //[self createSubViews];
-    }
-    return self;
+    return [super initWithFrame:frame];
 }
 
 -(void)setCategories:(NSArray *)categories
@@ -39,7 +35,6 @@
     [self createSubViews];
 
 }
-
 
 - (void)createSubViews
 {
@@ -63,12 +58,24 @@
         //赋值填充UI
         cateView.category = _categories[i];
         
+        //添加事件
+        [cateView addTarget:self action:@selector(cateViewTouch:) forControlEvents:UIControlEventTouchUpInside];
+        
         [self addSubview:cateView];
         
     }
     
     [self getSubviewFrames];
     
+}
+
+- (void)cateViewTouch:(BKCategoryView *)categoryView
+{
+    //通知代理响应操作
+    if ([self.delegate respondsToSelector:@selector(jumpToCategoryWithModel:)])
+    {
+        [self.delegate jumpToCategoryWithModel:categoryView.category];
+    }
 }
 
 //定制布局
