@@ -1,17 +1,17 @@
 //
-//  BKCategoryResponse.m
+//  BKCourseResponse.m
 //  BUKACH
 //
 //  Created by Lynn on 15/6/16.
 //  Copyright (c) 2015年 Lynn. All rights reserved.
 //
 
-#import "BKCategoryResponse.h"
-#import "BKCategoryModel.h"
+#import "BKCourseResponse.h"
+#import "BKCourseModel.h"
 
-@implementation BKCategoryResponse
+@implementation BKCourseResponse
 
-+(id)categoryResponseWithDict:(NSDictionary *)dict
++(id)courseResponseWithDict:(NSDictionary *)dict
 {
     return [[self alloc] initWithDict:dict];
 }
@@ -24,10 +24,10 @@
         
         //对数组的处理：依次转模型
         NSMutableArray * objs = [NSMutableArray array];
-        for (NSDictionary * cateDict in _data)
+        for (NSDictionary * courseDict in _data)
         {
-            BKCategoryModel * category = [BKCategoryModel categoryWithDict:cateDict];
-            [objs addObject:category];
+            BKCourseModel * course = [BKCourseModel courseWithDict:courseDict];
+            [objs addObject:course];
         }
         self.data = objs;
     }

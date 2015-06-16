@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class BKAdsModel;
 
 @interface BKAdsController : UIViewController
+
+@property (nonatomic, strong) BKAdsModel * ads;
 
 @end

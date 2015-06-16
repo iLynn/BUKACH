@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class BKCategoryModel;
 
-@interface BKCategoryController : UIViewController
+@interface BKCategoryController : UITableViewController
+
+@property (nonatomic, strong) BKCategoryModel * category;
 
 @end

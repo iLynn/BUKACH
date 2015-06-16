@@ -7,6 +7,7 @@
 //
 
 #import "BKAdsController.h"
+#import "BKAdsModel.h"
 
 @interface BKAdsController ()
 
@@ -14,13 +15,22 @@
 
 @implementation BKAdsController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    
-    self.view.backgroundColor = BKRandomColor;
     
 }
 
+- (void)setAds:(BKAdsModel *)ads
+{
+    _ads = ads;
+    
+    self.navigationItem.title = ads.ads_title;
+    
+    NSString * str = ads.ads_id;
+    
+    BKLog(@"%@", str);
+}
 
 
 @end

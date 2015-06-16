@@ -92,12 +92,13 @@
     if (self.viewControllers.count > 0)
     {
         viewController.hidesBottomBarWhenPushed = YES;
-        
     }
     
     //每一个vc的右边都是快捷联系
     viewController.navigationItem.rightBarButtonItem = [UIBarButtonItem buttonItemWithImageName:@"phone" andSelectedImageName:@"phone_hl" andTarget:self andAction:@selector(contactBUKACH)];
     
+    //全部是白色
+    viewController.view.backgroundColor = [UIColor whiteColor];
     
     [super pushViewController:viewController animated:animated];
 }

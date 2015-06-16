@@ -76,7 +76,7 @@
 {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor colorWithRed:1.000 green:0.799 blue:0.966 alpha:1.000];
+    //self.view.backgroundColor = [UIColor colorWithRed:1.000 green:0.799 blue:0.966 alpha:1.000];
 }
 
 #pragma mark - Table view data source

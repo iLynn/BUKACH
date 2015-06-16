@@ -39,8 +39,6 @@
     //有这两行代码，navVC下的view才不会跑偏
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.edgesForExtendedLayout = UIRectEdgeNone;
-    
-    self.view.backgroundColor = [UIColor whiteColor];
   
     //1.添加广告视图
     BKAdsView * adsView = [[BKAdsView alloc] initWithFrame:CGRectMake(0, 0, BKScreenWidth, 200)];
@@ -70,7 +68,7 @@
     
     
     //3.获得广告信息
-    [self getAdsInfo];
+    //[self getAdsInfo];
     
     //4.获得分类信息
     [self getCategoryInfo];
@@ -130,8 +128,7 @@
 {
     BKCategoryController * vc = [[BKCategoryController alloc] init];
     
-    // 设置导航标题
-    vc.navigationItem.title = category.category_name;
+    vc.category = category;
     
     [self.navigationController pushViewController:vc animated:YES];
     
@@ -145,8 +142,7 @@
 {
     BKAdsController * vc = [[BKAdsController alloc] init];
     
-    // 设置导航标题
-    vc.navigationItem.title = ad.ads_title;
+    vc.ads = ad;
     
     [self.navigationController pushViewController:vc animated:YES];
     
