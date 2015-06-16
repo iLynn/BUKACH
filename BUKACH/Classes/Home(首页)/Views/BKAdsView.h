@@ -10,9 +10,10 @@
 
 @interface BKAdsView : UIView
 
-/**装有多个ads模型对象的数组*/
+/** 装有多个ads模型对象的数组 */
 @property(nonatomic, strong)NSArray * ads;
 
+/** 快速创建的方法 */
 +(id)adsView;
 
 @end

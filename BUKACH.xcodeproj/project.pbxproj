@@ -18,6 +18,15 @@
 		BA9BF3341B2C1A320073F660 /* BKHotController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9BF3331B2C1A320073F660 /* BKHotController.m */; };
 		BA9BF3371B2C1A450073F660 /* BKProfileController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9BF3361B2C1A450073F660 /* BKProfileController.m */; };
 		BA9BF33A1B2C1BBC0073F660 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA9BF3391B2C1BBC0073F660 /* LaunchScreen.xib */; };
+		BAAB0F331B2FC0F6001DA224 /* BKAdsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAB0F321B2FC0F6001DA224 /* BKAdsModel.m */; };
+		BAAB0F361B2FC3D3001DA224 /* BKAdsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAB0F351B2FC3D3001DA224 /* BKAdsResponse.m */; };
+		BAAB0F381B2FCF19001DA224 /* 备忘 in Resources */ = {isa = PBXBuildFile; fileRef = BAAB0F371B2FCF19001DA224 /* 备忘 */; };
+		BAAB0F411B2FFAB2001DA224 /* BKCategoryResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAB0F401B2FFAB2001DA224 /* BKCategoryResponse.m */; };
+		BAAB0F441B2FFABF001DA224 /* BKCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAB0F431B2FFABF001DA224 /* BKCategoryModel.m */; };
+		BAAB0F4A1B2FFE38001DA224 /* BKCategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAB0F491B2FFE38001DA224 /* BKCategoryView.m */; };
+		BAAB0F4D1B2FFEB9001DA224 /* BKLeftRightView.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAB0F4C1B2FFEB9001DA224 /* BKLeftRightView.m */; };
+		BAAB0F501B2FFF1B001DA224 /* BKUpDownView.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAB0F4F1B2FFF1B001DA224 /* BKUpDownView.m */; };
+		BAAB0F531B30014C001DA224 /* BKCategoriesView.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAB0F521B30014C001DA224 /* BKCategoriesView.m */; };
 		BAD2E83A1B2D926900AA6C45 /* BKHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD2E8391B2D926900AA6C45 /* BKHttpTool.m */; };
 		BAD2E88B1B2D92CC00AA6C45 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD2E83D1B2D92CC00AA6C45 /* AFHTTPRequestOperation.m */; };
 		BAD2E88C1B2D92CC00AA6C45 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD2E83F1B2D92CC00AA6C45 /* AFHTTPRequestOperationManager.m */; };
@@ -69,7 +78,6 @@
 		BAFC54271B2EEC1400184B6B /* BKProfileJoinController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFC54261B2EEC1400184B6B /* BKProfileJoinController.m */; };
 		BAFC542A1B2EEC4700184B6B /* BKProfileSuggestionController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFC54291B2EEC4700184B6B /* BKProfileSuggestionController.m */; };
 		BAFC54621B2EFCCD00184B6B /* BKAdsView.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFC54611B2EFCCD00184B6B /* BKAdsView.m */; };
-		BAFC54651B2F17B700184B6B /* LYAdsView.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFC54641B2F17B700184B6B /* LYAdsView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +114,23 @@
 		BA9BF3361B2C1A450073F660 /* BKProfileController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKProfileController.m; sourceTree = "<group>"; };
 		BA9BF3381B2C1B8A0073F660 /* bukachPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bukachPrefix.pch; sourceTree = "<group>"; };
 		BA9BF3391B2C1BBC0073F660 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		BAAB0F311B2FC0F6001DA224 /* BKAdsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKAdsModel.h; sourceTree = "<group>"; };
+		BAAB0F321B2FC0F6001DA224 /* BKAdsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKAdsModel.m; sourceTree = "<group>"; };
+		BAAB0F341B2FC3D3001DA224 /* BKAdsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKAdsResponse.h; sourceTree = "<group>"; };
+		BAAB0F351B2FC3D3001DA224 /* BKAdsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKAdsResponse.m; sourceTree = "<group>"; };
+		BAAB0F371B2FCF19001DA224 /* 备忘 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "备忘"; sourceTree = "<group>"; };
+		BAAB0F3F1B2FFAB2001DA224 /* BKCategoryResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKCategoryResponse.h; sourceTree = "<group>"; };
+		BAAB0F401B2FFAB2001DA224 /* BKCategoryResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKCategoryResponse.m; sourceTree = "<group>"; };
+		BAAB0F421B2FFABF001DA224 /* BKCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKCategoryModel.h; sourceTree = "<group>"; };
+		BAAB0F431B2FFABF001DA224 /* BKCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKCategoryModel.m; sourceTree = "<group>"; };
+		BAAB0F481B2FFE38001DA224 /* BKCategoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKCategoryView.h; sourceTree = "<group>"; };
+		BAAB0F491B2FFE38001DA224 /* BKCategoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKCategoryView.m; sourceTree = "<group>"; };
+		BAAB0F4B1B2FFEB9001DA224 /* BKLeftRightView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKLeftRightView.h; sourceTree = "<group>"; };
+		BAAB0F4C1B2FFEB9001DA224 /* BKLeftRightView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKLeftRightView.m; sourceTree = "<group>"; };
+		BAAB0F4E1B2FFF1B001DA224 /* BKUpDownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKUpDownView.h; sourceTree = "<group>"; };
+		BAAB0F4F1B2FFF1B001DA224 /* BKUpDownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKUpDownView.m; sourceTree = "<group>"; };
+		BAAB0F511B30014C001DA224 /* BKCategoriesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKCategoriesView.h; sourceTree = "<group>"; };
+		BAAB0F521B30014C001DA224 /* BKCategoriesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKCategoriesView.m; sourceTree = "<group>"; };
 		BAD2E8381B2D926900AA6C45 /* BKHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKHttpTool.h; sourceTree = "<group>"; };
 		BAD2E8391B2D926900AA6C45 /* BKHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKHttpTool.m; sourceTree = "<group>"; };
 		BAD2E83C1B2D92CC00AA6C45 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -209,8 +234,6 @@
 		BAFC54291B2EEC4700184B6B /* BKProfileSuggestionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKProfileSuggestionController.m; sourceTree = "<group>"; };
 		BAFC54601B2EFCCD00184B6B /* BKAdsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKAdsView.h; sourceTree = "<group>"; };
 		BAFC54611B2EFCCD00184B6B /* BKAdsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKAdsView.m; sourceTree = "<group>"; };
-		BAFC54631B2F17B700184B6B /* LYAdsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYAdsView.h; sourceTree = "<group>"; };
-		BAFC54641B2F17B700184B6B /* LYAdsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYAdsView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +288,7 @@
 				BA9BF3381B2C1B8A0073F660 /* bukachPrefix.pch */,
 				BA9BF2E61B2C14D30073F660 /* Info.plist */,
 				BA9BF2E71B2C14D30073F660 /* main.m */,
+				BAAB0F371B2FCF19001DA224 /* 备忘 */,
 				BA9BF2F21B2C14D40073F660 /* Images.xcassets */,
 			);
 			name = "Supporting Files";
@@ -354,6 +378,14 @@
 		BA9BF3121B2C17400073F660 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BAAB0F341B2FC3D3001DA224 /* BKAdsResponse.h */,
+				BAAB0F351B2FC3D3001DA224 /* BKAdsResponse.m */,
+				BAAB0F311B2FC0F6001DA224 /* BKAdsModel.h */,
+				BAAB0F321B2FC0F6001DA224 /* BKAdsModel.m */,
+				BAAB0F3F1B2FFAB2001DA224 /* BKCategoryResponse.h */,
+				BAAB0F401B2FFAB2001DA224 /* BKCategoryResponse.m */,
+				BAAB0F421B2FFABF001DA224 /* BKCategoryModel.h */,
+				BAAB0F431B2FFABF001DA224 /* BKCategoryModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -361,10 +393,16 @@
 		BA9BF3131B2C17410073F660 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BAFC54631B2F17B700184B6B /* LYAdsView.h */,
-				BAFC54641B2F17B700184B6B /* LYAdsView.m */,
 				BAFC54601B2EFCCD00184B6B /* BKAdsView.h */,
 				BAFC54611B2EFCCD00184B6B /* BKAdsView.m */,
+				BAAB0F511B30014C001DA224 /* BKCategoriesView.h */,
+				BAAB0F521B30014C001DA224 /* BKCategoriesView.m */,
+				BAAB0F481B2FFE38001DA224 /* BKCategoryView.h */,
+				BAAB0F491B2FFE38001DA224 /* BKCategoryView.m */,
+				BAAB0F4B1B2FFEB9001DA224 /* BKLeftRightView.h */,
+				BAAB0F4C1B2FFEB9001DA224 /* BKLeftRightView.m */,
+				BAAB0F4E1B2FFF1B001DA224 /* BKUpDownView.h */,
+				BAAB0F4F1B2FFF1B001DA224 /* BKUpDownView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -719,6 +757,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA9BF33A1B2C1BBC0073F660 /* LaunchScreen.xib in Resources */,
+				BAAB0F381B2FCF19001DA224 /* 备忘 in Resources */,
 				BA9BF2F31B2C14D40073F660 /* Images.xcassets in Resources */,
 				BAD2E8951B2D92CC00AA6C45 /* MBProgressHUD.bundle in Resources */,
 			);
@@ -745,10 +784,13 @@
 				BAD2E8C41B2DAC9A00AA6C45 /* MJProperty.m in Sources */,
 				BAD2E88E1B2D92CC00AA6C45 /* AFNetworkReachabilityManager.m in Sources */,
 				BAD2E8AF1B2D92CD00AA6C45 /* UIView+WebCacheOperation.m in Sources */,
+				BAAB0F4D1B2FFEB9001DA224 /* BKLeftRightView.m in Sources */,
 				BA9BF3251B2C17410073F660 /* BKAppDelegate.m in Sources */,
+				BAAB0F361B2FC3D3001DA224 /* BKAdsResponse.m in Sources */,
 				BAD2E8A61B2D92CC00AA6C45 /* SDWebImageDownloaderOperation.m in Sources */,
 				BAD2E8901B2D92CC00AA6C45 /* AFURLConnectionOperation.m in Sources */,
 				BAD2E8C71B2DAC9A00AA6C45 /* NSObject+MJKeyValue.m in Sources */,
+				BAAB0F411B2FFAB2001DA224 /* BKCategoryResponse.m in Sources */,
 				BAD2E88B1B2D92CC00AA6C45 /* AFHTTPRequestOperation.m in Sources */,
 				BAD2E8C91B2DAC9A00AA6C45 /* NSString+MJExtension.m in Sources */,
 				BAD2E8C61B2DAC9A00AA6C45 /* NSObject+MJCoding.m in Sources */,
@@ -760,9 +802,11 @@
 				BA9BF3371B2C1A450073F660 /* BKProfileController.m in Sources */,
 				BAFC54621B2EFCCD00184B6B /* BKAdsView.m in Sources */,
 				BAD2E8931B2D92CC00AA6C45 /* AFURLSessionManager.m in Sources */,
+				BAAB0F531B30014C001DA224 /* BKCategoriesView.m in Sources */,
 				BAD2E8AA1B2D92CD00AA6C45 /* UIImage+GIF.m in Sources */,
 				BA9BF3281B2C182B0073F660 /* BKTabBarController.m in Sources */,
 				BAD2E8AE1B2D92CD00AA6C45 /* UIImageView+WebCache.m in Sources */,
+				BAAB0F331B2FC0F6001DA224 /* BKAdsModel.m in Sources */,
 				BAD2E8D81B2DC3E300AA6C45 /* BKCallTool.m in Sources */,
 				BAD2E8A91B2D92CD00AA6C45 /* UIButton+WebCache.m in Sources */,
 				BAD2E8C31B2DAC9A00AA6C45 /* MJFoundation.m in Sources */,
@@ -770,12 +814,13 @@
 				BAD2E8A51B2D92CC00AA6C45 /* SDWebImageDownloader.m in Sources */,
 				BAD2E8AC1B2D92CD00AA6C45 /* UIImage+WebP.m in Sources */,
 				BAD2E8D51B2DBC7400AA6C45 /* UIView+ViewFrameExt.m in Sources */,
-				BAFC54651B2F17B700184B6B /* LYAdsView.m in Sources */,
 				BAD2E8D31B2DBC7400AA6C45 /* UIBarButtonItem+ButtonImageExt.m in Sources */,
 				BAD2E8AB1B2D92CD00AA6C45 /* UIImage+MultiFormat.m in Sources */,
 				BAD2E88C1B2D92CC00AA6C45 /* AFHTTPRequestOperationManager.m in Sources */,
 				BA9BF3311B2C1A010073F660 /* BKGraceController.m in Sources */,
+				BAAB0F501B2FFF1B001DA224 /* BKUpDownView.m in Sources */,
 				BAFC54151B2ED1C200184B6B /* BKProfileItem.m in Sources */,
+				BAAB0F441B2FFABF001DA224 /* BKCategoryModel.m in Sources */,
 				BAD2E8941B2D92CC00AA6C45 /* MBProgressHUD+LY.m in Sources */,
 				BAD2E8A31B2D92CC00AA6C45 /* SDWebImageCompat.m in Sources */,
 				BAD2E8C81B2DAC9A00AA6C45 /* NSObject+MJProperty.m in Sources */,
@@ -793,6 +838,7 @@
 				BAD2E8A11B2D92CC00AA6C45 /* NSData+ImageContentType.m in Sources */,
 				BAD2E8C51B2DAC9A00AA6C45 /* MJType.m in Sources */,
 				BAD2E8D21B2DBC7400AA6C45 /* Foundation+Log.m in Sources */,
+				BAAB0F4A1B2FFE38001DA224 /* BKCategoryView.m in Sources */,
 				BAD2E8AD1B2D92CD00AA6C45 /* UIImageView+HighlightedWebCache.m in Sources */,
 				BAD2E83A1B2D926900AA6C45 /* BKHttpTool.m in Sources */,
 				BAFC54181B2ED49D00184B6B /* BKProfileGroup.m in Sources */,

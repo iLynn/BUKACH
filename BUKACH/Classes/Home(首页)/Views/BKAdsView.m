@@ -8,6 +8,7 @@
 
 #import "BKAdsView.h"
 #import "UIImageView+WebCache.h"
+#import "BKAdsModel.h"
 
 #define BKCurrentWidth self.bounds.size.width
 #define BKCurrentHeight self.bounds.size.height
@@ -78,30 +79,18 @@
 {
     _ads = ads;
     
-    //此处设置才能显示出来
+    //此处设置numberOfPages才有效
     self.pageControl.numberOfPages = self.ads.count;
     
-    //请求调用layoutSubviews方法
-    [self setNeedsLayout];
-    
-    //[self loadImages];
+    //加载图片，布局
+    [self loadImages];
     
 }
 
-//当self即将被添加到父亲视图的时候会被自动调用
-- (void)willMoveToSuperview:(UIView *)newSuperview
-{
-    CGFloat x = 0;
-    CGFloat y = 0;
-    CGFloat h = 200;
-    CGFloat w = newSuperview.frame.size.width;
-    self.frame = CGRectMake(x, y, w, h);
-}
+#pragma mark - 布局方法
 
-- (void)layoutSubviews
+- (void)loadImages
 {
-    [super layoutSubviews];
-
     //1.给page control设置frame
     CGFloat pageW = 200;
     CGFloat pageH = 40;
@@ -117,26 +106,33 @@
     //3.无限轮播设定
     //3.1.当前图片的初始化处理
     UIImageView * currentImageView =[[UIImageView alloc] init];
-#warning 假定此时ads里都是image对象
-    currentImageView.image = self.ads[0];
+    BKAdsModel * ads0 = self.ads[0];
+    [self getImageFromModel:ads0 withInImageView:currentImageView];
+    
     [self.scrollView addSubview:currentImageView];
     self.currentImageView = currentImageView;
+    
     self.currentImageView.frame = CGRectMake(BKCurrentWidth, 0, BKCurrentWidth, BKCurrentHeight);
     self.currentImageView.contentMode = UIViewContentModeScaleAspectFill;
     
     //3.2.初始化下一个视图
     UIImageView *nextImageView = [[UIImageView alloc] init];
+    
     [self.scrollView addSubview:nextImageView];
     self.nextImageView = nextImageView;
+    
     self.nextImageView.frame = CGRectMake(BKCurrentWidth * 2, 0, BKCurrentWidth, BKCurrentHeight);
     self.nextImageView.contentMode = UIViewContentModeScaleAspectFill;
     
     //3.3.初始化上一个视图
     UIImageView *preImageView = [[UIImageView alloc] init];
+    
     [self.scrollView addSubview:preImageView];
     self.preImageView = preImageView;
+    
     preImageView.frame = CGRectMake(0, 0, BKCurrentWidth, BKCurrentHeight);
     self.preImageView.contentMode = UIViewContentModeScaleAspectFill;
+    
     
     //4.默认先滚动一下
     self.scrollView.contentOffset = CGPointMake(BKCurrentWidth, 0);
@@ -144,8 +140,22 @@
 
 }
 
-//谁拥有pagecontrol，谁就负责它的实现
-//timer里负责调用自动滚动
+/**
+ *  封装一个从模型取image的url，再赋值给imageView的方法
+ *
+ *  @param ads       模型
+ *  @param imageView 需要被图片填充的view
+ */
+-(void)getImageFromModel:(BKAdsModel *)ads withInImageView:(UIImageView *)imageView
+{
+    NSString * photo_url = [NSString stringWithFormat:@"%@%@", BKUrlStr, ads.ads_photo];
+    
+    [imageView sd_setImageWithURL:[NSURL URLWithString:photo_url]];
+    
+}
+
+#pragma mark - 定时器的方法
+
 -(void)startTimer
 {
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(autoScroll) userInfo:nil repeats:YES];
@@ -174,6 +184,7 @@
 }
 
 #pragma mark scrollview的代理方法
+
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
     //用户拖动时，暂停自动轮播
@@ -198,11 +209,13 @@
     {
         // 加载下一个视图
         NSInteger nextIndex = (self.index == self.ads.count - 1) ? 0 : self.index + 1;
-        _nextImageView.image = self.ads[nextIndex];
+        BKAdsModel * adsNext = self.ads[nextIndex];
+        [self getImageFromModel:adsNext withInImageView:_nextImageView];
         
         // 加载上一个视图
         NSInteger preIndex = (self.index == 0) ? self.ads.count - 1 : self.index - 1;
-        _preImageView.image = self.ads[preIndex];
+        BKAdsModel * adsPre = self.ads[preIndex];
+        [self getImageFromModel:adsPre withInImageView:_preImageView];
         
     }
     

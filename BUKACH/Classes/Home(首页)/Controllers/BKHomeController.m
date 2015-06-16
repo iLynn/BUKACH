@@ -7,15 +7,25 @@
 //
 
 #import "BKHomeController.h"
-#import "BKAdsView.h"
-#import "LYAdsView.h"
 #import "BKHttpTool.h"
 
+#import "BKAdsView.h"
+#import "BKAdsResponse.h"
+#import "BKCategoryResponse.h"
+#import "BKCategoriesView.h"
+
+
 @interface BKHomeController ()
+
+@property (nonatomic, weak) BKAdsView * adsView;
+
+@property (nonatomic, weak) BKCategoriesView * categoriesView;
 
 @end
 
 @implementation BKHomeController
+
+#pragma mark - 懒加载
 
 - (void)viewDidLoad
 {
@@ -27,74 +37,82 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
   
-    //BKAdsView * adsView = [[BKAdsView alloc] initWithFrame:CGRectMake(0, 0, BKScreenWidth, 200)];
-    BKAdsView * adsView = [[BKAdsView alloc] init];
-
-    //LYAdsView * adsView = [[LYAdsView alloc] init];
-    NSMutableArray * array = [NSMutableArray array];
+    //1.添加广告视图
+    BKAdsView * adsView = [[BKAdsView alloc] initWithFrame:CGRectMake(0, 0, BKScreenWidth, 200)];
     
-    UIImage * image1 = [UIImage imageNamed:@"ads_01"];
-    [array addObject:image1];
-    UIImage * image2 = [UIImage imageNamed:@"ads_02"];
-    [array addObject:image2];
-    UIImage * image3 = [UIImage imageNamed:@"ads_03"];
-    [array addObject:image3];
-    UIImage * image4 = [UIImage imageNamed:@"ads_04"];
-    [array addObject:image4];
-    UIImage * image5 = [UIImage imageNamed:@"ads_05"];
-    [array addObject:image5];
-    
-
-    adsView.ads = array;
-    
+    self.adsView = adsView;
+  
     [self.view addSubview:adsView];
     
-    [self setupAdsInfo];
+    
+    //2.添加分类视图
+    CGFloat categoriesX = BKMargin;
+    CGFloat categoriesY = CGRectGetMaxY(self.adsView.frame) + BKMargin;
+    CGFloat categoriesW = BKScreenWidth - 2 * BKMargin;
+    CGFloat categoriesH = BKScreenHeight - categoriesY - 20 - 44 - 49;
+    
+    BKCategoriesView * categoriesView = [[BKCategoriesView alloc] initWithFrame:CGRectMake(categoriesX, categoriesY, categoriesW, categoriesH)];
+    
+    self.categoriesView = categoriesView;
+    
+    [self.view addSubview:categoriesView];
+    
+    
+    //3.获得广告信息
+    [self getAdsInfo];
+    
+    //4.获得分类信息
+    [self getCategoryInfo];
     
 }
 
-/**
- *  获得用户信息
- */
-- (void)setupAdsInfo
+- (void)getAdsInfo
 {
     //1.封装请求参数
     NSMutableDictionary * params = [NSMutableDictionary dictionary];
     
     //2.发送请求
     NSString * urlStr = [NSString stringWithFormat:@"%@get_ads_info", BKUrlStr];
-    [BKHttpTool post:urlStr params:params success:^(id responseObj) {
+    
+    [BKHttpTool post:urlStr params:params success:^(NSDictionary * adsResponse) {
         
-        BKLog(@"1111----%@", responseObj);
+        // 字典转模型
+        BKAdsResponse * response = [BKAdsResponse adsResponseWithDict:adsResponse];
+        
+        // 赋值填充UI
+        self.adsView.ads = response.data;
+        
+    } failure:^(NSError * error)
+    {
+        BKLog(@"请求失败-------%@", error);
+        
+    }];
+    
+}
+
+- (void)getCategoryInfo
+{
+    //1.封装请求参数
+    NSMutableDictionary * params = [NSMutableDictionary dictionary];
+    
+    //2.发送请求
+    NSString * urlStr = [NSString stringWithFormat:@"%@get_course_category", BKUrlStr];
+    
+    [BKHttpTool post:urlStr params:params success:^(NSDictionary * categoryResponse) {
+        
+        //BKLog(@"%@", categoryResponse);
+        
+        BKCategoryResponse * response = [BKCategoryResponse categoryResponseWithDict:categoryResponse];
+        
+        self.categoriesView.categories = response.data;
+        
         
     } failure:^(NSError * error) {
         
         BKLog(@"请求失败-------%@", error);
         
     }];
-    
-//    //2.发送请求
-//    [BKHttpTool post:@"http://192.168.10.8:8089/get_course_category" params:params success:^(id responseObj) {
-//        
-//        BKLog(@"2222-----%@", responseObj);
-//        
-//    } failure:^(NSError * error) {
-//        
-//        BKLog(@"请求失败-------%@", error);
-//        
-//    }];
-//    
-//    //2.发送请求
-//    params[@"category_id"] = @"3";
-//    [BKHttpTool post:@"http://192.168.10.8:8089/get_course_info" params:params success:^(id responseObj) {
-//        
-//        BKLog(@"3333----%@", responseObj);
-//        
-//    } failure:^(NSError * error) {
-//        
-//        BKLog(@"请求失败-------%@", error);
-//        
-//    }];
+
 }
 
 

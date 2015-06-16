@@ -41,6 +41,9 @@
 //屏幕的高
 #define BKScreenHeight  [UIScreen mainScreen].bounds.size.height
 
+//margin
+#define BKMargin 10
+
 
 //4.网络设置
 #define BKTestUrlStr @"http://192.168.10.8:8089/"

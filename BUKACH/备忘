@@ -1,0 +1,37 @@
+网络请求：
+
+1. 首页
+
+1.1. 首页广告
+post
+无参数
+http://120.25.150.214/get_ads_info
+
+1.2. 首页课程种类
+post
+无参数
+http://120.25.150.214/get_course_category
+
+1.2.1. 进入课程
+post
+参数是category_id
+http://120.25.150.214/get_course_info
+
+
+
+
+
+
+
+
+4. 我
+
+4.1. 注册用户
+post
+参数是：username、password、email
+http://120.25.150.214/add-user
+
+4.2. 登录
+post
+参数是：username、password
+http://120.25.150.214/auth
