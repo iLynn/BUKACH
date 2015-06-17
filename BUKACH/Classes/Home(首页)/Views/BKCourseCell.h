@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-@class BKCourseModel;
+@class BKCourseModel, BKCourseFrame;
 
 @interface BKCourseCell : UITableViewCell
 
 @property (nonatomic, strong) BKCourseModel * course;
+
+@property (nonatomic, strong) BKCourseFrame * cellFrame;
 
 /** 快速创建一个cell */
 + (id)cellWithTableView:(UITableView *)tableView;

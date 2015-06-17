@@ -68,7 +68,7 @@
     
     
     //3.获得广告信息
-    //[self getAdsInfo];
+    [self getAdsInfo];
     
     //4.获得分类信息
     [self getCategoryInfo];

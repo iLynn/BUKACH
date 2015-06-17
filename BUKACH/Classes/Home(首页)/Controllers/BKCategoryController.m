@@ -10,12 +10,16 @@
 #import "BKCategoryModel.h"
 #import "BKHttpTool.h"
 #import "BKCourseResponse.h"
-#import "BKCourseModel.h"
-#import "UIImageView+WebCache.h"
+
+#import "BKCourseCell.h"
+#import "BKCourseFrame.h"
+#import "BKCourseController.h"
+
 
 @interface BKCategoryController ()
 
-@property (nonatomic, strong) NSArray * courses;
+/** 让courses里面存frame模型，而不是普通数据模型 */
+@property (nonatomic, strong) NSArray * courseFrames;
 
 @end
 
@@ -50,11 +54,10 @@
     
     [BKHttpTool post:urlStr params:params success:^(NSDictionary * courseResponse) {
         
-        BKLog(@"%@", courseResponse);
-        
         BKCourseResponse * response = [BKCourseResponse courseResponseWithDict:courseResponse];
         
-        self.courses = response.data;
+        // 获取courseFrame的数组
+        self.courseFrames = [self courseFramesWithCourses:response.data];
         
         [self.tableView reloadData];
         
@@ -65,38 +68,37 @@
     }];
 }
 
+/**
+ *  将 course模型数组 转成 courseFrame模型数据
+ */
+- (NSArray *)courseFramesWithCourses:(NSArray *)courses
+{
+    NSMutableArray * frames = [NSMutableArray array];
+    for (BKCourseModel * course in courses)
+    {
+        BKCourseFrame * frame = [[BKCourseFrame alloc] init];
+        
+        // 传递course模型数据，计算所有子控件的frame
+        frame.course = course;
+        
+        [frames addObject:frame];
+    }
+    return frames;
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.courses.count;
+    return self.courseFrames.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell * cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"course"];
+    BKCourseCell * cell = [BKCourseCell cellWithTableView:tableView];
     
-    BKCourseModel * model = self.courses[indexPath.row];
-    
-    BKLog(@"model:%@", model);
-    
-    cell.textLabel.text = model.course_name;
-    
-    cell.detailTextLabel.text = model.course_intro;
-    cell.detailTextLabel.numberOfLines = 0;
-    
-    NSMutableDictionary * dict = [NSMutableDictionary dictionary];
-    dict[NSFontAttributeName] = [UIFont systemFontOfSize:15];
-    CGSize size = [model.course_intro sizeWithAttributes:dict];
-    
-    cell.detailTextLabel.height = size.height;
-//    
-//    BKLog(@"%@", NSStringFromCGSize(size));
-//    
-//    NSString * urlStr = [NSString stringWithFormat:@"%@%@", BKUrlStr, model.course_photo];
-//    BKLog(@"%@", urlStr);
-//    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:urlStr]];
+    cell.cellFrame = self.courseFrames[indexPath.row];
   
     return cell;
     
@@ -104,18 +106,10 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    BKCourseModel * model = self.courses[indexPath.row];
-    CGSize maxSize = CGSizeMake(BKScreenWidth, MAXFLOAT);
-    CGRect maxRect = CGRectMake(0, 0, BKScreenWidth, MAXFLOAT);
+    BKCourseFrame * frame = self.courseFrames[indexPath.row];
     
-    NSMutableDictionary * dict = [NSMutableDictionary dictionary];
-    dict[NSFontAttributeName] = [UIFont systemFontOfSize:11];
-    NSStringDrawingContext * context = [[NSStringDrawingContext alloc] init];
-    CGRect rect = [model.course_intro boundingRectWithSize:maxSize options:NSStringDrawingUsesFontLeading attributes:dict context:context]; //sizeWithFont:[UIFont systemFontOfSize:11] constrainedToSize:maxSize];
-    
-    BKLog(@"%@", NSStringFromCGRect(rect));
-    
-    return rect.size.height + 50;
+    return frame.cellHeight;
+
 }
 
 #pragma mark - table view delegate
@@ -125,30 +119,15 @@
     // 立即取消选中
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-//    // 先取出对应组的组模型
-//    BKProfileGroup * group = self.datas[indexPath.section];
-//    
-//    // 从组模型中取出对应行的模型
-//    BKProfileItem * item = group.items[indexPath.row];
-//    
-//    // 如果block中保存了代码，就执行block中保存的代码
-//    if (item.option != nil)
-//    {
-//        item.option();
-//    }
-//    else if ([item isKindOfClass:[BKProfileArrowItem class]])
-//    {
-//        // 创建目标控制并且添加到栈中
-//        BKProfileArrowItem * arrowItem = (BKProfileArrowItem *)item;
-//        
-//        UIViewController * vc = [[arrowItem.destVC alloc] init];
-//        
-//        // 设置导航标题
-//        vc.navigationItem.title = item.tilte;
-//        
-//        [self.navigationController pushViewController:vc animated:YES];
-//        
-//    }
+    BKCourseFrame * frame = self.courseFrames[indexPath.row];
+
+    // 跳转到新的控制器
+    BKCourseController * vc = [[BKCourseController alloc] init];
+    
+    vc.course = frame.course;
+    
+    [self.navigationController pushViewController:vc animated:YES];
+    
     
 }
 

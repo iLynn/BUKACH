@@ -9,6 +9,8 @@
 #import "BKCourseCell.h"
 #import "BKCourseModel.h"
 #import "UIImageView+WebCache.h"
+#import "BKCourseFrame.h"
+
 
 @interface BKCourseCell()
 
@@ -45,11 +47,13 @@
         
         //2.名称
         UILabel * nameLab = [[UILabel alloc] init];
+        nameLab.font = [UIFont systemFontOfSize:15];
         [self.contentView addSubview:nameLab];
         self.nameLab = nameLab;
         
         //3.介绍
         UILabel * introLab = [[UILabel alloc] init];
+        introLab.font = [UIFont systemFontOfSize:12];
         introLab.numberOfLines = 0;
         [self.contentView addSubview:introLab];
         self.introLab = introLab;
@@ -68,53 +72,27 @@
     self.introLab.text = course.course_intro;
     
     NSString * urlStr = [NSString stringWithFormat:@"%@%@", BKUrlStr, course.course_photo];
-    BKLog(@"%@", urlStr);
+    //BKLog(@"%@", urlStr);
     [self.iconView sd_setImageWithURL:[NSURL URLWithString:urlStr]];
     
-    NSMutableDictionary * dict = [NSMutableDictionary dictionary];
-    dict[NSFontAttributeName] = [UIFont systemFontOfSize:15];
-    CGSize size = [self.introLab.text sizeWithAttributes:dict];
-    
-    BKLog(@"%@", NSStringFromCGSize(size));
-    
-    // 计算frame
-    [self setupFrame];
-    
-//    // 2.计算introLab部分的frame
-//    [self setupIntroFrame];
-    
-    // 3.计算cell的高度
-    //self.cellHeight = CGRectGetMaxY(self.toolbarFrame);
     
 }
 
-- (void)setupFrame
+- (void)setCellFrame:(BKCourseFrame *)cellFrame
 {
-    //介绍
-    CGFloat introX = BKMargin;
-    CGFloat introY = BKMargin;
-    CGFloat introW = 120;
-    CGFloat introH = 80;
-    self.introLab.frame = CGRectMake(introX, introY, introW, introH);
+    _cellFrame = cellFrame;
     
-    //图片
-    CGFloat iconX = BKMargin;
-    CGFloat iconY = BKMargin;
-    CGFloat iconW = 120;
-    CGFloat iconH = 80;
-    self.iconView.frame = CGRectMake(iconX, iconY, iconW, iconH);
+    // 1.icon的frame数据
+    self.iconView.frame = cellFrame.iconFrame;
     
-    //名称
-    CGFloat nameX = 0;
-    CGFloat nameY = BKMargin;
-    CGFloat nameW = 0;
-    CGFloat nameH = 0;
-    self.nameLab.frame = CGRectMake(nameX, nameY, nameW, nameH);
+    // 2.name的frame数据
+    self.nameLab.frame = cellFrame.nameFrame;
     
-}
-
-- (void)setupIntroFrame
-{
+    // 3.intro的frame数据
+    self.introLab.frame = cellFrame.introFrame;
+    
+    // 填充自己
+    self.course = cellFrame.course;
     
 }
 

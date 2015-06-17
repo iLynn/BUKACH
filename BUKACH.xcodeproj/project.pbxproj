@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA8686981B310493004F22C7 /* BKCourseFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = BA8686971B310493004F22C7 /* BKCourseFrame.m */; };
+		BA86869B1B310B14004F22C7 /* BKCourseController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA86869A1B310B14004F22C7 /* BKCourseController.m */; };
 		BA9BF2E81B2C14D30073F660 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9BF2E71B2C14D30073F660 /* main.m */; };
 		BA9BF2F31B2C14D40073F660 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA9BF2F21B2C14D40073F660 /* Images.xcassets */; };
 		BA9BF3021B2C14D40073F660 /* BUKACHTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9BF3011B2C14D40073F660 /* BUKACHTests.m */; };
@@ -97,6 +99,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA8686961B310493004F22C7 /* BKCourseFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKCourseFrame.h; sourceTree = "<group>"; };
+		BA8686971B310493004F22C7 /* BKCourseFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKCourseFrame.m; sourceTree = "<group>"; };
+		BA8686991B310B14004F22C7 /* BKCourseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKCourseController.h; sourceTree = "<group>"; };
+		BA86869A1B310B14004F22C7 /* BKCourseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKCourseController.m; sourceTree = "<group>"; };
 		BA9BF2E21B2C14D30073F660 /* BUKACH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BUKACH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA9BF2E61B2C14D30073F660 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA9BF2E71B2C14D30073F660 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -393,6 +399,8 @@
 				BAAB0F551B301A84001DA224 /* BKCategoryController.m */,
 				BAAB0F5A1B30233F001DA224 /* BKAdsController.h */,
 				BAAB0F5B1B30233F001DA224 /* BKAdsController.m */,
+				BA8686991B310B14004F22C7 /* BKCourseController.h */,
+				BA86869A1B310B14004F22C7 /* BKCourseController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -412,6 +420,8 @@
 				BAAB0F5E1B305A5D001DA224 /* BKCourseResponse.m */,
 				BAAB0F601B305A6B001DA224 /* BKCourseModel.h */,
 				BAAB0F611B305A6B001DA224 /* BKCourseModel.m */,
+				BA8686961B310493004F22C7 /* BKCourseFrame.h */,
+				BA8686971B310493004F22C7 /* BKCourseFrame.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -830,6 +840,7 @@
 				BAAB0F591B301D16001DA224 /* BKAdView.m in Sources */,
 				BAFC54271B2EEC1400184B6B /* BKProfileJoinController.m in Sources */,
 				BAD2E88D1B2D92CC00AA6C45 /* AFHTTPSessionManager.m in Sources */,
+				BA8686981B310493004F22C7 /* BKCourseFrame.m in Sources */,
 				BAD2E8961B2D92CC00AA6C45 /* MBProgressHUD.m in Sources */,
 				BAD2E8911B2D92CC00AA6C45 /* AFURLRequestSerialization.m in Sources */,
 				BA9BF3371B2C1A450073F660 /* BKProfileController.m in Sources */,
@@ -877,6 +888,7 @@
 				BAD2E8AD1B2D92CD00AA6C45 /* UIImageView+HighlightedWebCache.m in Sources */,
 				BAD2E83A1B2D926900AA6C45 /* BKHttpTool.m in Sources */,
 				BAFC54181B2ED49D00184B6B /* BKProfileGroup.m in Sources */,
+				BA86869B1B310B14004F22C7 /* BKCourseController.m in Sources */,
 				BA9BF3341B2C1A320073F660 /* BKHotController.m in Sources */,
 				BAAB0F621B305A6B001DA224 /* BKCourseModel.m in Sources */,
 			);
