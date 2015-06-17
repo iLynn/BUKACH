@@ -15,23 +15,6 @@
     return [[self alloc] init];
 }
 
-//-(id)initWithFrame:(CGRect)frame
-//{
-//    if (self = [super initWithFrame:frame])
-//    {
-//        //内部图标居中
-//        self.imageView.contentMode = UIViewContentModeCenter;
-//        self.adjustsImageWhenHighlighted = NO;
-//        
-//        //内部文字靠左对齐
-//        self.titleLabel.textAlignment = NSTextAlignmentCenter;
-//        self.titleLabel.font = BKNavigatorFont;
-//        [self setTitleColor:BKNavigatorColor forState:UIControlStateNormal];
-//        
-//    }
-//    return self;
-//}
-
 /**
  *  重写方法，设置图片的位置：左边
  *

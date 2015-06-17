@@ -9,7 +9,7 @@
 #import "BKCourseFrame.h"
 #import "BKCourseModel.h"
 
-#define BKNameWidth ceilf(((BKScreenWidth - 3 * BKMargin) * 2) / 3)
+#define BKBaseWidth ceilf((BKScreenWidth - 2 * BKMargin - BKCellMargin) / 3)
 
 @interface BKCourseFrame()
 
@@ -39,11 +39,10 @@
     NSMutableDictionary * dictName = [NSMutableDictionary dictionary];
     dictName[NSFontAttributeName] = [UIFont systemFontOfSize:15];
     //宽度占屏幕宽度的2/3
-    CGSize maxSize = CGSizeMake(BKNameWidth, MAXFLOAT);
+    CGSize maxSize = CGSizeMake(2 * BKBaseWidth, MAXFLOAT);
     CGRect rectName = [self.course.course_name boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:dictName context:nil];
     
     self.nameHeight = ceilf(rectName.size.height);
-    BKLog(@"%f", _nameHeight);
     
     
     //intro部分
@@ -53,34 +52,40 @@
     CGRect rect = [self.course.course_intro boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:dict context:nil];
     
     self.introHeight = ceilf(rect.size.height);
-    BKLog(@"%f", _introHeight);
     
     
-    self.cellHeight = 3 * BKMargin + _nameHeight + _introHeight;
+    CGFloat height = 3 * BKMargin + _nameHeight + _introHeight;
+    CGFloat baseHeight = BKBaseWidth / 1.5 + 2 * BKMargin;
+    
+    //比图片的高度要小时
+    self.cellHeight = (height < baseHeight) ? baseHeight : height;
     
 }
 
 - (void)setupFrame
 {
+    //nameLab的起点，要保证居中
+    CGFloat baseLine = (_cellHeight - _nameHeight - _introHeight - BKMargin) / 2;
+    
     //图片
     CGFloat iconX = BKMargin;
-    CGFloat iconW = BKNameWidth / 2;
+    CGFloat iconW = BKBaseWidth;
     //设置成长宽3：2
-    CGFloat iconH = BKNameWidth / 3;
+    CGFloat iconH = BKBaseWidth / 1.5;
     CGFloat iconY = (_cellHeight - iconH ) / 2;
     self.iconFrame = CGRectMake(iconX, iconY, iconW, iconH);
     
     //名称
-    CGFloat nameY = BKMargin;
-    CGFloat nameX = CGRectGetMaxX(self.iconFrame) + BKMargin;
-    CGFloat nameW = BKNameWidth;
+    CGFloat nameX = CGRectGetMaxX(self.iconFrame) + BKCellMargin;
+    CGFloat nameY = baseLine;
+    CGFloat nameW = BKBaseWidth * 2;
     CGFloat nameH = _nameHeight;
     self.nameFrame = CGRectMake(nameX, nameY, nameW, nameH);
     
     //介绍
     CGFloat introX = nameX;
     CGFloat introY = CGRectGetMaxY(self.nameFrame) + BKMargin;
-    CGFloat introW = BKNameWidth;
+    CGFloat introW = BKBaseWidth * 2;
     CGFloat introH = _introHeight;
     self.introFrame = CGRectMake(introX, introY, introW, introH);
     

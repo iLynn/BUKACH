@@ -52,7 +52,7 @@
         }
         
         //切割圆角
-        cateView.layer.cornerRadius = 5;
+        cateView.layer.cornerRadius = BKCornerRadius;
         cateView.layer.masksToBounds = YES;
         
         //赋值填充UI

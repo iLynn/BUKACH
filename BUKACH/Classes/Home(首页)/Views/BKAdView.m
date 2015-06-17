@@ -17,14 +17,9 @@
 {
     if (self = [super initWithFrame:frame])
     {
-        //内部图标居中
-        self.imageView.contentMode = UIViewContentModeCenter;
-        self.adjustsImageWhenHighlighted = NO;
-        
-        //内部文字靠左对齐
-        self.titleLabel.textAlignment = NSTextAlignmentCenter;
-        self.titleLabel.font = [UIFont systemFontOfSize:15];
-        [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        //设置圆角
+        self.layer.cornerRadius = BKCornerRadius;
+        self.layer.masksToBounds = YES;
         
     }
     return self;

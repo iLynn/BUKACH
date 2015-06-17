@@ -42,6 +42,8 @@
     {
         //1.图片
         UIImageView * iconView = [[UIImageView alloc] init];
+        iconView.layer.cornerRadius = BKCornerRadius;
+        iconView.layer.masksToBounds = YES;
         [self.contentView addSubview:iconView];
         self.iconView = iconView;
         
@@ -72,7 +74,7 @@
     self.introLab.text = course.course_intro;
     
     NSString * urlStr = [NSString stringWithFormat:@"%@%@", BKUrlStr, course.course_photo];
-    //BKLog(@"%@", urlStr);
+
     [self.iconView sd_setImageWithURL:[NSURL URLWithString:urlStr]];
     
     

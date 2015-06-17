@@ -41,8 +41,13 @@
 //屏幕的高
 #define BKScreenHeight  [UIScreen mainScreen].bounds.size.height
 
-//margin
+//常用的margin
 #define BKMargin 5
+//cell里的margin
+#define BKCellMargin 10
+
+//图片的圆角
+#define BKCornerRadius 5
 
 
 //4.网络设置
