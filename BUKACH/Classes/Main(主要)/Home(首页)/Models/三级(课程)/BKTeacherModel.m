@@ -26,7 +26,7 @@
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"%@----teacher_id:%@, teacher_name:%@, teacher_level:%@, teahcer_photo_url:%@", [self class], _teacher_id, _teacher_name, _teacher_level, _teacher_photo_url];
+    return [NSString stringWithFormat:@"%@----teacher_id:%@, teacher_name:%@, teacher_level:%@, teahcer_photo_url:%@", [self class], _teacher_id, _teacher_name, _teacher_level, _teacher_photo];
 }
 
 @end

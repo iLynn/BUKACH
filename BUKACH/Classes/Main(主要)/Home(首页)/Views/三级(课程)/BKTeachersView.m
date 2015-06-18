@@ -10,8 +10,6 @@
 #import "BKTeacherModel.h"
 #import "BKTeacherView.h"
 
-#define BKCurrentWidth self.bounds.size.width
-#define BKCurrentHeight self.bounds.size.height
 
 @implementation BKTeachersView
 

@@ -12,12 +12,20 @@ post
 无参数
 http://120.25.150.214/get_course_category
 
-1.2.1. 进入课程
+1.2.1. 进入课程清单
 post
 参数是category_id
 http://120.25.150.214/get_course_info
 
+1.2.1.1. 进入课程详细
+post
+参数是course_id
+http://120.25.150.214/get_course_detail
 
+1.2.1.1.1. 进入教师详细
+post
+参数是teacher_id
+http://120.25.150.214/get_teacher_info
 
 
 

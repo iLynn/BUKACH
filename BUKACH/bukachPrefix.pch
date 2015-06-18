@@ -41,6 +41,12 @@
 //屏幕的高
 #define BKScreenHeight  [UIScreen mainScreen].bounds.size.height
 
+//当前页面的宽
+#define BKCurrentWidth self.bounds.size.width
+//当前页面的高
+#define BKCurrentHeight self.bounds.size.height
+
+
 //常用的margin
 #define BKMargin 5
 //cell里的margin

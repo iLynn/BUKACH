@@ -89,6 +89,10 @@
 		BADAB5511B32BE6E007ED14E /* BKTeacherView.m in Sources */ = {isa = PBXBuildFile; fileRef = BADAB5501B32BE6E007ED14E /* BKTeacherView.m */; };
 		BADAB5541B32C00A007ED14E /* BKTeacherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BADAB5531B32C00A007ED14E /* BKTeacherModel.m */; };
 		BADAB5571B32C78D007ED14E /* BKTeachersView.m in Sources */ = {isa = PBXBuildFile; fileRef = BADAB5561B32C78D007ED14E /* BKTeachersView.m */; };
+		BADAB55A1B32DF3E007ED14E /* BKTeacherController.m in Sources */ = {isa = PBXBuildFile; fileRef = BADAB5591B32DF3E007ED14E /* BKTeacherController.m */; };
+		BADAB55D1B3314BE007ED14E /* BKOneCourseResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = BADAB55C1B3314BE007ED14E /* BKOneCourseResponse.m */; };
+		BADAB5601B3314DC007ED14E /* BKOneCourseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BADAB55F1B3314DC007ED14E /* BKOneCourseModel.m */; };
+		BADAB5631B331ADF007ED14E /* BKOneTeacherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BADAB5621B331ADF007ED14E /* BKOneTeacherModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -267,6 +271,14 @@
 		BADAB5531B32C00A007ED14E /* BKTeacherModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKTeacherModel.m; sourceTree = "<group>"; };
 		BADAB5551B32C78D007ED14E /* BKTeachersView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKTeachersView.h; sourceTree = "<group>"; };
 		BADAB5561B32C78D007ED14E /* BKTeachersView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKTeachersView.m; sourceTree = "<group>"; };
+		BADAB5581B32DF3E007ED14E /* BKTeacherController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKTeacherController.h; sourceTree = "<group>"; };
+		BADAB5591B32DF3E007ED14E /* BKTeacherController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKTeacherController.m; sourceTree = "<group>"; };
+		BADAB55B1B3314BE007ED14E /* BKOneCourseResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKOneCourseResponse.h; sourceTree = "<group>"; };
+		BADAB55C1B3314BE007ED14E /* BKOneCourseResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKOneCourseResponse.m; sourceTree = "<group>"; };
+		BADAB55E1B3314DC007ED14E /* BKOneCourseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKOneCourseModel.h; sourceTree = "<group>"; };
+		BADAB55F1B3314DC007ED14E /* BKOneCourseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKOneCourseModel.m; sourceTree = "<group>"; };
+		BADAB5611B331ADF007ED14E /* BKOneTeacherModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKOneTeacherModel.h; sourceTree = "<group>"; };
+		BADAB5621B331ADF007ED14E /* BKOneTeacherModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKOneTeacherModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -662,6 +674,8 @@
 		BADAB4EA1B32B623007ED14E /* 四级(教师) */ = {
 			isa = PBXGroup;
 			children = (
+				BADAB5581B32DF3E007ED14E /* BKTeacherController.h */,
+				BADAB5591B32DF3E007ED14E /* BKTeacherController.m */,
 			);
 			path = "四级(教师)";
 			sourceTree = "<group>";
@@ -680,14 +694,14 @@
 		BADAB4EC1B32B623007ED14E /* 一级(首页) */ = {
 			isa = PBXGroup;
 			children = (
-				BADAB4ED1B32B623007ED14E /* BKAdsModel.h */,
-				BADAB4EE1B32B623007ED14E /* BKAdsModel.m */,
 				BADAB4EF1B32B623007ED14E /* BKAdsResponse.h */,
 				BADAB4F01B32B623007ED14E /* BKAdsResponse.m */,
-				BADAB4F11B32B623007ED14E /* BKCategoryModel.h */,
-				BADAB4F21B32B623007ED14E /* BKCategoryModel.m */,
+				BADAB4ED1B32B623007ED14E /* BKAdsModel.h */,
+				BADAB4EE1B32B623007ED14E /* BKAdsModel.m */,
 				BADAB4F31B32B623007ED14E /* BKCategoryResponse.h */,
 				BADAB4F41B32B623007ED14E /* BKCategoryResponse.m */,
+				BADAB4F11B32B623007ED14E /* BKCategoryModel.h */,
+				BADAB4F21B32B623007ED14E /* BKCategoryModel.m */,
 			);
 			path = "一级(首页)";
 			sourceTree = "<group>";
@@ -695,6 +709,10 @@
 		BADAB4F51B32B623007ED14E /* 三级(课程) */ = {
 			isa = PBXGroup;
 			children = (
+				BADAB55B1B3314BE007ED14E /* BKOneCourseResponse.h */,
+				BADAB55C1B3314BE007ED14E /* BKOneCourseResponse.m */,
+				BADAB55E1B3314DC007ED14E /* BKOneCourseModel.h */,
+				BADAB55F1B3314DC007ED14E /* BKOneCourseModel.m */,
 				BADAB5521B32C00A007ED14E /* BKTeacherModel.h */,
 				BADAB5531B32C00A007ED14E /* BKTeacherModel.m */,
 			);
@@ -704,10 +722,10 @@
 		BADAB4F61B32B623007ED14E /* 二级(广告-分类) */ = {
 			isa = PBXGroup;
 			children = (
-				BADAB4F71B32B623007ED14E /* BKCourseModel.h */,
-				BADAB4F81B32B623007ED14E /* BKCourseModel.m */,
 				BADAB4F91B32B623007ED14E /* BKCourseResponse.h */,
 				BADAB4FA1B32B623007ED14E /* BKCourseResponse.m */,
+				BADAB4F71B32B623007ED14E /* BKCourseModel.h */,
+				BADAB4F81B32B623007ED14E /* BKCourseModel.m */,
 				BADAB4FB1B32B623007ED14E /* Frame */,
 			);
 			path = "二级(广告-分类)";
@@ -725,6 +743,8 @@
 		BADAB4FE1B32B623007ED14E /* 四级(教师) */ = {
 			isa = PBXGroup;
 			children = (
+				BADAB5611B331ADF007ED14E /* BKOneTeacherModel.h */,
+				BADAB5621B331ADF007ED14E /* BKOneTeacherModel.m */,
 			);
 			path = "四级(教师)";
 			sourceTree = "<group>";
@@ -1082,6 +1102,7 @@
 				BAD2E8D51B2DBC7400AA6C45 /* UIView+ViewFrameExt.m in Sources */,
 				BAD2E8D31B2DBC7400AA6C45 /* UIBarButtonItem+ButtonImageExt.m in Sources */,
 				BAD2E8AB1B2D92CD00AA6C45 /* UIImage+MultiFormat.m in Sources */,
+				BADAB5631B331ADF007ED14E /* BKOneTeacherModel.m in Sources */,
 				BAD2E88C1B2D92CC00AA6C45 /* AFHTTPRequestOperationManager.m in Sources */,
 				BA9BF3311B2C1A010073F660 /* BKGraceController.m in Sources */,
 				BADAB5181B32B623007ED14E /* BKCategoryModel.m in Sources */,
@@ -1102,6 +1123,7 @@
 				BAD2E8A01B2D92CC00AA6C45 /* MKAnnotationView+WebCache.m in Sources */,
 				BA9BF2E81B2C14D30073F660 /* main.m in Sources */,
 				BAD2E8C21B2DAC9A00AA6C45 /* MJConst.m in Sources */,
+				BADAB55A1B32DF3E007ED14E /* BKTeacherController.m in Sources */,
 				BAD2E8A11B2D92CC00AA6C45 /* NSData+ImageContentType.m in Sources */,
 				BAD2E8C51B2DAC9A00AA6C45 /* MJType.m in Sources */,
 				BAD2E8D21B2DBC7400AA6C45 /* Foundation+Log.m in Sources */,
@@ -1109,6 +1131,8 @@
 				BAD2E83A1B2D926900AA6C45 /* BKHttpTool.m in Sources */,
 				BADAB51F1B32B623007ED14E /* BKCategoriesView.m in Sources */,
 				BADAB5481B32B73D007ED14E /* BKProfileJoinController.m in Sources */,
+				BADAB55D1B3314BE007ED14E /* BKOneCourseResponse.m in Sources */,
+				BADAB5601B3314DC007ED14E /* BKOneCourseModel.m in Sources */,
 				BA9BF3341B2C1A320073F660 /* BKHotController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

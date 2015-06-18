@@ -20,7 +20,7 @@
 @property (nonatomic, strong) NSString * teacher_level;
 
 /** 教师照片，是url地址的一部分 */
-@property (nonatomic, strong) NSString * teacher_photo_url;
+@property (nonatomic, strong) NSString * teacher_photo;
 
 
 + (id)teacherWithDict:(NSDictionary *)dict;

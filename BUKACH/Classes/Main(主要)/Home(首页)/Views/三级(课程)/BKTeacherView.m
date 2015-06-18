@@ -11,9 +11,6 @@
 #import "UIImageView+WebCache.h"
 
 
-#define BKCurrentWidth self.bounds.size.width
-#define BKCurrentHeight self.bounds.size.height
-
 @interface BKTeacherView()
 
 @property (nonatomic, weak) UIImageView * iconView;
@@ -96,7 +93,7 @@
     _teacher = teacher;
     
     //1.照片
-    NSString * urlStr = [NSString stringWithFormat:@"%@%@", BKUrlStr, teacher.teacher_photo_url];
+    NSString * urlStr = [NSString stringWithFormat:@"%@%@", BKUrlStr, teacher.teacher_photo];
     [self.iconView sd_setImageWithURL:[NSURL URLWithString:urlStr]];
     
     //2.名字
