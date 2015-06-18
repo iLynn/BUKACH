@@ -86,6 +86,9 @@
 		BADAB54C1B32B73D007ED14E /* BKProfileItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BADAB5391B32B73D007ED14E /* BKProfileItem.m */; };
 		BADAB54D1B32B73D007ED14E /* BKProfileTextItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BADAB53B1B32B73D007ED14E /* BKProfileTextItem.m */; };
 		BADAB54E1B32B73D007ED14E /* BKProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BADAB5421B32B73D007ED14E /* BKProfileCell.m */; };
+		BADAB5511B32BE6E007ED14E /* BKTeacherView.m in Sources */ = {isa = PBXBuildFile; fileRef = BADAB5501B32BE6E007ED14E /* BKTeacherView.m */; };
+		BADAB5541B32C00A007ED14E /* BKTeacherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BADAB5531B32C00A007ED14E /* BKTeacherModel.m */; };
+		BADAB5571B32C78D007ED14E /* BKTeachersView.m in Sources */ = {isa = PBXBuildFile; fileRef = BADAB5561B32C78D007ED14E /* BKTeachersView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -258,6 +261,12 @@
 		BADAB53B1B32B73D007ED14E /* BKProfileTextItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKProfileTextItem.m; sourceTree = "<group>"; };
 		BADAB5411B32B73D007ED14E /* BKProfileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKProfileCell.h; sourceTree = "<group>"; };
 		BADAB5421B32B73D007ED14E /* BKProfileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKProfileCell.m; sourceTree = "<group>"; };
+		BADAB54F1B32BE6E007ED14E /* BKTeacherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKTeacherView.h; sourceTree = "<group>"; };
+		BADAB5501B32BE6E007ED14E /* BKTeacherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKTeacherView.m; sourceTree = "<group>"; };
+		BADAB5521B32C00A007ED14E /* BKTeacherModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKTeacherModel.h; sourceTree = "<group>"; };
+		BADAB5531B32C00A007ED14E /* BKTeacherModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKTeacherModel.m; sourceTree = "<group>"; };
+		BADAB5551B32C78D007ED14E /* BKTeachersView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKTeachersView.h; sourceTree = "<group>"; };
+		BADAB5561B32C78D007ED14E /* BKTeachersView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKTeachersView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -686,6 +695,8 @@
 		BADAB4F51B32B623007ED14E /* 三级(课程) */ = {
 			isa = PBXGroup;
 			children = (
+				BADAB5521B32C00A007ED14E /* BKTeacherModel.h */,
+				BADAB5531B32C00A007ED14E /* BKTeacherModel.m */,
 			);
 			path = "三级(课程)";
 			sourceTree = "<group>";
@@ -751,6 +762,10 @@
 		BADAB50D1B32B623007ED14E /* 三级(课程) */ = {
 			isa = PBXGroup;
 			children = (
+				BADAB5551B32C78D007ED14E /* BKTeachersView.h */,
+				BADAB5561B32C78D007ED14E /* BKTeachersView.m */,
+				BADAB54F1B32BE6E007ED14E /* BKTeacherView.h */,
+				BADAB5501B32BE6E007ED14E /* BKTeacherView.m */,
 			);
 			path = "三级(课程)";
 			sourceTree = "<group>";
@@ -1047,6 +1062,9 @@
 				BAD2E8911B2D92CC00AA6C45 /* AFURLRequestSerialization.m in Sources */,
 				BAD2E8931B2D92CC00AA6C45 /* AFURLSessionManager.m in Sources */,
 				BAD2E8AA1B2D92CD00AA6C45 /* UIImage+GIF.m in Sources */,
+				BADAB5541B32C00A007ED14E /* BKTeacherModel.m in Sources */,
+				BADAB5511B32BE6E007ED14E /* BKTeacherView.m in Sources */,
+				BADAB5571B32C78D007ED14E /* BKTeachersView.m in Sources */,
 				BA9BF3281B2C182B0073F660 /* BKTabBarController.m in Sources */,
 				BADAB5211B32B623007ED14E /* BKLeftRightView.m in Sources */,
 				BAD2E8AE1B2D92CD00AA6C45 /* UIImageView+WebCache.m in Sources */,
