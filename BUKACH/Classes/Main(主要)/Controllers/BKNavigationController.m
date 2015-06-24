@@ -92,13 +92,14 @@
     if (self.viewControllers.count > 0)
     {
         viewController.hidesBottomBarWhenPushed = YES;
+        
+        //全部是白色，根控制器在自己写，不然app一运行就全部加载了
+        viewController.view.backgroundColor = [UIColor whiteColor];
     }
     
     //每一个vc的右边都是快捷联系
     viewController.navigationItem.rightBarButtonItem = [UIBarButtonItem buttonItemWithImageName:@"phone" andSelectedImageName:@"phone_hl" andTarget:self andAction:@selector(contactBUKACH)];
     
-    //全部是白色
-    viewController.view.backgroundColor = [UIColor whiteColor];
     
     [super pushViewController:viewController animated:animated];
 }

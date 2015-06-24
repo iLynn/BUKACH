@@ -7,8 +7,9 @@
 //
 
 #import "BKTeacherController.h"
-#import "BKTeacherModel.h"
 #import "BKHttpTool.h"
+#import "BKOneTeacherResponse.h"
+#import "BKOneTeacherModel.h"
 
 @interface BKTeacherController ()
 
@@ -19,12 +20,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-   
-
     
 }
 
-- (void)setTeacher:(BKTeacherModel *)teacher
+- (void)setTeacher:(BKOneTeacherModel *)teacher
 {
     _teacher = teacher;
     
@@ -48,13 +47,9 @@
     
     [BKHttpTool post:urlStr params:params success:^(NSDictionary * teacherResponse) {
         
-        BKLog(@"%@", teacherResponse);
+        BKOneTeacherResponse * response = [BKOneTeacherResponse oneTeacherResponseWithDict:teacherResponse];
         
-//        BKOneCourseResponse * response = [BKOneCourseResponse oneCourseResponseWithDict:courseResponse];
-//        
-//        self.courseArray = response.data;
-//        
-//        BKLog(@"%@", self.courseArray);
+        BKLog(@"%@", response);
         
     } failure:^(NSError * error) {
         

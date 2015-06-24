@@ -7,7 +7,8 @@
 //
 
 #import "BKTeachersView.h"
-#import "BKTeacherModel.h"
+//#import "BKTeacherModel.h"
+//#import "BKOneTeacherModel.h"
 #import "BKTeacherView.h"
 
 
@@ -47,7 +48,10 @@
         
         BKTeacherView * view = [[BKTeacherView alloc] initWithFrame:CGRectMake(viewX, baseY, baseW, baseH)];
         
-        view.backgroundColor = [UIColor redColor];
+        //view.backgroundColor = [UIColor redColor];
+        
+        //填充
+        view.teacher = self.teachers[i];
         
         [view addTarget:self action:@selector(teacherBtnTouch:) forControlEvents:UIControlEventTouchUpInside];
         
@@ -60,8 +64,6 @@
 
 - (void)teacherBtnTouch:(BKTeacherView *)view
 {
-    BKLog(@"touch");
-    
     //通知代理响应操作
     if ([self.BKDelegate respondsToSelector:@selector(jumpToTeacherWithModel:)])
     {

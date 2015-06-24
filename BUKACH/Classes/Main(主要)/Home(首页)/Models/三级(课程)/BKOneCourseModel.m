@@ -7,7 +7,7 @@
 //
 
 #import "BKOneCourseModel.h"
-#import "BKTeacherModel.h"
+#import "BKOneTeacherModel.h"
 
 @implementation BKOneCourseModel
 
@@ -26,7 +26,7 @@
         NSMutableArray * objs = [NSMutableArray array];
         for (NSDictionary * teacherDict in _teacher_arr)
         {
-            BKTeacherModel * teacher = [BKTeacherModel teacherWithDict:teacherDict];
+            BKOneTeacherModel * teacher = [BKOneTeacherModel oneTeacherWithDict:teacherDict];
             [objs addObject:teacher];
         }
         self.teacher_arr = objs;

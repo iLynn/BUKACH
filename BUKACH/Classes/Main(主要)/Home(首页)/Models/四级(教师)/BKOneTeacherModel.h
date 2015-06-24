@@ -30,4 +30,9 @@
 
 @property (nonatomic, strong) NSString * teacher_graduate_school;
 
+
+/** 快速创建 */
++(id)oneTeacherWithDict:(NSDictionary *)dict;
+-(id)initWithDict:(NSDictionary *)dict;
+
 @end

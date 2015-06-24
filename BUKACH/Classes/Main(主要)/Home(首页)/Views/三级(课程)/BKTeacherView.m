@@ -7,7 +7,8 @@
 //
 
 #import "BKTeacherView.h"
-#import "BKTeacherModel.h"
+//#import "BKTeacherModel.h"
+#import "BKOneTeacherModel.h"
 #import "UIImageView+WebCache.h"
 
 
@@ -49,7 +50,7 @@
     
     CGFloat iconY = 0;
     CGFloat iconH = BKCurrentHeight * 0.6;
-    CGFloat iconW = iconH * 0.7;
+    CGFloat iconW = iconH * 0.8;
     CGFloat iconX = (BKCurrentWidth - iconW ) * 0.5;
     self.iconView.frame = CGRectMake(iconX, iconY, iconW, iconH);
     
@@ -59,7 +60,7 @@
     //2.名字
     UILabel * nameLab = [[UILabel alloc] init];
     nameLab.font = [UIFont systemFontOfSize:14];
-    nameLab.contentMode = UIViewContentModeCenter;
+    nameLab.textAlignment = NSTextAlignmentCenter;
     self.nameLab = nameLab;
     
     CGFloat nameX = 0;
@@ -74,7 +75,7 @@
     //3.教师等级
     UILabel * levelLab = [[UILabel alloc] init];
     levelLab.font = [UIFont systemFontOfSize:12];
-    levelLab.contentMode = UIViewContentModeCenter;
+    nameLab.textAlignment = NSTextAlignmentCenter;
     self.levelLab = levelLab;
     
     CGFloat levelX = 0;
@@ -88,7 +89,7 @@
 }
 
 
-- (void)setTeacher:(BKTeacherModel *)teacher
+- (void)setTeacher:(BKOneTeacherModel *)teacher
 {
     _teacher = teacher;
     
@@ -98,9 +99,10 @@
     
     //2.名字
     self.nameLab.text = teacher.teacher_name;
-    
+
+#warning level需要提前转化为string啊
     //3.教师等级
-    self.levelLab.text = teacher.teacher_level;
+    self.levelLab.text = [NSString stringWithFormat:@"%@", teacher.teacher_level];
     
 }
 

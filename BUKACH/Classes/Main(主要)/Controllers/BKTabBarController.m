@@ -44,13 +44,15 @@
  */
 -(void)addAllChildVCs
 {
-    BKHomeController * home = [[BKHomeController alloc]init];
-    [self addOneChildViewController:home withTitle:@"首页" andImageName:@"home" andSelectedImageName:@"home_hl"];
-    self.home = home;
     
     BKGraceController * grace = [[BKGraceController alloc]init];
     [self addOneChildViewController:grace withTitle:@"风采" andImageName:@"grace" andSelectedImageName:@"grace_hl"];
     self.grace = grace;
+    
+    BKHomeController * home = [[BKHomeController alloc]init];
+    [self addOneChildViewController:home withTitle:@"首页" andImageName:@"home" andSelectedImageName:@"home_hl"];
+    self.home = home;
+
     
     BKHotController * hot = [[BKHotController alloc]init];
     [self addOneChildViewController:hot withTitle:@"热门" andImageName:@"hot" andSelectedImageName:@"hot_hl"];

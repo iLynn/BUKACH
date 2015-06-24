@@ -14,9 +14,9 @@
 #import "BKCategoryResponse.h"
 #import "BKCategoriesView.h"
 
-#import "BKCategoryModel.h"
+#import "BKOneCategoryModel.h"
 #import "BKCategoryController.h"
-#import "BKAdsModel.h"
+#import "BKOneAdsModel.h"
 #import "BKAdsController.h"
 
 
@@ -34,7 +34,11 @@
 
 - (void)viewDidLoad
 {
+    BKLog(@"%s", __func__);
+    
     [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor whiteColor];
     
     //有这两行代码，navVC下的view才不会跑偏
     self.automaticallyAdjustsScrollViewInsets = NO;
@@ -124,7 +128,7 @@
 
 #pragma mark - BKCategoriesViewDelegate代理方法
 
-- (void)jumpToCategoryWithModel:(BKCategoryModel *)category
+- (void)jumpToCategoryWithModel:(BKOneCategoryModel *)category
 {
     BKCategoryController * vc = [[BKCategoryController alloc] init];
     
@@ -138,7 +142,7 @@
 
 #pragma mark - BKAdsViewDelegate代理方法
 
-- (void)jumpToAdsWithModel:(BKAdsModel *)ad
+- (void)jumpToAdsWithModel:(BKOneAdsModel *)ad
 {
     BKAdsController * vc = [[BKAdsController alloc] init];
     

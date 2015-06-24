@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-@class BKCourseModel;
+@class BKOneCourseModel;
 
 @interface BKCourseController : UIViewController
 
-@property (nonatomic, strong) BKCourseModel * course;
+@property (nonatomic, strong) BKOneCourseModel * course;
 
 @end

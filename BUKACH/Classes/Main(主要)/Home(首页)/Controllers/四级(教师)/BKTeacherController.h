@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-@class BKTeacherModel;
+@class BKOneTeacherModel;
 
 @interface BKTeacherController : UIViewController
 
-@property (nonatomic, strong) BKTeacherModel * teacher;
+@property (nonatomic, strong) BKOneTeacherModel * teacher;
 
 @end

@@ -62,6 +62,16 @@
     return _datas;
 }
 
+- (void)viewDidLoad
+{
+    BKLog(@"%s", __func__);
+    
+    [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+}
+
 - (id)init
 {
     return [super initWithStyle:UITableViewStyleGrouped];
@@ -72,12 +82,6 @@
     return [super initWithStyle:UITableViewStyleGrouped];
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    
-    //self.view.backgroundColor = [UIColor colorWithRed:1.000 green:0.799 blue:0.966 alpha:1.000];
-}
 
 #pragma mark - Table view data source
 

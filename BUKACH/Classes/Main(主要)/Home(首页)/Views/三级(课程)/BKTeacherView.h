@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-@class BKTeacherModel;
+@class BKOneTeacherModel;
 
 @interface BKTeacherView : UIButton
 
 /** 填充UI用的模型 */
-@property (nonatomic, strong) BKTeacherModel * teacher;
+@property (nonatomic, strong) BKOneTeacherModel * teacher;
 
 
 + (id)teacherView;

@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-@class BKTeacherModel;
+@class BKOneTeacherModel;
 
 @protocol BKTeachersViewDelegate <NSObject>
 
-- (void)jumpToTeacherWithModel:(BKTeacherModel *)teacher;
+- (void)jumpToTeacherWithModel:(BKOneTeacherModel *)teacher;
 
 @end
 
