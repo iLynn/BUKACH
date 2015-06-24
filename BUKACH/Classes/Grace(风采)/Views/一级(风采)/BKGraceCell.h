@@ -7,12 +7,12 @@
 //
 
 #import "BKWaterFlowBaseCell.h"
-@class BKOneGraceModel, BKGraceWaterFlowView;
+@class BKGraceFrame, BKGraceWaterFlowView;
 
 @interface BKGraceCell : BKWaterFlowBaseCell
 
 + (id)cellWithWaterFlowView:(BKGraceWaterFlowView *)waterFlowView;
 
-@property (nonatomic, strong) BKOneGraceModel * grace;
+@property (nonatomic, strong) BKGraceFrame * graceFrame;
 
 @end

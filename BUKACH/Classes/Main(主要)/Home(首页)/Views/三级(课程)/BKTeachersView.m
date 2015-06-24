@@ -7,8 +7,6 @@
 //
 
 #import "BKTeachersView.h"
-//#import "BKTeacherModel.h"
-//#import "BKOneTeacherModel.h"
 #import "BKTeacherView.h"
 
 
@@ -17,11 +15,6 @@
 + (id)teachersView
 {
     return [[self alloc] initWithFrame:CGRectZero];
-}
-
-- (id)initWithFrame:(CGRect)frame
-{
-    return [super initWithFrame:frame];
 }
 
 - (void)setTeachers:(NSArray *)teachers
@@ -37,7 +30,7 @@
     NSInteger count = self.teachers.count;
     
     CGFloat baseH = BKCurrentHeight - 2 * BKMargin;
-    CGFloat baseW = baseH;
+    CGFloat baseW = baseH * 0.6;
     CGFloat baseY = BKMargin;
     
     self.contentSize = CGSizeMake((baseW + BKMargin) * count + BKMargin, BKCurrentHeight);
@@ -47,8 +40,6 @@
         CGFloat viewX = ( BKMargin + baseW ) * i + BKMargin;
         
         BKTeacherView * view = [[BKTeacherView alloc] initWithFrame:CGRectMake(viewX, baseY, baseW, baseH)];
-        
-        //view.backgroundColor = [UIColor redColor];
         
         //填充
         view.teacher = self.teachers[i];

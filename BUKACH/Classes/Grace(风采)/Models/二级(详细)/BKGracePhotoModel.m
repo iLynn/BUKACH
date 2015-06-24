@@ -1,16 +1,16 @@
 //
-//  BKOneGraceModel.m
+//  BKGracePhotoModel.m
 //  BUKACH
 //
-//  Created by Lynn on 15/6/23.
+//  Created by Lynn on 15/6/24.
 //  Copyright (c) 2015年 Lynn. All rights reserved.
 //
 
-#import "BKOneGraceModel.h"
+#import "BKGracePhotoModel.h"
 
-@implementation BKOneGraceModel
+@implementation BKGracePhotoModel
 
-+(id)oneGraceWithDict:(NSDictionary *)dict
++(id)gracePhotoWithDict:(NSDictionary *)dict
 {
     return [[self alloc] initWithDict:dict];
 }
@@ -26,7 +26,7 @@
 
 -(NSString *)description
 {
-    return [NSString stringWithFormat:@"%@----grace_title:%@, grace_id:%@, grace_photo:%@", [self class], _grace_title, _grace_id, _grace_photo];
+    return [NSString stringWithFormat:@"%@----img_location:%@, img_width:%f, img_height:%f", [self class], _img_location, _img_width, _img_height];
 }
 
 @end

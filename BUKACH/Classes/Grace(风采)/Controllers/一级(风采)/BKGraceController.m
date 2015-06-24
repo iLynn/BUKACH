@@ -14,11 +14,13 @@
 
 #import "BKOneGraceModel.h"
 #import "BKGraceCell.h"
+#import "BKGraceFrame.h"
+#import "BKGraceDetailController.h"
 
 @interface BKGraceController ()<BKGraceWaterFlowViewDataSource, BKGraceWaterFlowViewDelegate>
 
-/** 存放BKOneGraceModel模型的数组 */
-@property (nonatomic, strong) NSArray * graces;
+/** 存放BKGraceFrame模型的数组 */
+@property (nonatomic, strong) NSArray * graceFrames;
 
 @property (nonatomic, weak) BKGraceWaterFlowView * waterFlowView;
 
@@ -27,14 +29,14 @@
 @implementation BKGraceController
 
 //懒加载
-- (NSArray *)graces
+- (NSArray *)graceFrames
 {
-    if (_graces == nil)
+    if (_graceFrames == nil)
     {
-        _graces = [NSArray array];
+        _graceFrames = [NSArray array];
     }
     
-    return _graces;
+    return _graceFrames;
 }
 
 - (void)viewDidLoad
@@ -43,7 +45,7 @@
     
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor colorWithWhite:0.864 alpha:1.000];
     
     //有这两行代码，navVC下的view才不会跑偏
     self.automaticallyAdjustsScrollViewInsets = NO;
@@ -66,13 +68,11 @@
         // 字典转模型
         BKGraceResponse * response = [BKGraceResponse graceResponseWithDict:graceResponse];
         
-        self.graces = response.data;
-        
-        BKLog(@"%@", self.graces);
-        
+        // 获取courseFrame的数组
+        self.graceFrames = [self graceFramesWithGraces:response.data];
+  
         //添加风采视图
         BKGraceWaterFlowView * waterFlowView = [[BKGraceWaterFlowView alloc] init];
-        waterFlowView.backgroundColor = [UIColor lightGrayColor];
         
         waterFlowView.frame = CGRectMake(0, 0, BKScreenWidth, BKScreenHeight - 20 - 44 - 49);
         
@@ -96,6 +96,25 @@
 }
 
 
+/**
+ *  将 grace模型数组 转成 graceFrame模型数据
+ */
+- (NSArray *)graceFramesWithGraces:(NSArray *)graces
+{
+    NSMutableArray * frames = [NSMutableArray array];
+    for (BKOneGraceModel * grace in graces)
+    {
+        BKGraceFrame * frame = [[BKGraceFrame alloc] init];
+        
+        // 传递grace模型数据，计算所有子控件的frame
+        frame.grace = grace;
+        
+        [frames addObject:frame];
+    }
+    return frames;
+}
+
+
 #pragma mark - datasource数据源代理方法
 
 - (NSUInteger)numberOfColumnsInWaterFlowView:(BKGraceWaterFlowView *)waterFlowView
@@ -105,16 +124,21 @@
 
 - (NSUInteger)numberOfCellsInWaterFlowView:(BKGraceWaterFlowView *)waterFlowView
 {
-    return self.graces.count;
+    return self.graceFrames.count;
 }
 
 - (BKWaterFlowBaseCell *)waterFlowView:(BKGraceWaterFlowView *)waterFlowView cellAtIndex:(NSUInteger)index
 {
     BKGraceCell * cell = [BKGraceCell cellWithWaterFlowView:waterFlowView];
     
-    cell.backgroundColor = [UIColor yellowColor];
+    cell.backgroundColor = [UIColor whiteColor];
     
-    cell.grace = self.graces[index];
+    cell.graceFrame = self.graceFrames[index];
+    
+    //把index记录下来，在点击时可以用到
+    cell.tag = index;
+    
+    [cell addTarget:self action:@selector(cellTouch:) forControlEvents:UIControlEventTouchUpInside];
     
     return cell;
     
@@ -125,24 +149,23 @@
 
 - (CGFloat)waterFlowView:(BKGraceWaterFlowView *)waterFlowView heightAtIndex:(NSUInteger)index
 {
-    //BKOneGraceModel * grace = self.graces[index];
+    BKGraceFrame * frame = self.graceFrames[index];
     
-    CGFloat h = 0;
+    return frame.cellHeight;
+}
+
+- (void)cellTouch:(BKGraceCell *)cell
+{
+    // 立即取消选中
+    BKGraceFrame * frame = self.graceFrames[cell.tag];
     
-    if (index == 0)
-    {
-        h = 150;
-    }
-    else if (index == 1)
-    {
-        h = 180;
-    }
-    else
-    {
-        h = 200;
-    }
+    // 跳转到新的控制器
+    BKGraceDetailController * vc = [[BKGraceDetailController alloc] init];
     
-    return h;
+    vc.grace = frame.grace;
+    
+    [self.navigationController pushViewController:vc animated:YES];
+    
 }
 
 @end

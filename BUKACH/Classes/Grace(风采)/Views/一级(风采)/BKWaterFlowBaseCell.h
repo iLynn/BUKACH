@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BKWaterFlowBaseCell : UIView
+@interface BKWaterFlowBaseCell : UIButton
 
 /** 复用时用到的identifier */
 @property (nonatomic, copy) NSString * identifier;

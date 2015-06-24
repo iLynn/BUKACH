@@ -10,12 +10,13 @@
 #import "BKGraceWaterFlowView.h"
 #import "BKOneGraceModel.h"
 #import "UIImageView+WebCache.h"
+#import "BKGraceFrame.h"
 
 @interface BKGraceCell()
 
 @property (nonatomic, weak) UILabel * titleLab;
 
-@property (nonatomic, weak) UIImageView * imageView;
+@property (nonatomic, weak) UIImageView * photoView;
 
 @end
 
@@ -45,44 +46,36 @@
         //1.文字
         UILabel * titleLab = [[UILabel alloc] init];
         [self addSubview:titleLab];
-        titleLab.backgroundColor = [UIColor redColor];
+        titleLab.numberOfLines = 0;
         titleLab.font = [UIFont systemFontOfSize:14];
         self.titleLab = titleLab;
         
         //2.照片
-        UIImageView * imageView = [[UIImageView alloc] init];
-        [self addSubview:imageView];
-        imageView.backgroundColor = [UIColor blueColor];
-        self.imageView = imageView;
+        UIImageView * photoView = [[UIImageView alloc] init];
+        [self addSubview:photoView];
+        self.photoView = photoView;
         
     }
     return self;
 }
 
-- (void)setGrace:(BKOneGraceModel *)grace
+- (void)setGraceFrame:(BKGraceFrame *)graceFrame
 {
-    _grace = grace;
+    //计算frame
+    self.titleLab.frame = graceFrame.titleFrame;
+    
+    self.photoView.frame = graceFrame.photoFrame;
+    
+    //填充界面
+    BKOneGraceModel * grace = graceFrame.grace;
     
     self.titleLab.text = grace.grace_title;
     
     NSString * urlStr = [NSString stringWithFormat:@"%@%@", BKUrlStr, grace.grace_photo];
-
-    [self.imageView sd_setImageWithURL:[NSURL URLWithString:urlStr]];
+    
+    [self.photoView sd_setImageWithURL:[NSURL URLWithString:urlStr]];
     
 }
 
-- (void)layoutSubviews
-{
-    [super layoutSubviews];
-    
-    self.imageView.frame = self.bounds;
-    
-    CGFloat titleX = 0;
-    CGFloat titleH = 25;
-    CGFloat titleY = self.bounds.size.height - titleH;
-    CGFloat titleW = self.bounds.size.width;
-    
-    self.titleLab.frame = CGRectMake(titleX, titleY, titleW, titleH);
-}
 
 @end

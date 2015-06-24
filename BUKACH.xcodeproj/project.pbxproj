@@ -14,7 +14,6 @@
 		BA9BF3251B2C17410073F660 /* BKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9BF31E1B2C17410073F660 /* BKAppDelegate.m */; };
 		BA9BF3281B2C182B0073F660 /* BKTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9BF3271B2C182B0073F660 /* BKTabBarController.m */; };
 		BA9BF32B1B2C18430073F660 /* BKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9BF32A1B2C18430073F660 /* BKNavigationController.m */; };
-		BA9BF3311B2C1A010073F660 /* BKGraceController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9BF3301B2C1A010073F660 /* BKGraceController.m */; };
 		BA9BF3341B2C1A320073F660 /* BKHotController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9BF3331B2C1A320073F660 /* BKHotController.m */; };
 		BA9BF33A1B2C1BBC0073F660 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA9BF3391B2C1BBC0073F660 /* LaunchScreen.xib */; };
 		BA9C77D01B39BB1A00220322 /* BKTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9C77CF1B39BB1900220322 /* BKTextView.m */; };
@@ -31,14 +30,19 @@
 		BAB387651B38EFC600211970 /* BKUpDownView.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB3875C1B38EFC600211970 /* BKUpDownView.m */; };
 		BAB387661B38EFC600211970 /* BKAdsView.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB3875F1B38EFC600211970 /* BKAdsView.m */; };
 		BAB387671B38EFC600211970 /* BKAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB387611B38EFC600211970 /* BKAdView.m */; };
-		BAB3876A1B38F62A00211970 /* BKGraceResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB387691B38F62A00211970 /* BKGraceResponse.m */; };
-		BAB3876D1B38F64C00211970 /* BKOneGraceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB3876C1B38F64C00211970 /* BKOneGraceModel.m */; };
 		BAB387701B38F79F00211970 /* BKOneAdsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB3876F1B38F79F00211970 /* BKOneAdsModel.m */; };
 		BAB387731B38F7AC00211970 /* BKCategoryResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB387721B38F7AC00211970 /* BKCategoryResponse.m */; };
-		BAB387831B38FD8800211970 /* BKGraceWaterFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB387821B38FD8800211970 /* BKGraceWaterFlowView.m */; };
-		BAB387861B391BFC00211970 /* BKWaterFlowBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB387851B391BFC00211970 /* BKWaterFlowBaseCell.m */; };
-		BAB387891B39296D00211970 /* BKGraceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB387881B39296D00211970 /* BKGraceCell.m */; };
-		BAB3878C1B3941D000211970 /* BKGraceFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB3878B1B3941D000211970 /* BKGraceFrame.m */; };
+		BAC56BA91B3A78D100C7B900 /* BKGraceController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC56BA81B3A78D100C7B900 /* BKGraceController.m */; };
+		BAC56BB21B3A78D900C7B900 /* BKGraceFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC56BAD1B3A78D900C7B900 /* BKGraceFrame.m */; };
+		BAC56BB31B3A78D900C7B900 /* BKGraceResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC56BAF1B3A78D900C7B900 /* BKGraceResponse.m */; };
+		BAC56BB41B3A78D900C7B900 /* BKOneGraceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC56BB11B3A78D900C7B900 /* BKOneGraceModel.m */; };
+		BAC56BBD1B3A78E100C7B900 /* BKGraceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC56BB81B3A78E100C7B900 /* BKGraceCell.m */; };
+		BAC56BBE1B3A78E100C7B900 /* BKGraceWaterFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC56BBA1B3A78E100C7B900 /* BKGraceWaterFlowView.m */; };
+		BAC56BBF1B3A78E100C7B900 /* BKWaterFlowBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC56BBC1B3A78E100C7B900 /* BKWaterFlowBaseCell.m */; };
+		BAC56BC21B3A792700C7B900 /* BKGraceDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC56BC11B3A792700C7B900 /* BKGraceDetailController.m */; };
+		BAC56BC51B3A7D0700C7B900 /* BKGracePhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC56BC41B3A7D0700C7B900 /* BKGracePhotoModel.m */; };
+		BAC56BC81B3A89DE00C7B900 /* BKPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC56BC71B3A89DE00C7B900 /* BKPhotosView.m */; };
+		BAC56BCB1B3A8AEF00C7B900 /* BKPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC56BCA1B3A8AEF00C7B900 /* BKPhotoView.m */; };
 		BAD2E83A1B2D926900AA6C45 /* BKHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD2E8391B2D926900AA6C45 /* BKHttpTool.m */; };
 		BAD2E88B1B2D92CC00AA6C45 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD2E83D1B2D92CC00AA6C45 /* AFHTTPRequestOperation.m */; };
 		BAD2E88C1B2D92CC00AA6C45 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD2E83F1B2D92CC00AA6C45 /* AFHTTPRequestOperationManager.m */; };
@@ -120,8 +124,6 @@
 		BA9BF3271B2C182B0073F660 /* BKTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKTabBarController.m; sourceTree = "<group>"; };
 		BA9BF3291B2C18430073F660 /* BKNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKNavigationController.h; sourceTree = "<group>"; };
 		BA9BF32A1B2C18430073F660 /* BKNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKNavigationController.m; sourceTree = "<group>"; };
-		BA9BF32F1B2C1A010073F660 /* BKGraceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKGraceController.h; sourceTree = "<group>"; };
-		BA9BF3301B2C1A010073F660 /* BKGraceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKGraceController.m; sourceTree = "<group>"; };
 		BA9BF3321B2C1A320073F660 /* BKHotController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKHotController.h; sourceTree = "<group>"; };
 		BA9BF3331B2C1A320073F660 /* BKHotController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKHotController.m; sourceTree = "<group>"; };
 		BA9BF3381B2C1B8A0073F660 /* bukachPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bukachPrefix.pch; sourceTree = "<group>"; };
@@ -153,22 +155,32 @@
 		BAB3875F1B38EFC600211970 /* BKAdsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKAdsView.m; sourceTree = "<group>"; };
 		BAB387601B38EFC600211970 /* BKAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKAdView.h; sourceTree = "<group>"; };
 		BAB387611B38EFC600211970 /* BKAdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKAdView.m; sourceTree = "<group>"; };
-		BAB387681B38F62A00211970 /* BKGraceResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKGraceResponse.h; sourceTree = "<group>"; };
-		BAB387691B38F62A00211970 /* BKGraceResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKGraceResponse.m; sourceTree = "<group>"; };
-		BAB3876B1B38F64C00211970 /* BKOneGraceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKOneGraceModel.h; sourceTree = "<group>"; };
-		BAB3876C1B38F64C00211970 /* BKOneGraceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKOneGraceModel.m; sourceTree = "<group>"; };
 		BAB3876E1B38F79F00211970 /* BKOneAdsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKOneAdsModel.h; sourceTree = "<group>"; };
 		BAB3876F1B38F79F00211970 /* BKOneAdsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKOneAdsModel.m; sourceTree = "<group>"; };
 		BAB387711B38F7AC00211970 /* BKCategoryResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKCategoryResponse.h; sourceTree = "<group>"; };
 		BAB387721B38F7AC00211970 /* BKCategoryResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKCategoryResponse.m; sourceTree = "<group>"; };
-		BAB387811B38FD8800211970 /* BKGraceWaterFlowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKGraceWaterFlowView.h; sourceTree = "<group>"; };
-		BAB387821B38FD8800211970 /* BKGraceWaterFlowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKGraceWaterFlowView.m; sourceTree = "<group>"; };
-		BAB387841B391BFC00211970 /* BKWaterFlowBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKWaterFlowBaseCell.h; sourceTree = "<group>"; };
-		BAB387851B391BFC00211970 /* BKWaterFlowBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKWaterFlowBaseCell.m; sourceTree = "<group>"; };
-		BAB387871B39296D00211970 /* BKGraceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKGraceCell.h; sourceTree = "<group>"; };
-		BAB387881B39296D00211970 /* BKGraceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKGraceCell.m; sourceTree = "<group>"; };
-		BAB3878A1B3941D000211970 /* BKGraceFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKGraceFrame.h; sourceTree = "<group>"; };
-		BAB3878B1B3941D000211970 /* BKGraceFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKGraceFrame.m; sourceTree = "<group>"; };
+		BAC56BA71B3A78D100C7B900 /* BKGraceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKGraceController.h; sourceTree = "<group>"; };
+		BAC56BA81B3A78D100C7B900 /* BKGraceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKGraceController.m; sourceTree = "<group>"; };
+		BAC56BAC1B3A78D900C7B900 /* BKGraceFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKGraceFrame.h; sourceTree = "<group>"; };
+		BAC56BAD1B3A78D900C7B900 /* BKGraceFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKGraceFrame.m; sourceTree = "<group>"; };
+		BAC56BAE1B3A78D900C7B900 /* BKGraceResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKGraceResponse.h; sourceTree = "<group>"; };
+		BAC56BAF1B3A78D900C7B900 /* BKGraceResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKGraceResponse.m; sourceTree = "<group>"; };
+		BAC56BB01B3A78D900C7B900 /* BKOneGraceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKOneGraceModel.h; sourceTree = "<group>"; };
+		BAC56BB11B3A78D900C7B900 /* BKOneGraceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKOneGraceModel.m; sourceTree = "<group>"; };
+		BAC56BB71B3A78E100C7B900 /* BKGraceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKGraceCell.h; sourceTree = "<group>"; };
+		BAC56BB81B3A78E100C7B900 /* BKGraceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKGraceCell.m; sourceTree = "<group>"; };
+		BAC56BB91B3A78E100C7B900 /* BKGraceWaterFlowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKGraceWaterFlowView.h; sourceTree = "<group>"; };
+		BAC56BBA1B3A78E100C7B900 /* BKGraceWaterFlowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKGraceWaterFlowView.m; sourceTree = "<group>"; };
+		BAC56BBB1B3A78E100C7B900 /* BKWaterFlowBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKWaterFlowBaseCell.h; sourceTree = "<group>"; };
+		BAC56BBC1B3A78E100C7B900 /* BKWaterFlowBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKWaterFlowBaseCell.m; sourceTree = "<group>"; };
+		BAC56BC01B3A792700C7B900 /* BKGraceDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKGraceDetailController.h; sourceTree = "<group>"; };
+		BAC56BC11B3A792700C7B900 /* BKGraceDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKGraceDetailController.m; sourceTree = "<group>"; };
+		BAC56BC31B3A7D0700C7B900 /* BKGracePhotoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKGracePhotoModel.h; sourceTree = "<group>"; };
+		BAC56BC41B3A7D0700C7B900 /* BKGracePhotoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKGracePhotoModel.m; sourceTree = "<group>"; };
+		BAC56BC61B3A89DE00C7B900 /* BKPhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKPhotosView.h; sourceTree = "<group>"; };
+		BAC56BC71B3A89DE00C7B900 /* BKPhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKPhotosView.m; sourceTree = "<group>"; };
+		BAC56BC91B3A8AEF00C7B900 /* BKPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKPhotoView.h; sourceTree = "<group>"; };
+		BAC56BCA1B3A8AEF00C7B900 /* BKPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKPhotoView.m; sourceTree = "<group>"; };
 		BAD2E8381B2D926900AA6C45 /* BKHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKHttpTool.h; sourceTree = "<group>"; };
 		BAD2E8391B2D926900AA6C45 /* BKHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKHttpTool.m; sourceTree = "<group>"; };
 		BAD2E83C1B2D92CC00AA6C45 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -377,8 +389,8 @@
 		BA9BF30D1B2C17400073F660 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BA9BF32F1B2C1A010073F660 /* BKGraceController.h */,
-				BA9BF3301B2C1A010073F660 /* BKGraceController.m */,
+				BAC56BA61B3A78D100C7B900 /* 一级(风采) */,
+				BAC56BA51B3A78D100C7B900 /* 二级(详细) */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -386,12 +398,8 @@
 		BA9BF30E1B2C17400073F660 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BAB387681B38F62A00211970 /* BKGraceResponse.h */,
-				BAB387691B38F62A00211970 /* BKGraceResponse.m */,
-				BAB3876B1B38F64C00211970 /* BKOneGraceModel.h */,
-				BAB3876C1B38F64C00211970 /* BKOneGraceModel.m */,
-				BAB3878A1B3941D000211970 /* BKGraceFrame.h */,
-				BAB3878B1B3941D000211970 /* BKGraceFrame.m */,
+				BAC56BAB1B3A78D900C7B900 /* 一级(风采) */,
+				BAC56BAA1B3A78D900C7B900 /* 二级(详细) */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -585,14 +593,74 @@
 		BAB387801B38FD8800211970 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BAB387811B38FD8800211970 /* BKGraceWaterFlowView.h */,
-				BAB387821B38FD8800211970 /* BKGraceWaterFlowView.m */,
-				BAB387841B391BFC00211970 /* BKWaterFlowBaseCell.h */,
-				BAB387851B391BFC00211970 /* BKWaterFlowBaseCell.m */,
-				BAB387871B39296D00211970 /* BKGraceCell.h */,
-				BAB387881B39296D00211970 /* BKGraceCell.m */,
+				BAC56BB61B3A78E100C7B900 /* 一级(风采) */,
+				BAC56BB51B3A78E100C7B900 /* 二级(详细) */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		BAC56BA51B3A78D100C7B900 /* 二级(详细) */ = {
+			isa = PBXGroup;
+			children = (
+				BAC56BC01B3A792700C7B900 /* BKGraceDetailController.h */,
+				BAC56BC11B3A792700C7B900 /* BKGraceDetailController.m */,
+			);
+			path = "二级(详细)";
+			sourceTree = "<group>";
+		};
+		BAC56BA61B3A78D100C7B900 /* 一级(风采) */ = {
+			isa = PBXGroup;
+			children = (
+				BAC56BA71B3A78D100C7B900 /* BKGraceController.h */,
+				BAC56BA81B3A78D100C7B900 /* BKGraceController.m */,
+			);
+			path = "一级(风采)";
+			sourceTree = "<group>";
+		};
+		BAC56BAA1B3A78D900C7B900 /* 二级(详细) */ = {
+			isa = PBXGroup;
+			children = (
+				BAC56BC31B3A7D0700C7B900 /* BKGracePhotoModel.h */,
+				BAC56BC41B3A7D0700C7B900 /* BKGracePhotoModel.m */,
+			);
+			path = "二级(详细)";
+			sourceTree = "<group>";
+		};
+		BAC56BAB1B3A78D900C7B900 /* 一级(风采) */ = {
+			isa = PBXGroup;
+			children = (
+				BAC56BAC1B3A78D900C7B900 /* BKGraceFrame.h */,
+				BAC56BAD1B3A78D900C7B900 /* BKGraceFrame.m */,
+				BAC56BAE1B3A78D900C7B900 /* BKGraceResponse.h */,
+				BAC56BAF1B3A78D900C7B900 /* BKGraceResponse.m */,
+				BAC56BB01B3A78D900C7B900 /* BKOneGraceModel.h */,
+				BAC56BB11B3A78D900C7B900 /* BKOneGraceModel.m */,
+			);
+			path = "一级(风采)";
+			sourceTree = "<group>";
+		};
+		BAC56BB51B3A78E100C7B900 /* 二级(详细) */ = {
+			isa = PBXGroup;
+			children = (
+				BAC56BC61B3A89DE00C7B900 /* BKPhotosView.h */,
+				BAC56BC71B3A89DE00C7B900 /* BKPhotosView.m */,
+				BAC56BC91B3A8AEF00C7B900 /* BKPhotoView.h */,
+				BAC56BCA1B3A8AEF00C7B900 /* BKPhotoView.m */,
+			);
+			path = "二级(详细)";
+			sourceTree = "<group>";
+		};
+		BAC56BB61B3A78E100C7B900 /* 一级(风采) */ = {
+			isa = PBXGroup;
+			children = (
+				BAC56BB71B3A78E100C7B900 /* BKGraceCell.h */,
+				BAC56BB81B3A78E100C7B900 /* BKGraceCell.m */,
+				BAC56BB91B3A78E100C7B900 /* BKGraceWaterFlowView.h */,
+				BAC56BBA1B3A78E100C7B900 /* BKGraceWaterFlowView.m */,
+				BAC56BBB1B3A78E100C7B900 /* BKWaterFlowBaseCell.h */,
+				BAC56BBC1B3A78E100C7B900 /* BKWaterFlowBaseCell.m */,
+			);
+			path = "一级(风采)";
 			sourceTree = "<group>";
 		};
 		BAD2E83B1B2D92CC00AA6C45 /* AFNetworking */ = {
@@ -1105,27 +1173,30 @@
 				BAD2E88F1B2D92CC00AA6C45 /* AFSecurityPolicy.m in Sources */,
 				BAD2E8A71B2D92CC00AA6C45 /* SDWebImageManager.m in Sources */,
 				BAD2E8A81B2D92CD00AA6C45 /* SDWebImagePrefetcher.m in Sources */,
+				BAC56BBF1B3A78E100C7B900 /* BKWaterFlowBaseCell.m in Sources */,
 				BADAB5461B32B73D007ED14E /* BKProfileController.m in Sources */,
 				BA9BF32B1B2C18430073F660 /* BKNavigationController.m in Sources */,
+				BAC56BC51B3A7D0700C7B900 /* BKGracePhotoModel.m in Sources */,
 				BADAB54B1B32B73D007ED14E /* BKProfileGroup.m in Sources */,
 				BAD2E88E1B2D92CC00AA6C45 /* AFNetworkReachabilityManager.m in Sources */,
-				BAB3878C1B3941D000211970 /* BKGraceFrame.m in Sources */,
 				BAD2E8AF1B2D92CD00AA6C45 /* UIView+WebCacheOperation.m in Sources */,
 				BADAB5131B32B623007ED14E /* BKCourseController.m in Sources */,
 				BA9BF3251B2C17410073F660 /* BKAppDelegate.m in Sources */,
 				BAB387641B38EFC600211970 /* BKLeftRightView.m in Sources */,
 				BAD2E8A61B2D92CC00AA6C45 /* SDWebImageDownloaderOperation.m in Sources */,
 				BADAB54A1B32B73D007ED14E /* BKProfileArrowItem.m in Sources */,
+				BAC56BB41B3A78D900C7B900 /* BKOneGraceModel.m in Sources */,
+				BAC56BB21B3A78D900C7B900 /* BKGraceFrame.m in Sources */,
 				BAD2E8901B2D92CC00AA6C45 /* AFURLConnectionOperation.m in Sources */,
 				BAD2E88B1B2D92CC00AA6C45 /* AFHTTPRequestOperation.m in Sources */,
 				BADAB54D1B32B73D007ED14E /* BKProfileTextItem.m in Sources */,
 				BAB387701B38F79F00211970 /* BKOneAdsModel.m in Sources */,
+				BAC56BA91B3A78D100C7B900 /* BKGraceController.m in Sources */,
 				BAB387731B38F7AC00211970 /* BKCategoryResponse.m in Sources */,
 				BAD2E88D1B2D92CC00AA6C45 /* AFHTTPSessionManager.m in Sources */,
 				BAD2E8961B2D92CC00AA6C45 /* MBProgressHUD.m in Sources */,
 				BAD2E8911B2D92CC00AA6C45 /* AFURLRequestSerialization.m in Sources */,
 				BAD2E8931B2D92CC00AA6C45 /* AFURLSessionManager.m in Sources */,
-				BAB3876A1B38F62A00211970 /* BKGraceResponse.m in Sources */,
 				BAD2E8AA1B2D92CD00AA6C45 /* UIImage+GIF.m in Sources */,
 				BADAB5511B32BE6E007ED14E /* BKTeacherView.m in Sources */,
 				BADAB5571B32C78D007ED14E /* BKTeachersView.m in Sources */,
@@ -1133,6 +1204,7 @@
 				BA6E06231B33A84300A41C3F /* BKOneTeacherResponse.m in Sources */,
 				BAD2E8AE1B2D92CD00AA6C45 /* UIImageView+WebCache.m in Sources */,
 				BAD2E8D81B2DC3E300AA6C45 /* BKCallTool.m in Sources */,
+				BAC56BC21B3A792700C7B900 /* BKGraceDetailController.m in Sources */,
 				BADAB51C1B32B623007ED14E /* BKCourseFrame.m in Sources */,
 				BAD2E8A91B2D92CD00AA6C45 /* UIButton+WebCache.m in Sources */,
 				BAB387511B38EF7C00211970 /* BKOneCategoryModel.m in Sources */,
@@ -1141,20 +1213,20 @@
 				BAB387631B38EFC600211970 /* BKCategoryView.m in Sources */,
 				BAD2E8A51B2D92CC00AA6C45 /* SDWebImageDownloader.m in Sources */,
 				BADAB54C1B32B73D007ED14E /* BKProfileItem.m in Sources */,
+				BAC56BBE1B3A78E100C7B900 /* BKGraceWaterFlowView.m in Sources */,
 				BADAB5231B32B623007ED14E /* BKCourseCell.m in Sources */,
 				BAD2E8AC1B2D92CD00AA6C45 /* UIImage+WebP.m in Sources */,
 				BAD2E8D51B2DBC7400AA6C45 /* UIView+ViewFrameExt.m in Sources */,
+				BAC56BC81B3A89DE00C7B900 /* BKPhotosView.m in Sources */,
+				BAC56BB31B3A78D900C7B900 /* BKGraceResponse.m in Sources */,
 				BAD2E8D31B2DBC7400AA6C45 /* UIBarButtonItem+ButtonImageExt.m in Sources */,
 				BAD2E8AB1B2D92CD00AA6C45 /* UIImage+MultiFormat.m in Sources */,
 				BAB3873D1B38EEBC00211970 /* BKAdsController.m in Sources */,
 				BADAB5631B331ADF007ED14E /* BKOneTeacherModel.m in Sources */,
 				BAB3873C1B38EEBC00211970 /* BKCategoryController.m in Sources */,
-				BAB387831B38FD8800211970 /* BKGraceWaterFlowView.m in Sources */,
 				BAB387671B38EFC600211970 /* BKAdView.m in Sources */,
 				BAD2E88C1B2D92CC00AA6C45 /* AFHTTPRequestOperationManager.m in Sources */,
-				BA9BF3311B2C1A010073F660 /* BKGraceController.m in Sources */,
 				BAD2E8941B2D92CC00AA6C45 /* MBProgressHUD+LY.m in Sources */,
-				BAB3876D1B38F64C00211970 /* BKOneGraceModel.m in Sources */,
 				BAD2E8A31B2D92CC00AA6C45 /* SDWebImageCompat.m in Sources */,
 				BAB387651B38EFC600211970 /* BKUpDownView.m in Sources */,
 				BAB387621B38EFC600211970 /* BKCategoriesView.m in Sources */,
@@ -1164,8 +1236,8 @@
 				BADAB54E1B32B73D007ED14E /* BKProfileCell.m in Sources */,
 				BA9C77D01B39BB1A00220322 /* BKTextView.m in Sources */,
 				BAD2E8921B2D92CC00AA6C45 /* AFURLResponseSerialization.m in Sources */,
+				BAC56BBD1B3A78E100C7B900 /* BKGraceCell.m in Sources */,
 				BADAB5491B32B73D007ED14E /* BKProfileSuggestionController.m in Sources */,
-				BAB387891B39296D00211970 /* BKGraceCell.m in Sources */,
 				BAD2E8A41B2D92CC00AA6C45 /* SDWebImageDecoder.m in Sources */,
 				BAD2E8A21B2D92CC00AA6C45 /* SDImageCache.m in Sources */,
 				BAD2E8A01B2D92CC00AA6C45 /* MKAnnotationView+WebCache.m in Sources */,
@@ -1176,12 +1248,12 @@
 				BAD2E8AD1B2D92CD00AA6C45 /* UIImageView+HighlightedWebCache.m in Sources */,
 				BAD2E83A1B2D926900AA6C45 /* BKHttpTool.m in Sources */,
 				BAB387451B38EF2400211970 /* BKOneAdsResponse.m in Sources */,
+				BAC56BCB1B3A8AEF00C7B900 /* BKPhotoView.m in Sources */,
 				BADAB5481B32B73D007ED14E /* BKProfileJoinController.m in Sources */,
 				BADAB55D1B3314BE007ED14E /* BKOneCourseResponse.m in Sources */,
 				BADAB5601B3314DC007ED14E /* BKOneCourseModel.m in Sources */,
 				BAB387521B38EF7C00211970 /* BKAdsResponse.m in Sources */,
 				BA9BF3341B2C1A320073F660 /* BKHotController.m in Sources */,
-				BAB387861B391BFC00211970 /* BKWaterFlowBaseCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

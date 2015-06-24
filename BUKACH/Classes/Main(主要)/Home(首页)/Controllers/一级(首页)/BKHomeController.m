@@ -45,7 +45,7 @@
     self.edgesForExtendedLayout = UIRectEdgeNone;
   
     //1.添加广告视图
-    BKAdsView * adsView = [[BKAdsView alloc] initWithFrame:CGRectMake(0, 0, BKScreenWidth, 200)];
+    BKAdsView * adsView = [[BKAdsView alloc] initWithFrame:CGRectMake(0, 0, BKScreenWidth, BKScreenHeight * 0.3)];
     
     self.adsView = adsView;
     

@@ -26,6 +26,17 @@
 @property (nonatomic, assign) CGFloat img_width;
 
 
+
+/** 图片高度 */
+@property (nonatomic, assign) CGFloat grace_height;
+
+/** 图片宽度 */
+@property (nonatomic, assign) CGFloat grace_width;
+
+/** 存放详细浏览时的所有图片 */
+@property (nonatomic, strong) NSArray * grace_photo_array;
+
+
 +(id)oneGraceWithDict:(NSDictionary *)dict;
 -(id)initWithDict:(NSDictionary *)dict;
 

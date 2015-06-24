@@ -286,7 +286,7 @@
 /** index位置对应的高度 */
 - (CGFloat)heightAtIndex:(NSUInteger)index
 {
-    if ([self.delegate respondsToSelector:@selector(waterFlowView:heightAtIndex:)])
+    if ([self.BKdelegate respondsToSelector:@selector(waterFlowView:heightAtIndex:)])
     {
         return [self.BKdelegate waterFlowView:self heightAtIndex:index];
     }
@@ -307,12 +307,12 @@
 
     CGPoint point = [touch locationInView:self];
     
-    __block NSNumber *selectIndex = nil;
+    __block NSNumber * selectIndex = nil;
     [self.displayingCells enumerateKeysAndObjectsUsingBlock:^(id key, BKWaterFlowBaseCell * cell, BOOL *stop) {
         if (CGRectContainsPoint(cell.frame, point))
         {
             selectIndex = key;
-            * stop = YES;
+            *stop = YES;
         }
     }];
     
