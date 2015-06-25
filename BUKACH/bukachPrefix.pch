@@ -26,16 +26,14 @@
 
 //3.基础设置
 
+//3.1.颜色
 //简便的颜色写法
 #define BKColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:0.5]
 //随机色
 #define BKRandomColor BKColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
 
-//导航的字体颜色
-#define BKNavigatorColor [UIColor blackColor]
-//导航的字体大小
-#define BKNavigatorFont [UIFont boldSystemFontOfSize:20]
 
+//3.2.屏幕适配
 //屏幕的宽
 #define BKScreenWidth [UIScreen mainScreen].bounds.size.width
 //屏幕的高
@@ -47,10 +45,41 @@
 #define BKCurrentHeight self.bounds.size.height
 
 
+//3.3.字体颜色与大小
+//导航字体颜色
+#define BKNavigationColor [UIColor blackColor];
+//导航字体大小
+#define BKNavigationFont [UIFont boldSystemFontOfSize:20]
+
+//高亮字体颜色
+#define BKHighlightColor [UIColor orangeColor];
+//高亮字体大小
+#define BKHighlightFont [UIFont systemFontOfSize:18]
+
+//普通字体颜色
+#define BKCustomColor [UIColor blackColor];
+//普通字体大小
+#define BKCustomFont [UIFont systemFontOfSize:15]
+
+//灰暗字体颜色
+#define BKUnhighlightColor [UIColor darkGrayColor];
+//灰暗字体大小
+#define BKUnhighlightFont [UIFont systemFontOfSize:13]
+
+
+//3.4.美观布局
 //常用的margin
-#define BKMargin 5
-//cell里的margin
-#define BKCellMargin 10
+#define BKCustomMargin BKScreenWidth * 0.02
+//宽一点的margin
+#define BKSubviewMargin BKScreenWidth * 0.03
+
+#define BKDefaultHeight BKScreenWidth * 0.06
+
+//当两列布局时的宽度
+#define BKHalfWidth (BKScreenWidth - 2 * BKCustomMargin - BKSubviewMargin) * 0.5
+//当一列布局时的宽度
+#define BKFullWidth (BKScreenWidth - 2 * BKCustomMargin)
+
 
 //图片的圆角
 #define BKCornerRadius 5

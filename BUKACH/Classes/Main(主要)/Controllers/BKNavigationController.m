@@ -37,8 +37,8 @@
     
     //设置文字属性
     NSMutableDictionary * dict = [NSMutableDictionary dictionary];
-    dict[NSForegroundColorAttributeName] = BKNavigatorColor;
-    dict[NSFontAttributeName] = BKNavigatorFont;
+    dict[NSForegroundColorAttributeName] = BKNavigationColor;
+    dict[NSFontAttributeName] = BKNavigationFont;
     
     [barApperence setTitleTextAttributes:dict];
 }
@@ -76,7 +76,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
 }
 
@@ -86,7 +85,7 @@
  *  @param viewController 新的控制器
  *  @param animated       动画
  */
--(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
     //不是navi的根（根是栈底的那个控制器），就隐藏底部tabbar导航
     if (self.viewControllers.count > 0)
@@ -94,10 +93,12 @@
         viewController.hidesBottomBarWhenPushed = YES;
         
         //全部是白色，根控制器在自己写，不然app一运行就全部加载了
-        viewController.view.backgroundColor = [UIColor whiteColor];
+        viewController.view.backgroundColor = [UIColor colorWithRed:1.000 green:0.963 blue:0.976 alpha:1];
     }
     
     //每一个vc的右边都是快捷联系
+    //不想使用这个按钮，可在自己vc的viewDidLoad里重新设置
+#warning 顺序是：先push，再viewDidLoad，才能有效
     viewController.navigationItem.rightBarButtonItem = [UIBarButtonItem buttonItemWithImageName:@"phone" andSelectedImageName:@"phone_hl" andTarget:self andAction:@selector(contactBUKACH)];
     
     

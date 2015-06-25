@@ -81,9 +81,9 @@
 {
     NSInteger baseCount = (_categories.count + 2) * 0.5;
     
-    CGFloat baseHeight = ( BKCurrentHeight - BKMargin * (baseCount - 1) )/ baseCount;
+    CGFloat baseHeight = ( BKCurrentHeight - BKCustomMargin * (baseCount - 1) )/ baseCount;
     
-    CGFloat baseWidth = ( BKCurrentWidth - BKMargin ) * 0.5;
+    CGFloat baseWidth = ( BKCurrentWidth - BKCustomMargin ) * 0.5;
     
     CGFloat viewX = 0;
     CGFloat viewY = 0;
@@ -100,7 +100,7 @@
         //高度
         if ([ID isEqualToString:@"1"] || [ID isEqualToString:@"8"])
         {
-            viewH = 2 * baseHeight + BKMargin;
+            viewH = 2 * baseHeight + BKCustomMargin;
         }
         else
         {
@@ -114,22 +114,22 @@
         }
         else if ([ID isEqualToString:@"3"])
         {
-            viewY = BKMargin + baseHeight;
+            viewY = BKCustomMargin + baseHeight;
         }
         else if ([ID isEqualToString:@"4"] || [ID isEqualToString:@"5"])
         {
-            viewY = (BKMargin + baseHeight ) * 2;
+            viewY = (BKCustomMargin + baseHeight ) * 2;
         }
         else if ([ID isEqualToString:@"6"] || [ID isEqualToString:@"8"])
         {
-            viewY = (BKMargin + baseHeight ) * 3;
+            viewY = (BKCustomMargin + baseHeight ) * 3;
         }
         //符合行号为 id/2 向上取整时：7符合
         else
         {
             NSInteger row = ceil( ID.floatValue / 2);
             
-            viewY = (BKMargin + baseHeight ) * row;
+            viewY = (BKCustomMargin + baseHeight ) * row;
         }
         
         //X值
@@ -139,14 +139,14 @@
         }
         else if ([ID isEqualToString:@"3"] || [ID isEqualToString:@"5"])
         {
-            viewX = BKMargin + baseWidth;
+            viewX = BKCustomMargin + baseWidth;
         }
         //符合奇数在左，偶数在右规律时：1，7，2，8符合
         else
         {
             NSInteger column = (ID.integerValue % 2) == 0 ? 1 : 0;
             
-            viewX = ( BKMargin + baseWidth ) * column;
+            viewX = ( BKCustomMargin + baseWidth ) * column;
         }
         
         

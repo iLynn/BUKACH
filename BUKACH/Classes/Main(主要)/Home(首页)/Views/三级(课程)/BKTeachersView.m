@@ -29,15 +29,15 @@
 {
     NSInteger count = self.teachers.count;
     
-    CGFloat baseH = BKCurrentHeight - 2 * BKMargin;
+    CGFloat baseH = BKCurrentHeight - 2 * BKCustomMargin;
     CGFloat baseW = baseH * 0.6;
-    CGFloat baseY = BKMargin;
+    CGFloat baseY = BKCustomMargin;
     
-    self.contentSize = CGSizeMake((baseW + BKMargin) * count + BKMargin, BKCurrentHeight);
+    self.contentSize = CGSizeMake((baseW + BKCustomMargin) * count + BKCustomMargin, BKCurrentHeight);
     
     for (int i = 0; i < count; i++)
     {
-        CGFloat viewX = ( BKMargin + baseW ) * i + BKMargin;
+        CGFloat viewX = ( BKCustomMargin + baseW ) * i + BKCustomMargin;
         
         BKTeacherView * view = [[BKTeacherView alloc] initWithFrame:CGRectMake(viewX, baseY, baseW, baseH)];
         

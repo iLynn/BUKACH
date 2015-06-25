@@ -27,7 +27,7 @@
     
     self.navigationItem.title = ads.ads_title;
     
-    //NSString * str = ads.ads_id;
+#warning 等待接口，再继续做
     
 }
 

@@ -58,7 +58,8 @@
     
     //2.名字
     UILabel * nameLab = [[UILabel alloc] init];
-    nameLab.font = [UIFont systemFontOfSize:14];
+    nameLab.font = BKCustomFont;
+    nameLab.textColor = BKCustomColor;
     nameLab.textAlignment = NSTextAlignmentCenter;
     self.nameLab = nameLab;
     
@@ -73,7 +74,8 @@
     
     //3.教师等级
     UILabel * levelLab = [[UILabel alloc] init];
-    levelLab.font = [UIFont systemFontOfSize:12];
+    levelLab.font = BKUnhighlightFont;
+    levelLab.textColor = BKUnhighlightColor;
     levelLab.textAlignment = NSTextAlignmentCenter;
     self.levelLab = levelLab;
     

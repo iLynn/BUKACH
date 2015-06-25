@@ -12,25 +12,41 @@
 #import "BKOneTeacherModel.h"
 #import "UIImageView+WebCache.h"
 
-#define BKBaseWidth (BKScreenWidth - 2 * BKMargin)
 
 @interface BKTeacherController ()
 
+/** 存放teacher模型的数组 */
 @property (nonatomic, strong) NSArray * teacherArray;
-
+/** 整个页面的容器 */
 @property (nonatomic, weak) UIScrollView * contentView;
-
+/** 具体的某个教师模型，用于填充此页面的 */
 @property (nonatomic, strong) BKOneTeacherModel * teacherDetail;
 
-
+/** 教师照片 */
 @property (nonatomic, weak) UIImageView * photoView;
+/** 教师等级 */
 @property (nonatomic, weak) UILabel * levelLab;
+/** 教师名字 */
 @property (nonatomic, weak) UILabel * nameLab;
+/** 教师教育背景 */
+@property (nonatomic, weak) UILabel * graduate;
+/** 教师教育背景 */
 @property (nonatomic, weak) UILabel * graduateLab;
-
+/** “教学风格” */
+@property (nonatomic, weak) UILabel * style;
+/** 教师教学风格 */
 @property (nonatomic, weak) UILabel * styleLab;
+/** “教师经验” */
+@property (nonatomic, weak) UILabel * experience;
+/** 教师经验 */
 @property (nonatomic, weak) UILabel * experienceLab;
+/** “教师详细信息” */
+@property (nonatomic, weak) UILabel * detail;
+/** 教师详细信息 */
 @property (nonatomic, weak) UILabel * detailLab;
+/** “教师获奖情况” */
+@property (nonatomic, weak) UILabel * award;
+/** 教师获奖情况 */
 @property (nonatomic, weak) UILabel * awardLab;
 
 @end
@@ -95,8 +111,6 @@
         {
             self.teacherDetail = self.teacherArray[0];
             
-            BKLog(@"%@", response);
-            
             [self createSubviews];
             
         }
@@ -112,7 +126,7 @@
 - (void)createSubviews
 {
     //1.教师图片
-    UIImageView * photoView = [[UIImageView alloc] initWithFrame:CGRectMake(BKMargin, BKMargin, (BKBaseWidth - BKMargin ) * 0.6, (BKBaseWidth - BKMargin ) * 0.8)];
+    UIImageView * photoView = [[UIImageView alloc] initWithFrame:CGRectMake(BKCustomMargin, BKCustomMargin, (BKFullWidth - BKCustomMargin ) * 0.6, (BKFullWidth - BKCustomMargin ) * 0.8)];
     [self.contentView addSubview:photoView];
     
     NSString * urlStr = [NSString stringWithFormat:@"%@%@", BKUrlStr, self.teacherDetail.teacher_photo];
@@ -122,10 +136,10 @@
     
     
     //2.教师等级
-    UILabel * levelLab = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.photoView.frame) + BKMargin, BKMargin, (BKBaseWidth - BKMargin ) * 0.4, (BKBaseWidth - BKMargin ) * 0.5)];
+    UILabel * levelLab = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.photoView.frame) + BKCustomMargin, BKCustomMargin, (BKFullWidth - BKCustomMargin ) * 0.4, (BKFullWidth - BKCustomMargin ) * 0.5)];
     levelLab.font = [UIFont systemFontOfSize:60];
     levelLab.textAlignment = NSTextAlignmentCenter;
-    levelLab.textColor = [UIColor orangeColor];
+    levelLab.textColor = BKHighlightColor;
     levelLab.numberOfLines = 0;
     [self.contentView addSubview:levelLab];
     levelLab.text = self.teacherDetail.teacher_level;
@@ -134,10 +148,10 @@
     
     
     //3.教师名字
-    UILabel * nameLab = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.photoView.frame) + BKMargin, CGRectGetMaxY(self.levelLab.frame), (BKBaseWidth - BKMargin ) * 0.4, (BKBaseWidth - BKMargin ) * 0.3)];
+    UILabel * nameLab = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.photoView.frame) + BKCustomMargin, CGRectGetMaxY(self.levelLab.frame), (BKFullWidth - BKCustomMargin ) * 0.4, (BKFullWidth - BKCustomMargin ) * 0.3)];
     nameLab.font = [UIFont systemFontOfSize:36];
     nameLab.textAlignment = NSTextAlignmentCenter;
-    nameLab.textColor = [UIColor blackColor];
+    nameLab.textColor = BKCustomColor;
     [self.contentView addSubview:nameLab];
     nameLab.text = self.teacherDetail.teacher_name;
     
@@ -145,24 +159,28 @@
     
     
     //4.教师学历
-    UILabel * graduate = [[UILabel alloc] initWithFrame:CGRectMake(BKMargin, CGRectGetMaxY(self.photoView.frame) + BKMargin, BKBaseWidth, 30)];
+    UILabel * graduate = [[UILabel alloc] initWithFrame:CGRectMake(BKCustomMargin, CGRectGetMaxY(self.photoView.frame) + BKCustomMargin, BKFullWidth, BKDefaultHeight)];
     graduate.text = @"教师背景";
-    graduate.font = [UIFont systemFontOfSize:18];
-    graduate.textColor = [UIColor orangeColor];
+    graduate.font = BKHighlightFont;
+    graduate.textColor = BKHighlightColor;
     [self.contentView addSubview:graduate];
     
-    UILabel * graduateLab = [[UILabel alloc] initWithFrame:CGRectMake(BKMargin, CGRectGetMaxY(self.photoView.frame) + 2 * BKMargin + 30, BKBaseWidth, 30)];
+    self.graduate = graduate;
+    
+    //4.1 学历的具体内容
+    UILabel * graduateLab = [[UILabel alloc] initWithFrame:CGRectMake(BKCustomMargin, CGRectGetMaxY(self.graduate.frame) + BKCustomMargin, BKFullWidth, BKDefaultHeight)];
     [self.contentView addSubview:graduateLab];
-    graduateLab.font = [UIFont systemFontOfSize:15];
+    graduateLab.font = BKCustomFont;
+    graduateLab.textColor = BKCustomColor;
     graduateLab.text = self.teacherDetail.teacher_graduate_school;
     graduateLab.numberOfLines = 0;
     
     self.graduateLab = graduateLab;
     
-    //计算高度
+    //4.2 计算高度
     NSMutableDictionary * dict = [NSMutableDictionary dictionary];
-    dict[NSFontAttributeName] = [UIFont systemFontOfSize:15];
-    CGSize maxSize = CGSizeMake(BKBaseWidth, MAXFLOAT);
+    dict[NSFontAttributeName] = BKCustomFont;
+    CGSize maxSize = CGSizeMake(BKFullWidth, MAXFLOAT);
     
     CGRect graduateRect = [self.teacherDetail.teacher_graduate_school boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:dict context:nil];
     
@@ -170,78 +188,94 @@
     
     
     //5.教学风格
-    UILabel * style = [[UILabel alloc] initWithFrame:CGRectMake(BKMargin, CGRectGetMaxY(self.graduateLab.frame) + BKMargin, BKBaseWidth, 30)];
+    UILabel * style = [[UILabel alloc] initWithFrame:CGRectMake(BKCustomMargin, CGRectGetMaxY(self.graduateLab.frame) + BKCustomMargin, BKFullWidth, BKDefaultHeight)];
     style.text = @"教学风格";
-    style.font = [UIFont systemFontOfSize:18];
-    style.textColor = [UIColor orangeColor];
+    style.font = BKHighlightFont;
+    style.textColor = BKHighlightColor;
     [self.contentView addSubview:style];
     
-    UILabel * styleLab = [[UILabel alloc] initWithFrame:CGRectMake(BKMargin, CGRectGetMaxY(self.graduateLab.frame) + 2 * BKMargin + 30, BKBaseWidth, 30)];
+    self.style = style;
+    
+    //5.1 风格的具体内容
+    UILabel * styleLab = [[UILabel alloc] initWithFrame:CGRectMake(BKCustomMargin, CGRectGetMaxY(self.style.frame) + BKCustomMargin, BKFullWidth, BKDefaultHeight)];
     [self.contentView addSubview:styleLab];
-    styleLab.font = [UIFont systemFontOfSize:15];
+    styleLab.font = BKCustomFont;
+    styleLab.textColor = BKCustomColor;
     styleLab.text = self.teacherDetail.teacher_style;
     styleLab.numberOfLines = 0;
     
     self.styleLab = styleLab;
     
-    //计算高度
+    //5.2 计算高度
     CGRect styleRect = [self.teacherDetail.teacher_style boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:dict context:nil];
     
     self.styleLab.height = ceilf(styleRect.size.height);
     
     
     //6.教学经验
-    UILabel * experience = [[UILabel alloc] initWithFrame:CGRectMake(BKMargin, CGRectGetMaxY(self.styleLab.frame) + BKMargin, BKBaseWidth, 30)];
+    UILabel * experience = [[UILabel alloc] initWithFrame:CGRectMake(BKCustomMargin, CGRectGetMaxY(self.styleLab.frame) + BKCustomMargin, BKFullWidth, BKDefaultHeight)];
     experience.text = @"教学经验";
-    experience.font = [UIFont systemFontOfSize:18];
-    experience.textColor = [UIColor orangeColor];
+    experience.font = BKHighlightFont;
+    experience.textColor = BKHighlightColor;
     [self.contentView addSubview:experience];
     
-    UILabel * experienceLab = [[UILabel alloc] initWithFrame:CGRectMake(BKMargin, CGRectGetMaxY(self.styleLab.frame) + 2 * BKMargin + 30, BKBaseWidth, 30)];
+    self.experience = experience;
+    
+    //6.1 经验的具体内容
+    UILabel * experienceLab = [[UILabel alloc] initWithFrame:CGRectMake(BKCustomMargin, CGRectGetMaxY(self.experience.frame) + BKCustomMargin, BKFullWidth, BKDefaultHeight)];
     [self.contentView addSubview:experienceLab];
-    experienceLab.font = [UIFont systemFontOfSize:15];
+    experienceLab.font = BKCustomFont;
+    experienceLab.textColor = BKCustomColor;
     experienceLab.text = self.teacherDetail.teacher_experience;
     experienceLab.numberOfLines = 0;
     
     self.experienceLab = experienceLab;
     
-    //计算高度
+    //6.2 计算高度
     CGRect experienceRect = [self.teacherDetail.teacher_experience boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:dict context:nil];
     
     self.experienceLab.height = ceilf(experienceRect.size.height);
     
     
     //7.教师详情
-    UILabel * detail = [[UILabel alloc] initWithFrame:CGRectMake(BKMargin, CGRectGetMaxY(self.experienceLab.frame) + BKMargin, BKBaseWidth, 30)];
+    UILabel * detail = [[UILabel alloc] initWithFrame:CGRectMake(BKCustomMargin, CGRectGetMaxY(self.experienceLab.frame) + BKCustomMargin, BKFullWidth, BKDefaultHeight)];
     detail.text = @"教师详情";
-    detail.font = [UIFont systemFontOfSize:18];
-    detail.textColor = [UIColor orangeColor];
+    detail.font = BKHighlightFont;
+    detail.textColor = BKHighlightColor;
     [self.contentView addSubview:detail];
     
-    UILabel * detailLab = [[UILabel alloc] initWithFrame:CGRectMake(BKMargin, CGRectGetMaxY(self.experienceLab.frame) + 2 * BKMargin + 30, BKBaseWidth, 30)];
+    self.detail = detail;
+    
+    //7.1 详情的具体内容
+    UILabel * detailLab = [[UILabel alloc] initWithFrame:CGRectMake(BKCustomMargin, CGRectGetMaxY(self.detail.frame) + BKCustomMargin, BKFullWidth, BKDefaultHeight)];
     [self.contentView addSubview:detailLab];
-    detailLab.font = [UIFont systemFontOfSize:15];
+    detailLab.font = BKCustomFont;
+    detailLab.textColor = BKCustomColor;
     detailLab.text = self.teacherDetail.teacher_detail;
     detailLab.numberOfLines = 0;
     
     self.detailLab = detailLab;
     
-    //计算高度
+    //7.2 计算高度
     CGRect detailRect = [self.teacherDetail.teacher_detail boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:dict context:nil];
     
     self.detailLab.height = ceilf(detailRect.size.height);
     
     
     //8.奖项
-    UILabel * award = [[UILabel alloc] initWithFrame:CGRectMake(BKMargin, CGRectGetMaxY(self.detailLab.frame) + BKMargin, BKBaseWidth, 30)];
+    UILabel * award = [[UILabel alloc] initWithFrame:CGRectMake(BKCustomMargin, CGRectGetMaxY(self.detailLab.frame) + BKCustomMargin, BKFullWidth, BKDefaultHeight)];
     award.text = @"获奖情况";
-    award.font = [UIFont systemFontOfSize:18];
-    award.textColor = [UIColor orangeColor];
+    award.font = BKHighlightFont;
+    award.textColor = BKHighlightColor;
     [self.contentView addSubview:award];
     
-    UILabel * awardLab = [[UILabel alloc] initWithFrame:CGRectMake(BKMargin, CGRectGetMaxY(self.detailLab.frame) + 2 * BKMargin + 30, BKBaseWidth, 30)];
+    self.award = award;
+    
+    //7.1 奖项的具体内容
+    UILabel * awardLab = [[UILabel alloc] initWithFrame:CGRectMake(BKCustomMargin, CGRectGetMaxY(self.award.frame) + BKCustomMargin, BKFullWidth, BKDefaultHeight)];
     [self.contentView addSubview:awardLab];
-    awardLab.font = [UIFont systemFontOfSize:15];
+    awardLab.font = BKCustomFont;
+    awardLab.textColor = BKCustomColor;
     awardLab.text = self.teacherDetail.teacher_award;
     awardLab.numberOfLines = 0;
     
@@ -256,7 +290,7 @@
     
     
     //9.重新计算scrollView的contentSize
-    self.contentView.contentSize = CGSizeMake(0, CGRectGetMaxY(self.awardLab.frame) + BKMargin);
+    self.contentView.contentSize = CGSizeMake(0, CGRectGetMaxY(self.awardLab.frame) + BKCustomMargin);
     
     
 }

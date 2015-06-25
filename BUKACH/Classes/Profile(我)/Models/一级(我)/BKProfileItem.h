@@ -18,8 +18,6 @@ typedef  void (^optionBlcok)();
 /** 标题 */
 @property (nonatomic, copy) NSString * tilte;
 
-///** 附带文字 */
-//@property (nonatomic, copy) NSString * customerText;
 
 /** 定义block保存将来要执行的代码 */
 @property (nonatomic, copy) optionBlcok option;

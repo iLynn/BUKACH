@@ -22,20 +22,17 @@
 
 @interface BKHomeController ()<BKCategoriesViewDelegate, BKAdsViewDelegate>
 
+/** 广告区 */
 @property (nonatomic, weak) BKAdsView * adsView;
-
+/** 课程分类区 */
 @property (nonatomic, weak) BKCategoriesView * categoriesView;
 
 @end
 
 @implementation BKHomeController
 
-#pragma mark - 懒加载
-
 - (void)viewDidLoad
 {
-    BKLog(@"%s", __func__);
-    
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
@@ -56,10 +53,10 @@
     
     
     //2.添加分类视图
-    CGFloat categoriesX = BKMargin;
-    CGFloat categoriesY = CGRectGetMaxY(self.adsView.frame) + BKMargin;
-    CGFloat categoriesW = BKScreenWidth - 2 * BKMargin;
-    CGFloat categoriesH = BKScreenHeight - categoriesY - 20 - 44 - 49 - BKMargin;
+    CGFloat categoriesX = BKCustomMargin;
+    CGFloat categoriesY = CGRectGetMaxY(self.adsView.frame) + BKCustomMargin;
+    CGFloat categoriesW = BKScreenWidth - 2 * BKCustomMargin;
+    CGFloat categoriesH = BKScreenHeight - categoriesY - 20 - 44 - 49 - BKCustomMargin;
     
     BKCategoriesView * categoriesView = [[BKCategoriesView alloc] initWithFrame:CGRectMake(categoriesX, categoriesY, categoriesW, categoriesH)];
     

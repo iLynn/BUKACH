@@ -20,6 +20,7 @@
 {
     if (self = [super initWithFrame:frame])
     {
+        // 设置为透明色
         self.backgroundColor = [UIColor clearColor];
         
         // 添加一个显示占位文字的label
@@ -33,7 +34,7 @@
         self.placehoderColor = [UIColor lightGrayColor];
         
         // 设置默认的字体
-        self.font = [UIFont systemFontOfSize:14];
+        self.font = BKCustomFont;
         
         // 当用户通过键盘修改了self的文字，self就会自动发出一个UITextViewTextDidChangeNotification通知
         // 一旦发出上面的通知，就会调用self的textDidChange方法
@@ -100,7 +101,7 @@
 {
     [super layoutSubviews];
     
-    self.placehoderLabel.y = 8;
+    self.placehoderLabel.y = 6;
     self.placehoderLabel.x = 5;
     self.placehoderLabel.width = self.width - 2 * self.placehoderLabel.x;
     

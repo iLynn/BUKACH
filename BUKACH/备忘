@@ -1,3 +1,10 @@
+
+
+所有的子控件都是：外部位置设为(0，0)，内部布局时加入BKxxxMargin
+BKxxxMargin用比例给出：3% 的宽度 或 5% 的宽度
+
+
+
 网络请求：
 
 1. 首页
@@ -29,6 +36,20 @@ http://120.25.150.214/get_teacher_info
 
 
 
+2. 风采
+
+post
+参数是start、end
+http://120.25.150.214/get_all_grace
+
+2.1. 风采详细
+post
+参数是grace_id
+http://120.25.150.214/get_grace_detail
+
+
+
+3. 热门
 
 
 
@@ -43,3 +64,21 @@ http://120.25.150.214/add-user
 post
 参数是：username、password
 http://120.25.150.214/auth
+
+4.3. 建议
+post
+参数是：content、email、phone
+http://120.25.150.214/add_feedback
+
+4.4. 招聘
+post
+无参数
+http://120.25.150.214/get_job_info
+
+4.5. 关于
+post
+无参数
+http://120.25.150.214/about_us
+
+
+

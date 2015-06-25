@@ -43,6 +43,13 @@
 		BAC56BC51B3A7D0700C7B900 /* BKGracePhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC56BC41B3A7D0700C7B900 /* BKGracePhotoModel.m */; };
 		BAC56BC81B3A89DE00C7B900 /* BKPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC56BC71B3A89DE00C7B900 /* BKPhotosView.m */; };
 		BAC56BCB1B3A8AEF00C7B900 /* BKPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC56BCA1B3A8AEF00C7B900 /* BKPhotoView.m */; };
+		BAC858821B3B92B6003536A8 /* BKAboutResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC858811B3B92B6003536A8 /* BKAboutResponse.m */; };
+		BAC858851B3B92F3003536A8 /* BKAboutModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC858841B3B92F3003536A8 /* BKAboutModel.m */; };
+		BAC858881B3B9B46003536A8 /* BKJobsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC858871B3B9B46003536A8 /* BKJobsResponse.m */; };
+		BAC8588B1B3B9B59003536A8 /* BKOneJobModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC8588A1B3B9B59003536A8 /* BKOneJobModel.m */; };
+		BAC8588E1B3B9E2C003536A8 /* BKJobCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC8588D1B3B9E2C003536A8 /* BKJobCell.m */; };
+		BAC858951B3BBF48003536A8 /* BKCourseFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC858941B3BBF48003536A8 /* BKCourseFrame.m */; };
+		BAC8589C1B3BEE9E003536A8 /* BKJobFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC8589B1B3BEE9E003536A8 /* BKJobFrame.m */; };
 		BAD2E83A1B2D926900AA6C45 /* BKHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD2E8391B2D926900AA6C45 /* BKHttpTool.m */; };
 		BAD2E88B1B2D92CC00AA6C45 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD2E83D1B2D92CC00AA6C45 /* AFHTTPRequestOperation.m */; };
 		BAD2E88C1B2D92CC00AA6C45 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD2E83F1B2D92CC00AA6C45 /* AFHTTPRequestOperationManager.m */; };
@@ -79,7 +86,6 @@
 		BAD2E8D81B2DC3E300AA6C45 /* BKCallTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD2E8D71B2DC3E300AA6C45 /* BKCallTool.m */; };
 		BADAB5121B32B623007ED14E /* BKHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = BADAB4E11B32B623007ED14E /* BKHomeController.m */; };
 		BADAB5131B32B623007ED14E /* BKCourseController.m in Sources */ = {isa = PBXBuildFile; fileRef = BADAB4E41B32B623007ED14E /* BKCourseController.m */; };
-		BADAB51C1B32B623007ED14E /* BKCourseFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = BADAB4FD1B32B623007ED14E /* BKCourseFrame.m */; };
 		BADAB5231B32B623007ED14E /* BKCourseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BADAB5101B32B623007ED14E /* BKCourseCell.m */; };
 		BADAB5461B32B73D007ED14E /* BKProfileController.m in Sources */ = {isa = PBXBuildFile; fileRef = BADAB5281B32B73D007ED14E /* BKProfileController.m */; };
 		BADAB5471B32B73D007ED14E /* BKProfileAboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = BADAB52B1B32B73D007ED14E /* BKProfileAboutController.m */; };
@@ -181,6 +187,20 @@
 		BAC56BC71B3A89DE00C7B900 /* BKPhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKPhotosView.m; sourceTree = "<group>"; };
 		BAC56BC91B3A8AEF00C7B900 /* BKPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKPhotoView.h; sourceTree = "<group>"; };
 		BAC56BCA1B3A8AEF00C7B900 /* BKPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKPhotoView.m; sourceTree = "<group>"; };
+		BAC858801B3B92B6003536A8 /* BKAboutResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKAboutResponse.h; sourceTree = "<group>"; };
+		BAC858811B3B92B6003536A8 /* BKAboutResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKAboutResponse.m; sourceTree = "<group>"; };
+		BAC858831B3B92F3003536A8 /* BKAboutModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKAboutModel.h; sourceTree = "<group>"; };
+		BAC858841B3B92F3003536A8 /* BKAboutModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKAboutModel.m; sourceTree = "<group>"; };
+		BAC858861B3B9B46003536A8 /* BKJobsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKJobsResponse.h; sourceTree = "<group>"; };
+		BAC858871B3B9B46003536A8 /* BKJobsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKJobsResponse.m; sourceTree = "<group>"; };
+		BAC858891B3B9B59003536A8 /* BKOneJobModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKOneJobModel.h; sourceTree = "<group>"; };
+		BAC8588A1B3B9B59003536A8 /* BKOneJobModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKOneJobModel.m; sourceTree = "<group>"; };
+		BAC8588C1B3B9E2C003536A8 /* BKJobCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKJobCell.h; sourceTree = "<group>"; };
+		BAC8588D1B3B9E2C003536A8 /* BKJobCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKJobCell.m; sourceTree = "<group>"; };
+		BAC858931B3BBF48003536A8 /* BKCourseFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKCourseFrame.h; sourceTree = "<group>"; };
+		BAC858941B3BBF48003536A8 /* BKCourseFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKCourseFrame.m; sourceTree = "<group>"; };
+		BAC8589A1B3BEE9E003536A8 /* BKJobFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKJobFrame.h; sourceTree = "<group>"; };
+		BAC8589B1B3BEE9E003536A8 /* BKJobFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKJobFrame.m; sourceTree = "<group>"; };
 		BAD2E8381B2D926900AA6C45 /* BKHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKHttpTool.h; sourceTree = "<group>"; };
 		BAD2E8391B2D926900AA6C45 /* BKHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKHttpTool.m; sourceTree = "<group>"; };
 		BAD2E83C1B2D92CC00AA6C45 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -253,8 +273,6 @@
 		BADAB4E11B32B623007ED14E /* BKHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKHomeController.m; sourceTree = "<group>"; };
 		BADAB4E31B32B623007ED14E /* BKCourseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKCourseController.h; sourceTree = "<group>"; };
 		BADAB4E41B32B623007ED14E /* BKCourseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKCourseController.m; sourceTree = "<group>"; };
-		BADAB4FC1B32B623007ED14E /* BKCourseFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKCourseFrame.h; sourceTree = "<group>"; };
-		BADAB4FD1B32B623007ED14E /* BKCourseFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKCourseFrame.m; sourceTree = "<group>"; };
 		BADAB50F1B32B623007ED14E /* BKCourseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKCourseCell.h; sourceTree = "<group>"; };
 		BADAB5101B32B623007ED14E /* BKCourseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKCourseCell.m; sourceTree = "<group>"; };
 		BADAB5271B32B73D007ED14E /* BKProfileController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKProfileController.h; sourceTree = "<group>"; };
@@ -529,6 +547,7 @@
 			children = (
 				BAB3873F1B38EF2400211970 /* BKCourseResponse.h */,
 				BAB387401B38EF2400211970 /* BKCourseResponse.m */,
+				BAC858921B3BBF48003536A8 /* Frame */,
 			);
 			path = "分类";
 			sourceTree = "<group>";
@@ -661,6 +680,25 @@
 				BAC56BBC1B3A78E100C7B900 /* BKWaterFlowBaseCell.m */,
 			);
 			path = "一级(风采)";
+			sourceTree = "<group>";
+		};
+		BAC858921B3BBF48003536A8 /* Frame */ = {
+			isa = PBXGroup;
+			children = (
+				BAC858931B3BBF48003536A8 /* BKCourseFrame.h */,
+				BAC858941B3BBF48003536A8 /* BKCourseFrame.m */,
+			);
+			name = Frame;
+			path = "../广告/Frame";
+			sourceTree = "<group>";
+		};
+		BAC858991B3BEE9E003536A8 /* Frame */ = {
+			isa = PBXGroup;
+			children = (
+				BAC8589A1B3BEE9E003536A8 /* BKJobFrame.h */,
+				BAC8589B1B3BEE9E003536A8 /* BKJobFrame.m */,
+			);
+			path = Frame;
 			sourceTree = "<group>";
 		};
 		BAD2E83B1B2D92CC00AA6C45 /* AFNetworking */ = {
@@ -849,18 +887,8 @@
 			children = (
 				BAB387411B38EF2400211970 /* 广告 */,
 				BAB3873E1B38EF2400211970 /* 分类 */,
-				BADAB4FB1B32B623007ED14E /* Frame */,
 			);
 			path = "二级(广告-分类)";
-			sourceTree = "<group>";
-		};
-		BADAB4FB1B32B623007ED14E /* Frame */ = {
-			isa = PBXGroup;
-			children = (
-				BADAB4FC1B32B623007ED14E /* BKCourseFrame.h */,
-				BADAB4FD1B32B623007ED14E /* BKCourseFrame.m */,
-			);
-			path = Frame;
 			sourceTree = "<group>";
 		};
 		BADAB4FE1B32B623007ED14E /* 四级(教师) */ = {
@@ -935,9 +963,9 @@
 			isa = PBXGroup;
 			children = (
 				BADAB5261B32B73D007ED14E /* 一级(我) */,
+				BADAB52F1B32B73D007ED14E /* 二级(建议箱) */,
 				BADAB5291B32B73D007ED14E /* 二级(关于我们) */,
 				BADAB52C1B32B73D007ED14E /* 二级(加入我们) */,
-				BADAB52F1B32B73D007ED14E /* 二级(建议箱) */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -982,9 +1010,9 @@
 			isa = PBXGroup;
 			children = (
 				BADAB5331B32B73D007ED14E /* 一级(我) */,
+				BADAB53E1B32B73D007ED14E /* 二级(建议箱) */,
 				BADAB53C1B32B73D007ED14E /* 二级(关于我们) */,
 				BADAB53D1B32B73D007ED14E /* 二级(加入我们) */,
-				BADAB53E1B32B73D007ED14E /* 二级(建议箱) */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1007,6 +1035,10 @@
 		BADAB53C1B32B73D007ED14E /* 二级(关于我们) */ = {
 			isa = PBXGroup;
 			children = (
+				BAC858801B3B92B6003536A8 /* BKAboutResponse.h */,
+				BAC858811B3B92B6003536A8 /* BKAboutResponse.m */,
+				BAC858831B3B92F3003536A8 /* BKAboutModel.h */,
+				BAC858841B3B92F3003536A8 /* BKAboutModel.m */,
 			);
 			path = "二级(关于我们)";
 			sourceTree = "<group>";
@@ -1014,6 +1046,11 @@
 		BADAB53D1B32B73D007ED14E /* 二级(加入我们) */ = {
 			isa = PBXGroup;
 			children = (
+				BAC858861B3B9B46003536A8 /* BKJobsResponse.h */,
+				BAC858871B3B9B46003536A8 /* BKJobsResponse.m */,
+				BAC858891B3B9B59003536A8 /* BKOneJobModel.h */,
+				BAC8588A1B3B9B59003536A8 /* BKOneJobModel.m */,
+				BAC858991B3BEE9E003536A8 /* Frame */,
 			);
 			path = "二级(加入我们)";
 			sourceTree = "<group>";
@@ -1029,9 +1066,9 @@
 			isa = PBXGroup;
 			children = (
 				BADAB5401B32B73D007ED14E /* 一级(我) */,
+				BADAB5451B32B73D007ED14E /* 二级(建议箱) */,
 				BADAB5431B32B73D007ED14E /* 二级(关于我们) */,
 				BADAB5441B32B73D007ED14E /* 二级(加入我们) */,
-				BADAB5451B32B73D007ED14E /* 二级(建议箱) */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1055,6 +1092,8 @@
 		BADAB5441B32B73D007ED14E /* 二级(加入我们) */ = {
 			isa = PBXGroup;
 			children = (
+				BAC8588C1B3B9E2C003536A8 /* BKJobCell.h */,
+				BAC8588D1B3B9E2C003536A8 /* BKJobCell.m */,
 			);
 			path = "二级(加入我们)";
 			sourceTree = "<group>";
@@ -1190,7 +1229,9 @@
 				BAD2E8901B2D92CC00AA6C45 /* AFURLConnectionOperation.m in Sources */,
 				BAD2E88B1B2D92CC00AA6C45 /* AFHTTPRequestOperation.m in Sources */,
 				BADAB54D1B32B73D007ED14E /* BKProfileTextItem.m in Sources */,
+				BAC858851B3B92F3003536A8 /* BKAboutModel.m in Sources */,
 				BAB387701B38F79F00211970 /* BKOneAdsModel.m in Sources */,
+				BAC858951B3BBF48003536A8 /* BKCourseFrame.m in Sources */,
 				BAC56BA91B3A78D100C7B900 /* BKGraceController.m in Sources */,
 				BAB387731B38F7AC00211970 /* BKCategoryResponse.m in Sources */,
 				BAD2E88D1B2D92CC00AA6C45 /* AFHTTPSessionManager.m in Sources */,
@@ -1205,7 +1246,7 @@
 				BAD2E8AE1B2D92CD00AA6C45 /* UIImageView+WebCache.m in Sources */,
 				BAD2E8D81B2DC3E300AA6C45 /* BKCallTool.m in Sources */,
 				BAC56BC21B3A792700C7B900 /* BKGraceDetailController.m in Sources */,
-				BADAB51C1B32B623007ED14E /* BKCourseFrame.m in Sources */,
+				BAC8588B1B3B9B59003536A8 /* BKOneJobModel.m in Sources */,
 				BAD2E8A91B2D92CD00AA6C45 /* UIButton+WebCache.m in Sources */,
 				BAB387511B38EF7C00211970 /* BKOneCategoryModel.m in Sources */,
 				BAD2E8D41B2DBC7400AA6C45 /* UIImage+ResizeExt.m in Sources */,
@@ -1228,6 +1269,8 @@
 				BAD2E88C1B2D92CC00AA6C45 /* AFHTTPRequestOperationManager.m in Sources */,
 				BAD2E8941B2D92CC00AA6C45 /* MBProgressHUD+LY.m in Sources */,
 				BAD2E8A31B2D92CC00AA6C45 /* SDWebImageCompat.m in Sources */,
+				BAC8589C1B3BEE9E003536A8 /* BKJobFrame.m in Sources */,
+				BAC8588E1B3B9E2C003536A8 /* BKJobCell.m in Sources */,
 				BAB387651B38EFC600211970 /* BKUpDownView.m in Sources */,
 				BAB387621B38EFC600211970 /* BKCategoriesView.m in Sources */,
 				BADAB5121B32B623007ED14E /* BKHomeController.m in Sources */,
@@ -1243,6 +1286,7 @@
 				BAD2E8A01B2D92CC00AA6C45 /* MKAnnotationView+WebCache.m in Sources */,
 				BA9BF2E81B2C14D30073F660 /* main.m in Sources */,
 				BADAB55A1B32DF3E007ED14E /* BKTeacherController.m in Sources */,
+				BAC858881B3B9B46003536A8 /* BKJobsResponse.m in Sources */,
 				BAD2E8A11B2D92CC00AA6C45 /* NSData+ImageContentType.m in Sources */,
 				BAD2E8D21B2DBC7400AA6C45 /* Foundation+Log.m in Sources */,
 				BAD2E8AD1B2D92CD00AA6C45 /* UIImageView+HighlightedWebCache.m in Sources */,
@@ -1253,6 +1297,7 @@
 				BADAB55D1B3314BE007ED14E /* BKOneCourseResponse.m in Sources */,
 				BADAB5601B3314DC007ED14E /* BKOneCourseModel.m in Sources */,
 				BAB387521B38EF7C00211970 /* BKAdsResponse.m in Sources */,
+				BAC858821B3B92B6003536A8 /* BKAboutResponse.m in Sources */,
 				BA9BF3341B2C1A320073F660 /* BKHotController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

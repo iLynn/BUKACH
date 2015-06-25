@@ -9,7 +9,7 @@
 #import "BKGraceFrame.h"
 #import "BKOneGraceModel.h"
 
-#define BKBaseWidth ceilf((BKScreenWidth - 3 * BKMargin) / 2)
+#define BKBaseWidth ceilf((BKScreenWidth - 3 * BKCustomMargin) / 2)
 
 
 @interface BKGraceFrame()
@@ -54,7 +54,7 @@
     self.photoHeight = BKBaseWidth * imgH / imgW;
     
     
-    self.cellHeight = self.titleHeight + self.photoHeight + BKMargin;
+    self.cellHeight = self.titleHeight + self.photoHeight + BKCustomMargin;
     
 }
 
@@ -70,7 +70,7 @@
     
     //2.图片
     CGFloat photoX = 0;
-    CGFloat photoY = CGRectGetMaxY(self.titleFrame) + BKMargin;
+    CGFloat photoY = CGRectGetMaxY(self.titleFrame) + BKCustomMargin;
     CGFloat photoW = BKBaseWidth;
     //设置成长宽3：2
     CGFloat photoH = self.photoHeight;

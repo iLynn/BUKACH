@@ -65,20 +65,25 @@
     self.imageView.image = [UIImage imageNamed:_item.icon];
     
     // 设置辅助视图
+    //1.箭头模式
     if ([item isKindOfClass:[BKProfileArrowItem class]])
     {
         self.accessoryView = self.arrowImage;
     }
+    //2.文本模式
     else if ([item isKindOfClass:[BKProfileTextItem class]])
     {
         BKProfileTextItem * newItem = (BKProfileTextItem *)item;
         NSString * text = [NSString stringWithFormat:@"Ver %@", newItem.customerText];
-
+        
+        //设置文字内容
         NSMutableDictionary * dict = [NSMutableDictionary dictionary];
-        dict[NSFontAttributeName] = [UIFont systemFontOfSize:20];
+        dict[NSFontAttributeName] = BKHighlightFont;
         self.textView.size = [text sizeWithAttributes:dict];
         
+        //将文字封装到小视图里
         self.textView.text = text;
+        self.textView.font = BKCustomFont;
         self.textView.contentMode = UIViewContentModeRight;
         
         self.accessoryView = self.textView;

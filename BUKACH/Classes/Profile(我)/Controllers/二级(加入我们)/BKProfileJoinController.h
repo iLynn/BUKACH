@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BKProfileJoinController : UIViewController
+@interface BKProfileJoinController : UITableViewController
 
 @end
