@@ -10,6 +10,7 @@
 
 @interface BKPhotosView : UIView
 
+/** photos里存放的是photo_url的字符串 */
 @property (nonatomic, strong) NSArray * photos;
 
 + (id)photosView;

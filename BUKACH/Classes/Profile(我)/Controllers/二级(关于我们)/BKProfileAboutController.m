@@ -94,7 +94,6 @@
 
 - (void)fillSubviews
 {
-#warning 提醒后台修改此字段的属性，不然布局太难看！
     self.detailLab.text = self.about.about_us_detail;
     
     NSMutableDictionary * dictTitle = [NSMutableDictionary dictionary];

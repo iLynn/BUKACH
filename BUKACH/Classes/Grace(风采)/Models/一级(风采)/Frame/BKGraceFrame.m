@@ -9,7 +9,7 @@
 #import "BKGraceFrame.h"
 #import "BKOneGraceModel.h"
 
-#define BKBaseWidth ceilf((BKScreenWidth - 3 * BKCustomMargin) / 2)
+//#define BKBaseWidth ceilf((BKScreenWidth - 3 * BKCustomMargin) / 2)
 
 
 @interface BKGraceFrame()
@@ -38,10 +38,10 @@
 {
     //1.title部分
     NSMutableDictionary * dictTitle = [NSMutableDictionary dictionary];
-    dictTitle[NSFontAttributeName] = [UIFont systemFontOfSize:14];
+    dictTitle[NSFontAttributeName] = BKCustomFont;
     
     //宽度占屏幕宽度的一半
-    CGSize maxSize = CGSizeMake(BKBaseWidth, MAXFLOAT);
+    CGSize maxSize = CGSizeMake(BKHalfWidth - 2 * BKCustomMargin, MAXFLOAT);
     CGRect rectName = [self.grace.grace_title boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:dictTitle context:nil];
     
     self.titleHeight = ceilf(rectName.size.height);
@@ -51,31 +51,34 @@
     CGFloat imgH = self.grace.img_height;
     CGFloat imgW = self.grace.img_width;
     
-    self.photoHeight = BKBaseWidth * imgH / imgW;
+    self.photoHeight = BKHalfWidth * imgH / imgW;
     
     
-    self.cellHeight = self.titleHeight + self.photoHeight + BKCustomMargin;
+    self.cellHeight = self.titleHeight + self.photoHeight + BKCustomMargin * 2;
     
 }
 
 - (void)setupFrame
 {
-    //1.标题
-    CGFloat titleX = 0;
-    CGFloat titleY = 0;
-    CGFloat titleW = BKBaseWidth;
-    CGFloat titleH = self.titleHeight;
+    //1.先图片
+    CGFloat photoX = 0;
+    CGFloat photoY = 0;
+    CGFloat photoW = BKHalfWidth;
+    //设置成长宽3：2
+    CGFloat photoH = _photoHeight;
+    
+    self.photoFrame = CGRectMake(photoX, photoY, photoW, photoH);
+    
+    
+    
+    //2.再文字
+    CGFloat titleX = BKCustomMargin;
+    CGFloat titleY = CGRectGetMaxY(self.photoFrame) + BKCustomMargin;
+    CGFloat titleW = BKHalfWidth - 2 * BKCustomMargin;
+    CGFloat titleH = _titleHeight;
     
     self.titleFrame = CGRectMake(titleX, titleY, titleW, titleH);
     
-    //2.图片
-    CGFloat photoX = 0;
-    CGFloat photoY = CGRectGetMaxY(self.titleFrame) + BKCustomMargin;
-    CGFloat photoW = BKBaseWidth;
-    //设置成长宽3：2
-    CGFloat photoH = self.photoHeight;
-    
-    self.photoFrame = CGRectMake(photoX, photoY, photoW, photoH);
 
 }
 

@@ -76,7 +76,7 @@
 #define BKDefaultHeight BKScreenWidth * 0.06
 
 //当两列布局时的宽度
-#define BKHalfWidth (BKScreenWidth - 2 * BKCustomMargin - BKSubviewMargin) * 0.5
+#define BKHalfWidth (BKScreenWidth - 3 * BKCustomMargin) * 0.5
 //当一列布局时的宽度
 #define BKFullWidth (BKScreenWidth - 2 * BKCustomMargin)
 

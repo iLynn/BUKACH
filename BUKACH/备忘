@@ -14,6 +14,11 @@ post
 无参数
 http://120.25.150.214/get_ads_info
 
+1.1.1. 点击具体的广告
+post
+参数是ad_id
+http://120.25.150.214/get_ad_detail
+
 1.2. 首页课程种类
 post
 无参数
@@ -50,6 +55,20 @@ http://120.25.150.214/get_grace_detail
 
 
 3. 热门
+
+post
+无参数
+http://120.25.150.214/get_hot_summary
+
+3.1. 点击某个具体的type
+post
+参数是hot_type_id
+http://120.25.150.214/get_all_hot_by_type
+
+3.1.1. 点击某个具体的hot
+post
+参数是hot_id
+http://120.25.150.214/get_hot_detail
 
 
 

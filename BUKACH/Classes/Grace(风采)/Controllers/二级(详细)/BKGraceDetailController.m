@@ -10,14 +10,11 @@
 #import "BKOneGraceModel.h"
 #import "BKHttpTool.h"
 #import "BKGraceResponse.h"
-#import "BKGracePhotoModel.h"
 
 #import "UIImageView+WebCache.h"
 #import "BKPhotosView.h"
 
 @interface BKGraceDetailController ()
-
-//@property (nonatomic, weak) UIScrollView * contentView;
 
 @property (nonatomic, weak) BKPhotosView * contentView;
 
@@ -52,8 +49,6 @@
     
     self.contentView = contentView;
     
-    BKLog(@"%@", NSStringFromCGRect(self.contentView.frame));
-    
 }
 
 
@@ -81,8 +76,7 @@
     NSString * urlStr = [NSString stringWithFormat:@"%@get_grace_detail", BKUrlStr];
     
     [BKHttpTool post:urlStr params:params success:^(NSDictionary * graceResponse) {
-        
-#warning 提醒后台修改字段名？
+
         BKGraceResponse * response = [BKGraceResponse graceResponseWithDict:graceResponse];
         
         //只有一个grace
@@ -90,7 +84,15 @@
         {
             BKOneGraceModel * model = response.data[0];
             
-            self.contentView.photos = model.grace_photo_array;
+            //有详细图片时
+            if (model.grace_photo_array.count > 0)
+            {
+                self.contentView.photos = model.grace_photo_array;
+            }
+            else
+            {
+                BKLog(@"no grace detail photos");
+            }
         }
         
     } failure:^(NSError * error) {

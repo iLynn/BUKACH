@@ -47,7 +47,8 @@
         UILabel * titleLab = [[UILabel alloc] init];
         [self addSubview:titleLab];
         titleLab.numberOfLines = 0;
-        titleLab.font = [UIFont systemFontOfSize:14];
+        titleLab.font = BKCustomFont;
+        titleLab.textColor = BKCustomColor;
         self.titleLab = titleLab;
         
         //2.照片

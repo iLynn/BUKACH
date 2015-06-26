@@ -7,16 +7,15 @@
 //
 
 #import "BKPhotoView.h"
-#import "BKGracePhotoModel.h"
 #import "UIImageView+WebCache.h"
 
 @implementation BKPhotoView
 
--(void)setPhoto:(BKGracePhotoModel *)photo
+-(void)setPhoto_url:(NSString *)photo_url
 {
-    _photo = photo;
+    _photo_url = photo_url;
     
-    NSString * urlStr = [NSString stringWithFormat:@"%@%@", BKUrlStr, photo.img_location];
+    NSString * urlStr = [NSString stringWithFormat:@"%@%@", BKUrlStr, photo_url];
 
     [self sd_setImageWithURL:[NSURL URLWithString:urlStr]];
     

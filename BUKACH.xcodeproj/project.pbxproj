@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA4E67371B3D53E5001C9DD1 /* BKHotController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4E67341B3D53E5001C9DD1 /* BKHotController.m */; };
+		BA4E67411B3D53EE001C9DD1 /* BKHotResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4E673C1B3D53EE001C9DD1 /* BKHotResponse.m */; };
+		BA4E67421B3D53EE001C9DD1 /* BKHotTypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4E673E1B3D53EE001C9DD1 /* BKHotTypeModel.m */; };
+		BA4E67431B3D53EE001C9DD1 /* BKOneHotModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4E67401B3D53EE001C9DD1 /* BKOneHotModel.m */; };
+		BA4E674A1B3D53F4001C9DD1 /* BKHotCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4E67471B3D53F4001C9DD1 /* BKHotCell.m */; };
+		BA4E674B1B3D53F4001C9DD1 /* BKSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4E67491B3D53F4001C9DD1 /* BKSectionHeaderView.m */; };
+		BA4E674E1B3D5420001C9DD1 /* BKHotDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4E674D1B3D5420001C9DD1 /* BKHotDetailController.m */; };
+		BA4E67511B3D551A001C9DD1 /* BKOneHotResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4E67501B3D551A001C9DD1 /* BKOneHotResponse.m */; };
 		BA6E06231B33A84300A41C3F /* BKOneTeacherResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6E06221B33A84300A41C3F /* BKOneTeacherResponse.m */; };
 		BA9BF2E81B2C14D30073F660 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9BF2E71B2C14D30073F660 /* main.m */; };
 		BA9BF2F31B2C14D40073F660 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA9BF2F21B2C14D40073F660 /* Images.xcassets */; };
@@ -14,14 +22,12 @@
 		BA9BF3251B2C17410073F660 /* BKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9BF31E1B2C17410073F660 /* BKAppDelegate.m */; };
 		BA9BF3281B2C182B0073F660 /* BKTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9BF3271B2C182B0073F660 /* BKTabBarController.m */; };
 		BA9BF32B1B2C18430073F660 /* BKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9BF32A1B2C18430073F660 /* BKNavigationController.m */; };
-		BA9BF3341B2C1A320073F660 /* BKHotController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9BF3331B2C1A320073F660 /* BKHotController.m */; };
 		BA9BF33A1B2C1BBC0073F660 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA9BF3391B2C1BBC0073F660 /* LaunchScreen.xib */; };
 		BA9C77D01B39BB1A00220322 /* BKTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9C77CF1B39BB1900220322 /* BKTextView.m */; };
 		BAAB0F381B2FCF19001DA224 /* 备忘 in Resources */ = {isa = PBXBuildFile; fileRef = BAAB0F371B2FCF19001DA224 /* 备忘 */; };
 		BAB3873C1B38EEBC00211970 /* BKCategoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB387381B38EEBC00211970 /* BKCategoryController.m */; };
 		BAB3873D1B38EEBC00211970 /* BKAdsController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB3873B1B38EEBC00211970 /* BKAdsController.m */; };
 		BAB387441B38EF2400211970 /* BKCourseResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB387401B38EF2400211970 /* BKCourseResponse.m */; };
-		BAB387451B38EF2400211970 /* BKOneAdsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB387431B38EF2400211970 /* BKOneAdsResponse.m */; };
 		BAB387511B38EF7C00211970 /* BKOneCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB3874A1B38EF7C00211970 /* BKOneCategoryModel.m */; };
 		BAB387521B38EF7C00211970 /* BKAdsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB3874D1B38EF7C00211970 /* BKAdsResponse.m */; };
 		BAB387621B38EFC600211970 /* BKCategoriesView.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB387561B38EFC600211970 /* BKCategoriesView.m */; };
@@ -33,14 +39,12 @@
 		BAB387701B38F79F00211970 /* BKOneAdsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB3876F1B38F79F00211970 /* BKOneAdsModel.m */; };
 		BAB387731B38F7AC00211970 /* BKCategoryResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB387721B38F7AC00211970 /* BKCategoryResponse.m */; };
 		BAC56BA91B3A78D100C7B900 /* BKGraceController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC56BA81B3A78D100C7B900 /* BKGraceController.m */; };
-		BAC56BB21B3A78D900C7B900 /* BKGraceFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC56BAD1B3A78D900C7B900 /* BKGraceFrame.m */; };
 		BAC56BB31B3A78D900C7B900 /* BKGraceResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC56BAF1B3A78D900C7B900 /* BKGraceResponse.m */; };
 		BAC56BB41B3A78D900C7B900 /* BKOneGraceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC56BB11B3A78D900C7B900 /* BKOneGraceModel.m */; };
 		BAC56BBD1B3A78E100C7B900 /* BKGraceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC56BB81B3A78E100C7B900 /* BKGraceCell.m */; };
 		BAC56BBE1B3A78E100C7B900 /* BKGraceWaterFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC56BBA1B3A78E100C7B900 /* BKGraceWaterFlowView.m */; };
 		BAC56BBF1B3A78E100C7B900 /* BKWaterFlowBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC56BBC1B3A78E100C7B900 /* BKWaterFlowBaseCell.m */; };
 		BAC56BC21B3A792700C7B900 /* BKGraceDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC56BC11B3A792700C7B900 /* BKGraceDetailController.m */; };
-		BAC56BC51B3A7D0700C7B900 /* BKGracePhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC56BC41B3A7D0700C7B900 /* BKGracePhotoModel.m */; };
 		BAC56BC81B3A89DE00C7B900 /* BKPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC56BC71B3A89DE00C7B900 /* BKPhotosView.m */; };
 		BAC56BCB1B3A8AEF00C7B900 /* BKPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC56BCA1B3A8AEF00C7B900 /* BKPhotoView.m */; };
 		BAC858821B3B92B6003536A8 /* BKAboutResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC858811B3B92B6003536A8 /* BKAboutResponse.m */; };
@@ -50,6 +54,8 @@
 		BAC8588E1B3B9E2C003536A8 /* BKJobCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC8588D1B3B9E2C003536A8 /* BKJobCell.m */; };
 		BAC858951B3BBF48003536A8 /* BKCourseFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC858941B3BBF48003536A8 /* BKCourseFrame.m */; };
 		BAC8589C1B3BEE9E003536A8 /* BKJobFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC8589B1B3BEE9E003536A8 /* BKJobFrame.m */; };
+		BAC858A01B3C1C8A003536A8 /* BKGraceFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC8589F1B3C1C8A003536A8 /* BKGraceFrame.m */; };
+		BAC858D21B3C32A5003536A8 /* BKRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC858D11B3C32A5003536A8 /* BKRefreshView.m */; };
 		BAD2E83A1B2D926900AA6C45 /* BKHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD2E8391B2D926900AA6C45 /* BKHttpTool.m */; };
 		BAD2E88B1B2D92CC00AA6C45 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD2E83D1B2D92CC00AA6C45 /* AFHTTPRequestOperation.m */; };
 		BAD2E88C1B2D92CC00AA6C45 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD2E83F1B2D92CC00AA6C45 /* AFHTTPRequestOperationManager.m */; };
@@ -115,6 +121,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA4E67331B3D53E5001C9DD1 /* BKHotController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKHotController.h; sourceTree = "<group>"; };
+		BA4E67341B3D53E5001C9DD1 /* BKHotController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKHotController.m; sourceTree = "<group>"; };
+		BA4E673B1B3D53EE001C9DD1 /* BKHotResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKHotResponse.h; sourceTree = "<group>"; };
+		BA4E673C1B3D53EE001C9DD1 /* BKHotResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKHotResponse.m; sourceTree = "<group>"; };
+		BA4E673D1B3D53EE001C9DD1 /* BKHotTypeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKHotTypeModel.h; sourceTree = "<group>"; };
+		BA4E673E1B3D53EE001C9DD1 /* BKHotTypeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKHotTypeModel.m; sourceTree = "<group>"; };
+		BA4E673F1B3D53EE001C9DD1 /* BKOneHotModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKOneHotModel.h; sourceTree = "<group>"; };
+		BA4E67401B3D53EE001C9DD1 /* BKOneHotModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKOneHotModel.m; sourceTree = "<group>"; };
+		BA4E67461B3D53F4001C9DD1 /* BKHotCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKHotCell.h; sourceTree = "<group>"; };
+		BA4E67471B3D53F4001C9DD1 /* BKHotCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKHotCell.m; sourceTree = "<group>"; };
+		BA4E67481B3D53F4001C9DD1 /* BKSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKSectionHeaderView.h; sourceTree = "<group>"; };
+		BA4E67491B3D53F4001C9DD1 /* BKSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKSectionHeaderView.m; sourceTree = "<group>"; };
+		BA4E674C1B3D5420001C9DD1 /* BKHotDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKHotDetailController.h; sourceTree = "<group>"; };
+		BA4E674D1B3D5420001C9DD1 /* BKHotDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKHotDetailController.m; sourceTree = "<group>"; };
+		BA4E674F1B3D551A001C9DD1 /* BKOneHotResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKOneHotResponse.h; sourceTree = "<group>"; };
+		BA4E67501B3D551A001C9DD1 /* BKOneHotResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKOneHotResponse.m; sourceTree = "<group>"; };
 		BA6E06211B33A84300A41C3F /* BKOneTeacherResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKOneTeacherResponse.h; sourceTree = "<group>"; };
 		BA6E06221B33A84300A41C3F /* BKOneTeacherResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKOneTeacherResponse.m; sourceTree = "<group>"; };
 		BA9BF2E21B2C14D30073F660 /* BUKACH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BUKACH.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,8 +152,6 @@
 		BA9BF3271B2C182B0073F660 /* BKTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKTabBarController.m; sourceTree = "<group>"; };
 		BA9BF3291B2C18430073F660 /* BKNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKNavigationController.h; sourceTree = "<group>"; };
 		BA9BF32A1B2C18430073F660 /* BKNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKNavigationController.m; sourceTree = "<group>"; };
-		BA9BF3321B2C1A320073F660 /* BKHotController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKHotController.h; sourceTree = "<group>"; };
-		BA9BF3331B2C1A320073F660 /* BKHotController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKHotController.m; sourceTree = "<group>"; };
 		BA9BF3381B2C1B8A0073F660 /* bukachPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bukachPrefix.pch; sourceTree = "<group>"; };
 		BA9BF3391B2C1BBC0073F660 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		BA9C77CE1B39BB1900220322 /* BKTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BKTextView.h; path = "../../Models/二级(建议箱)/BKTextView.h"; sourceTree = "<group>"; };
@@ -143,8 +163,6 @@
 		BAB3873B1B38EEBC00211970 /* BKAdsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKAdsController.m; sourceTree = "<group>"; };
 		BAB3873F1B38EF2400211970 /* BKCourseResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKCourseResponse.h; sourceTree = "<group>"; };
 		BAB387401B38EF2400211970 /* BKCourseResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKCourseResponse.m; sourceTree = "<group>"; };
-		BAB387421B38EF2400211970 /* BKOneAdsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKOneAdsResponse.h; sourceTree = "<group>"; };
-		BAB387431B38EF2400211970 /* BKOneAdsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKOneAdsResponse.m; sourceTree = "<group>"; };
 		BAB387491B38EF7C00211970 /* BKOneCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKOneCategoryModel.h; sourceTree = "<group>"; };
 		BAB3874A1B38EF7C00211970 /* BKOneCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKOneCategoryModel.m; sourceTree = "<group>"; };
 		BAB3874C1B38EF7C00211970 /* BKAdsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKAdsResponse.h; sourceTree = "<group>"; };
@@ -167,8 +185,6 @@
 		BAB387721B38F7AC00211970 /* BKCategoryResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKCategoryResponse.m; sourceTree = "<group>"; };
 		BAC56BA71B3A78D100C7B900 /* BKGraceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKGraceController.h; sourceTree = "<group>"; };
 		BAC56BA81B3A78D100C7B900 /* BKGraceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKGraceController.m; sourceTree = "<group>"; };
-		BAC56BAC1B3A78D900C7B900 /* BKGraceFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKGraceFrame.h; sourceTree = "<group>"; };
-		BAC56BAD1B3A78D900C7B900 /* BKGraceFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKGraceFrame.m; sourceTree = "<group>"; };
 		BAC56BAE1B3A78D900C7B900 /* BKGraceResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKGraceResponse.h; sourceTree = "<group>"; };
 		BAC56BAF1B3A78D900C7B900 /* BKGraceResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKGraceResponse.m; sourceTree = "<group>"; };
 		BAC56BB01B3A78D900C7B900 /* BKOneGraceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKOneGraceModel.h; sourceTree = "<group>"; };
@@ -181,8 +197,6 @@
 		BAC56BBC1B3A78E100C7B900 /* BKWaterFlowBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKWaterFlowBaseCell.m; sourceTree = "<group>"; };
 		BAC56BC01B3A792700C7B900 /* BKGraceDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKGraceDetailController.h; sourceTree = "<group>"; };
 		BAC56BC11B3A792700C7B900 /* BKGraceDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKGraceDetailController.m; sourceTree = "<group>"; };
-		BAC56BC31B3A7D0700C7B900 /* BKGracePhotoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKGracePhotoModel.h; sourceTree = "<group>"; };
-		BAC56BC41B3A7D0700C7B900 /* BKGracePhotoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKGracePhotoModel.m; sourceTree = "<group>"; };
 		BAC56BC61B3A89DE00C7B900 /* BKPhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKPhotosView.h; sourceTree = "<group>"; };
 		BAC56BC71B3A89DE00C7B900 /* BKPhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKPhotosView.m; sourceTree = "<group>"; };
 		BAC56BC91B3A8AEF00C7B900 /* BKPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKPhotoView.h; sourceTree = "<group>"; };
@@ -201,6 +215,10 @@
 		BAC858941B3BBF48003536A8 /* BKCourseFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKCourseFrame.m; sourceTree = "<group>"; };
 		BAC8589A1B3BEE9E003536A8 /* BKJobFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKJobFrame.h; sourceTree = "<group>"; };
 		BAC8589B1B3BEE9E003536A8 /* BKJobFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKJobFrame.m; sourceTree = "<group>"; };
+		BAC8589E1B3C1C8A003536A8 /* BKGraceFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKGraceFrame.h; sourceTree = "<group>"; };
+		BAC8589F1B3C1C8A003536A8 /* BKGraceFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKGraceFrame.m; sourceTree = "<group>"; };
+		BAC858D01B3C32A5003536A8 /* BKRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKRefreshView.h; sourceTree = "<group>"; };
+		BAC858D11B3C32A5003536A8 /* BKRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKRefreshView.m; sourceTree = "<group>"; };
 		BAD2E8381B2D926900AA6C45 /* BKHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKHttpTool.h; sourceTree = "<group>"; };
 		BAD2E8391B2D926900AA6C45 /* BKHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKHttpTool.m; sourceTree = "<group>"; };
 		BAD2E83C1B2D92CC00AA6C45 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -325,6 +343,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA4E67311B3D53E5001C9DD1 /* 二级(详情) */ = {
+			isa = PBXGroup;
+			children = (
+				BA4E674C1B3D5420001C9DD1 /* BKHotDetailController.h */,
+				BA4E674D1B3D5420001C9DD1 /* BKHotDetailController.m */,
+			);
+			path = "二级(详情)";
+			sourceTree = "<group>";
+		};
+		BA4E67321B3D53E5001C9DD1 /* 一级(热门) */ = {
+			isa = PBXGroup;
+			children = (
+				BA4E67331B3D53E5001C9DD1 /* BKHotController.h */,
+				BA4E67341B3D53E5001C9DD1 /* BKHotController.m */,
+			);
+			path = "一级(热门)";
+			sourceTree = "<group>";
+		};
+		BA4E67391B3D53EE001C9DD1 /* 二级(详情) */ = {
+			isa = PBXGroup;
+			children = (
+				BA4E674F1B3D551A001C9DD1 /* BKOneHotResponse.h */,
+				BA4E67501B3D551A001C9DD1 /* BKOneHotResponse.m */,
+			);
+			path = "二级(详情)";
+			sourceTree = "<group>";
+		};
+		BA4E673A1B3D53EE001C9DD1 /* 一级(热门) */ = {
+			isa = PBXGroup;
+			children = (
+				BA4E673B1B3D53EE001C9DD1 /* BKHotResponse.h */,
+				BA4E673C1B3D53EE001C9DD1 /* BKHotResponse.m */,
+				BA4E673D1B3D53EE001C9DD1 /* BKHotTypeModel.h */,
+				BA4E673E1B3D53EE001C9DD1 /* BKHotTypeModel.m */,
+				BA4E673F1B3D53EE001C9DD1 /* BKOneHotModel.h */,
+				BA4E67401B3D53EE001C9DD1 /* BKOneHotModel.m */,
+			);
+			path = "一级(热门)";
+			sourceTree = "<group>";
+		};
+		BA4E67441B3D53F4001C9DD1 /* 二级(详情) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "二级(详情)";
+			sourceTree = "<group>";
+		};
+		BA4E67451B3D53F4001C9DD1 /* 一级(热门) */ = {
+			isa = PBXGroup;
+			children = (
+				BA4E67461B3D53F4001C9DD1 /* BKHotCell.h */,
+				BA4E67471B3D53F4001C9DD1 /* BKHotCell.m */,
+				BA4E67481B3D53F4001C9DD1 /* BKSectionHeaderView.h */,
+				BA4E67491B3D53F4001C9DD1 /* BKSectionHeaderView.m */,
+			);
+			path = "一级(热门)";
+			sourceTree = "<group>";
+		};
 		BA9BF2D91B2C14D30073F660 = {
 			isa = PBXGroup;
 			children = (
@@ -435,8 +511,8 @@
 		BA9BF3151B2C17410073F660 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BA9BF3321B2C1A320073F660 /* BKHotController.h */,
-				BA9BF3331B2C1A320073F660 /* BKHotController.m */,
+				BA4E67321B3D53E5001C9DD1 /* 一级(热门) */,
+				BA4E67311B3D53E5001C9DD1 /* 二级(详情) */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -444,6 +520,8 @@
 		BA9BF3161B2C17410073F660 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BA4E673A1B3D53EE001C9DD1 /* 一级(热门) */,
+				BA4E67391B3D53EE001C9DD1 /* 二级(详情) */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -451,6 +529,8 @@
 		BA9BF3171B2C17410073F660 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BA4E67451B3D53F4001C9DD1 /* 一级(热门) */,
+				BA4E67441B3D53F4001C9DD1 /* 二级(详情) */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -555,8 +635,6 @@
 		BAB387411B38EF2400211970 /* 广告 */ = {
 			isa = PBXGroup;
 			children = (
-				BAB387421B38EF2400211970 /* BKOneAdsResponse.h */,
-				BAB387431B38EF2400211970 /* BKOneAdsResponse.m */,
 			);
 			path = "广告";
 			sourceTree = "<group>";
@@ -639,8 +717,6 @@
 		BAC56BAA1B3A78D900C7B900 /* 二级(详细) */ = {
 			isa = PBXGroup;
 			children = (
-				BAC56BC31B3A7D0700C7B900 /* BKGracePhotoModel.h */,
-				BAC56BC41B3A7D0700C7B900 /* BKGracePhotoModel.m */,
 			);
 			path = "二级(详细)";
 			sourceTree = "<group>";
@@ -648,12 +724,11 @@
 		BAC56BAB1B3A78D900C7B900 /* 一级(风采) */ = {
 			isa = PBXGroup;
 			children = (
-				BAC56BAC1B3A78D900C7B900 /* BKGraceFrame.h */,
-				BAC56BAD1B3A78D900C7B900 /* BKGraceFrame.m */,
 				BAC56BAE1B3A78D900C7B900 /* BKGraceResponse.h */,
 				BAC56BAF1B3A78D900C7B900 /* BKGraceResponse.m */,
 				BAC56BB01B3A78D900C7B900 /* BKOneGraceModel.h */,
 				BAC56BB11B3A78D900C7B900 /* BKOneGraceModel.m */,
+				BAC8589D1B3C1C8A003536A8 /* Frame */,
 			);
 			path = "一级(风采)";
 			sourceTree = "<group>";
@@ -672,12 +747,13 @@
 		BAC56BB61B3A78E100C7B900 /* 一级(风采) */ = {
 			isa = PBXGroup;
 			children = (
-				BAC56BB71B3A78E100C7B900 /* BKGraceCell.h */,
-				BAC56BB81B3A78E100C7B900 /* BKGraceCell.m */,
 				BAC56BB91B3A78E100C7B900 /* BKGraceWaterFlowView.h */,
 				BAC56BBA1B3A78E100C7B900 /* BKGraceWaterFlowView.m */,
 				BAC56BBB1B3A78E100C7B900 /* BKWaterFlowBaseCell.h */,
 				BAC56BBC1B3A78E100C7B900 /* BKWaterFlowBaseCell.m */,
+				BAC56BB71B3A78E100C7B900 /* BKGraceCell.h */,
+				BAC56BB81B3A78E100C7B900 /* BKGraceCell.m */,
+				BAC858CC1B3C3279003536A8 /* RefreshView */,
 			);
 			path = "一级(风采)";
 			sourceTree = "<group>";
@@ -699,6 +775,24 @@
 				BAC8589B1B3BEE9E003536A8 /* BKJobFrame.m */,
 			);
 			path = Frame;
+			sourceTree = "<group>";
+		};
+		BAC8589D1B3C1C8A003536A8 /* Frame */ = {
+			isa = PBXGroup;
+			children = (
+				BAC8589E1B3C1C8A003536A8 /* BKGraceFrame.h */,
+				BAC8589F1B3C1C8A003536A8 /* BKGraceFrame.m */,
+			);
+			path = Frame;
+			sourceTree = "<group>";
+		};
+		BAC858CC1B3C3279003536A8 /* RefreshView */ = {
+			isa = PBXGroup;
+			children = (
+				BAC858D01B3C32A5003536A8 /* BKRefreshView.h */,
+				BAC858D11B3C32A5003536A8 /* BKRefreshView.m */,
+			);
+			path = RefreshView;
 			sourceTree = "<group>";
 		};
 		BAD2E83B1B2D92CC00AA6C45 /* AFNetworking */ = {
@@ -1210,22 +1304,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAD2E88F1B2D92CC00AA6C45 /* AFSecurityPolicy.m in Sources */,
+				BA4E674B1B3D53F4001C9DD1 /* BKSectionHeaderView.m in Sources */,
 				BAD2E8A71B2D92CC00AA6C45 /* SDWebImageManager.m in Sources */,
 				BAD2E8A81B2D92CD00AA6C45 /* SDWebImagePrefetcher.m in Sources */,
 				BAC56BBF1B3A78E100C7B900 /* BKWaterFlowBaseCell.m in Sources */,
 				BADAB5461B32B73D007ED14E /* BKProfileController.m in Sources */,
 				BA9BF32B1B2C18430073F660 /* BKNavigationController.m in Sources */,
-				BAC56BC51B3A7D0700C7B900 /* BKGracePhotoModel.m in Sources */,
 				BADAB54B1B32B73D007ED14E /* BKProfileGroup.m in Sources */,
 				BAD2E88E1B2D92CC00AA6C45 /* AFNetworkReachabilityManager.m in Sources */,
 				BAD2E8AF1B2D92CD00AA6C45 /* UIView+WebCacheOperation.m in Sources */,
 				BADAB5131B32B623007ED14E /* BKCourseController.m in Sources */,
 				BA9BF3251B2C17410073F660 /* BKAppDelegate.m in Sources */,
 				BAB387641B38EFC600211970 /* BKLeftRightView.m in Sources */,
+				BAC858A01B3C1C8A003536A8 /* BKGraceFrame.m in Sources */,
 				BAD2E8A61B2D92CC00AA6C45 /* SDWebImageDownloaderOperation.m in Sources */,
 				BADAB54A1B32B73D007ED14E /* BKProfileArrowItem.m in Sources */,
 				BAC56BB41B3A78D900C7B900 /* BKOneGraceModel.m in Sources */,
-				BAC56BB21B3A78D900C7B900 /* BKGraceFrame.m in Sources */,
 				BAD2E8901B2D92CC00AA6C45 /* AFURLConnectionOperation.m in Sources */,
 				BAD2E88B1B2D92CC00AA6C45 /* AFHTTPRequestOperation.m in Sources */,
 				BADAB54D1B32B73D007ED14E /* BKProfileTextItem.m in Sources */,
@@ -1239,6 +1333,7 @@
 				BAD2E8911B2D92CC00AA6C45 /* AFURLRequestSerialization.m in Sources */,
 				BAD2E8931B2D92CC00AA6C45 /* AFURLSessionManager.m in Sources */,
 				BAD2E8AA1B2D92CD00AA6C45 /* UIImage+GIF.m in Sources */,
+				BA4E67371B3D53E5001C9DD1 /* BKHotController.m in Sources */,
 				BADAB5511B32BE6E007ED14E /* BKTeacherView.m in Sources */,
 				BADAB5571B32C78D007ED14E /* BKTeachersView.m in Sources */,
 				BA9BF3281B2C182B0073F660 /* BKTabBarController.m in Sources */,
@@ -1254,12 +1349,15 @@
 				BAB387631B38EFC600211970 /* BKCategoryView.m in Sources */,
 				BAD2E8A51B2D92CC00AA6C45 /* SDWebImageDownloader.m in Sources */,
 				BADAB54C1B32B73D007ED14E /* BKProfileItem.m in Sources */,
+				BA4E67421B3D53EE001C9DD1 /* BKHotTypeModel.m in Sources */,
 				BAC56BBE1B3A78E100C7B900 /* BKGraceWaterFlowView.m in Sources */,
+				BAC858D21B3C32A5003536A8 /* BKRefreshView.m in Sources */,
 				BADAB5231B32B623007ED14E /* BKCourseCell.m in Sources */,
 				BAD2E8AC1B2D92CD00AA6C45 /* UIImage+WebP.m in Sources */,
 				BAD2E8D51B2DBC7400AA6C45 /* UIView+ViewFrameExt.m in Sources */,
 				BAC56BC81B3A89DE00C7B900 /* BKPhotosView.m in Sources */,
 				BAC56BB31B3A78D900C7B900 /* BKGraceResponse.m in Sources */,
+				BA4E67511B3D551A001C9DD1 /* BKOneHotResponse.m in Sources */,
 				BAD2E8D31B2DBC7400AA6C45 /* UIBarButtonItem+ButtonImageExt.m in Sources */,
 				BAD2E8AB1B2D92CD00AA6C45 /* UIImage+MultiFormat.m in Sources */,
 				BAB3873D1B38EEBC00211970 /* BKAdsController.m in Sources */,
@@ -1271,7 +1369,9 @@
 				BAD2E8A31B2D92CC00AA6C45 /* SDWebImageCompat.m in Sources */,
 				BAC8589C1B3BEE9E003536A8 /* BKJobFrame.m in Sources */,
 				BAC8588E1B3B9E2C003536A8 /* BKJobCell.m in Sources */,
+				BA4E67411B3D53EE001C9DD1 /* BKHotResponse.m in Sources */,
 				BAB387651B38EFC600211970 /* BKUpDownView.m in Sources */,
+				BA4E674E1B3D5420001C9DD1 /* BKHotDetailController.m in Sources */,
 				BAB387621B38EFC600211970 /* BKCategoriesView.m in Sources */,
 				BADAB5121B32B623007ED14E /* BKHomeController.m in Sources */,
 				BADAB5471B32B73D007ED14E /* BKProfileAboutController.m in Sources */,
@@ -1282,6 +1382,7 @@
 				BAC56BBD1B3A78E100C7B900 /* BKGraceCell.m in Sources */,
 				BADAB5491B32B73D007ED14E /* BKProfileSuggestionController.m in Sources */,
 				BAD2E8A41B2D92CC00AA6C45 /* SDWebImageDecoder.m in Sources */,
+				BA4E67431B3D53EE001C9DD1 /* BKOneHotModel.m in Sources */,
 				BAD2E8A21B2D92CC00AA6C45 /* SDImageCache.m in Sources */,
 				BAD2E8A01B2D92CC00AA6C45 /* MKAnnotationView+WebCache.m in Sources */,
 				BA9BF2E81B2C14D30073F660 /* main.m in Sources */,
@@ -1291,14 +1392,13 @@
 				BAD2E8D21B2DBC7400AA6C45 /* Foundation+Log.m in Sources */,
 				BAD2E8AD1B2D92CD00AA6C45 /* UIImageView+HighlightedWebCache.m in Sources */,
 				BAD2E83A1B2D926900AA6C45 /* BKHttpTool.m in Sources */,
-				BAB387451B38EF2400211970 /* BKOneAdsResponse.m in Sources */,
 				BAC56BCB1B3A8AEF00C7B900 /* BKPhotoView.m in Sources */,
 				BADAB5481B32B73D007ED14E /* BKProfileJoinController.m in Sources */,
 				BADAB55D1B3314BE007ED14E /* BKOneCourseResponse.m in Sources */,
 				BADAB5601B3314DC007ED14E /* BKOneCourseModel.m in Sources */,
 				BAB387521B38EF7C00211970 /* BKAdsResponse.m in Sources */,
+				BA4E674A1B3D53F4001C9DD1 /* BKHotCell.m in Sources */,
 				BAC858821B3B92B6003536A8 /* BKAboutResponse.m in Sources */,
-				BA9BF3341B2C1A320073F660 /* BKHotController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

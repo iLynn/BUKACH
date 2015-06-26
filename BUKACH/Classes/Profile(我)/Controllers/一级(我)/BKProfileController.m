@@ -64,8 +64,6 @@
 
 - (void)viewDidLoad
 {
-    BKLog(@"%s", __func__);
-    
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];

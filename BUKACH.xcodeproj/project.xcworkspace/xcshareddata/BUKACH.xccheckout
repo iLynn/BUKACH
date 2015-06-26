@@ -12,6 +12,8 @@
 	<dict>
 		<key>5168D0BF7C9B2A51D2808754FBB4054559037297</key>
 		<string>https://github.com/iLynn/BUKACH.git</string>
+		<key>d3b33442-203a-4b98-a023-85834f8d8bd5++1585</key>
+		<string>http://192.168.88.8/qfproj/teachers/oyangjian/%2525E7%252588%2525B1%2525E9%252599%252590%2525E5%252585%25258D/trunk/MMProgressHUD</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>BUKACH.xcodeproj</string>
@@ -19,6 +21,13 @@
 	<dict>
 		<key>5168D0BF7C9B2A51D2808754FBB4054559037297</key>
 		<string>../..</string>
+		<key>d3b33442-203a-4b98-a023-85834f8d8bd5++1585</key>
+		<string>../../BUKACH/Classes/Main(%E4%B8%BB%E8%A6%81)/Libs/MMProgressHUD</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>d3b33442-203a-4b98-a023-85834f8d8bd5++1585</key>
+		<string>http://192.168.88.8/qfproj</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/iLynn/BUKACH.git</string>
@@ -35,6 +44,14 @@
 			<string>5168D0BF7C9B2A51D2808754FBB4054559037297</string>
 			<key>IDESourceControlWCCName</key>
 			<string>BUKACH</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>d3b33442-203a-4b98-a023-85834f8d8bd5++1585</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MMProgressHUD</string>
 		</dict>
 	</array>
 </dict>

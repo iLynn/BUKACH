@@ -20,6 +20,8 @@
 
 @property (nonatomic, strong) NSString * job_name;
 
+@property (nonatomic, strong) NSString * job_resume;
+
 /** 快速创建 */
 +(id)oneJobWithDict:(NSDictionary *)dict;
 -(id)initWithDict:(NSDictionary *)dict;

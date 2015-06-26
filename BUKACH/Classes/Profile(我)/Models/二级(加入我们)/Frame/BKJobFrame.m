@@ -56,9 +56,9 @@
     
     
     //3. 应聘通道
-    //CGRect rectResume = [self.job.job_resume boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:dict context:nil];
+    CGRect rectResume = [self.job.job_resume boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:dict context:nil];
     
-    //self.resumeHeight = rectResume.size.height;
+    self.resumeHeight = rectResume.size.height;
     
     
     //4. 职位有效期
@@ -68,7 +68,7 @@
     
     
     //5. 高度
-    self.cellHeight = self.titleHeight + self.detailHeight + self.resumeHeight + self.timeHeight + 2 * BKDefaultHeight + 6 * BKCustomMargin;
+    self.cellHeight = self.titleHeight + self.detailHeight + self.resumeHeight + self.timeHeight + 3 * BKDefaultHeight + 8 * BKCustomMargin;
     
 }
 
@@ -88,16 +88,16 @@
     CGFloat detailH = _detailHeight;
     self.detailFrame = CGRectMake(detailX, detailY, detailW, detailH);
     
-//    //3. 应聘通道
-//    CGFloat resumeX = detailX;
-//    CGFloat resumeY = CGRectGetMaxY(self.detailFrame) + BKCustomMargin * 2 + BKDefaultHeight;
-//    CGFloat resumeW = BKFullWidth;
-//    CGFloat resumeH = _resumeHeight;
-//    self.resumeFrame = CGRectMake(resumeX, resumeY, resumeW, resumeH);
+    //3. 应聘通道
+    CGFloat resumeX = detailX;
+    CGFloat resumeY = CGRectGetMaxY(self.detailFrame) + BKCustomMargin * 2 + BKDefaultHeight;
+    CGFloat resumeW = BKFullWidth;
+    CGFloat resumeH = _resumeHeight;
+    self.resumeFrame = CGRectMake(resumeX, resumeY, resumeW, resumeH);
     
     //4. 职位有效期
     CGFloat timeX = detailX;
-    CGFloat timeY = CGRectGetMaxY(self.detailFrame) + BKCustomMargin * 2 + BKDefaultHeight;
+    CGFloat timeY = CGRectGetMaxY(self.resumeFrame) + BKCustomMargin * 2 + BKDefaultHeight;
     CGFloat timeW = BKFullWidth;
     CGFloat timeH = _timeHeight;
     self.timeFrame = CGRectMake(timeX, timeY, timeW, timeH);

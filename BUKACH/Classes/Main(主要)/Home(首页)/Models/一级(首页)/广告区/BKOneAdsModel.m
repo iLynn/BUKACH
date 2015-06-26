@@ -26,7 +26,7 @@
 
 -(NSString *)description
 {
-    return [NSString stringWithFormat:@"%@----ads_title:%@, ads_id:%@, ads_photo:%@", [self class], _ads_title, _ads_id, _ads_photo];
+    return [NSString stringWithFormat:@"%@----ads_title:%@, ads_id:%@, ads_photo:%@, ad_text:%@, ad_id:%@, hot_photo_array:%@", [self class], _ads_title, _ads_id, _ads_photo, _ad_text, _ad_id, _hot_photo_array];
 }
 
 @end

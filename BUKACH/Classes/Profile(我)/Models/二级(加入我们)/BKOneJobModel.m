@@ -26,7 +26,7 @@
 
 -(NSString *)description
 {
-    return [NSString stringWithFormat:@"%@----job_name:%@, job_quota:%@, job_type:%@, job_detail:%@, job_deadline:%@", [self class], _job_name, _job_quota, _job_type, _job_detail, _job_deadline];
+    return [NSString stringWithFormat:@"%@----job_name:%@, job_quota:%@, job_type:%@, job_detail:%@, job_deadline:%@, job_resume:%@", [self class], _job_name, _job_quota, _job_type, _job_detail, _job_deadline, _job_resume];
 }
 
 @end

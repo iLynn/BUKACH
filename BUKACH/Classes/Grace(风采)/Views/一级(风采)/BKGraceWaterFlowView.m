@@ -9,9 +9,9 @@
 #import "BKGraceWaterFlowView.h"
 #import "BKWaterFlowBaseCell.h"
 
-#define BKWaterFlowDefaultMargin 5
+//#define BKWaterFlowDefaultMargin 5
 #define BKWaterFlowDefaultNumberOfColumn 2
-#define BKWaterFlowDefaultHeight 180
+//#define BKWaterFlowDefaultHeight 180
 
 @interface BKGraceWaterFlowView()
 
@@ -266,7 +266,7 @@
     }
     else
     {
-        return BKWaterFlowDefaultMargin;
+        return BKCustomMargin;
     }
 }
 
@@ -292,7 +292,7 @@
     }
     else
     {
-        return BKWaterFlowDefaultHeight;
+        return BKDefaultHeight;
     }
 }
 

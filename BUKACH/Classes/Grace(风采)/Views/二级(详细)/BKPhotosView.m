@@ -101,7 +101,7 @@
     //3.无限轮播设定
     //3.1.当前图片的初始化处理
     BKPhotoView * currentView =[[BKPhotoView alloc] init];
-    currentView.photo = self.photos[0];
+    currentView.photo_url = self.photos[0];
     
     [self.scrollView addSubview:currentView];
     self.currentView = currentView;
@@ -145,25 +145,25 @@
     CGFloat offset = self.scrollView.contentOffset.x;
     
     //if (self.nextView.image == nil || self.preView.image == nil)
-    if (self.nextView.photo == nil || self.preView.photo == nil)
+    if (self.nextView.photo_url== nil || self.preView.photo_url == nil)
     {
         // 加载下一个视图
         NSInteger nextIndex = (self.index == self.photos.count - 1) ? 0 : self.index + 1;
-        _nextView.photo = self.photos[nextIndex];
+        _nextView.photo_url = self.photos[nextIndex];
         
         // 加载上一个视图
         NSInteger preIndex = (self.index == 0) ? self.photos.count - 1 : self.index - 1;
-        _preView.photo = self.photos[preIndex];
+        _preView.photo_url = self.photos[preIndex];
         
     }
     
     if(offset == 0)
     {
-        _currentView.photo = _preView.photo;
+        _currentView.photo_url = _preView.photo_url;
         
         scrollView.contentOffset = CGPointMake(scrollView.bounds.size.width, 0);
         
-        _preView.photo = nil;
+        _preView.photo_url = nil;
         
         if (self.index == 0)
         {
@@ -176,11 +176,11 @@
     }
     if (offset == scrollView.bounds.size.width * 2)
     {
-        _currentView.photo = _nextView.photo;
+        _currentView.photo_url = _nextView.photo_url;
         
         scrollView.contentOffset = CGPointMake(scrollView.bounds.size.width, 0);
         
-        _nextView.photo = nil;
+        _nextView.photo_url = nil;
         
         if (self.index == self.photos.count - 1)
         {

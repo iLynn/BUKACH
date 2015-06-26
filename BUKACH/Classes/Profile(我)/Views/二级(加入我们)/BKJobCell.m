@@ -55,6 +55,7 @@
         
         self.titleLab = titleLab;
         
+        
         //2.具体：招聘要求 + 工作内容
         UILabel * detail = [[UILabel alloc] initWithFrame: CGRectMake(BKCustomMargin, CGRectGetMaxY(self.titleLab.frame) + BKCustomMargin, BKFullWidth, BKDefaultHeight)];
         detail.text = @"职位详情";
@@ -74,26 +75,27 @@
         self.detailLab = detailLab;
         
         
-//        //3.简历投递
-//        UILabel * resume = [[UILabel alloc] initWithFrame:CGRectMake(BKCustomMargin, CGRectGetMaxY(self.detailLab.frame) + BKCustomMargin, BKFullWidth, BKDefaultHeight)];
-//        resume.text = @"申请方式";
-//        resume.font = [UIFont boldSystemFontOfSize:15];
-//        resume.textColor = BKCustomColor;
-//        [self.contentView addSubview:resume];
-//        
-//        self.resume = resume;
-//        
-//        //3.1 申请通道的具体内容
-//        UILabel * resumeLab = [[UILabel alloc] init];
-//        resumeLab.font = BKCustomFont;
-//        resumeLab.textColor = BKCustomColor;
-//        resumeLab.numberOfLines = 0;
-//        [self.contentView addSubview:resumeLab];
-//        
-//        self.resumeLab = resumeLab;
+        //3.简历投递
+        UILabel * resume = [[UILabel alloc] initWithFrame:CGRectMake(BKCustomMargin, CGRectGetMaxY(self.detailLab.frame) + BKCustomMargin, BKFullWidth, BKDefaultHeight)];
+        resume.text = @"申请方式";
+        resume.font = [UIFont boldSystemFontOfSize:15];
+        resume.textColor = BKCustomColor;
+        [self.contentView addSubview:resume];
+        
+        self.resume = resume;
+        
+        //3.1 申请通道的具体内容
+        UILabel * resumeLab = [[UILabel alloc] init];
+        resumeLab.font = BKCustomFont;
+        resumeLab.textColor = BKCustomColor;
+        resumeLab.numberOfLines = 0;
+        [self.contentView addSubview:resumeLab];
+        
+        self.resumeLab = resumeLab;
+        
         
         //4.有效期
-        UILabel * time = [[UILabel alloc] initWithFrame:CGRectMake(BKCustomMargin, CGRectGetMaxY(self.resume.frame) + BKCustomMargin, BKFullWidth, BKDefaultHeight)];
+        UILabel * time = [[UILabel alloc] initWithFrame:CGRectMake(BKCustomMargin, CGRectGetMaxY(self.resumeLab.frame) + BKCustomMargin, BKFullWidth, BKDefaultHeight)];
         time.text = @"职位有效期";
         time.font = [UIFont boldSystemFontOfSize:15];
         time.textColor = BKCustomColor;
@@ -123,8 +125,7 @@
     
     self.detailLab.text = job.job_detail;
 
-#warning 提醒后台，漏了一个属性
-    //self.resumeLab.text = job.resume;
+    self.resumeLab.text = job.job_resume;
     
     self.timeLab.text = job.job_deadline;
     
@@ -145,12 +146,12 @@
     self.detailLab.frame = cellFrame.detailFrame;
     
     // 3.简历 的frame
-//    self.resume.frame = CGRectMake(BKCustomMargin, CGRectGetMaxY(self.detailLab.frame) + BKCustomMargin, BKFullWidth, BKDefaultHeight);
-//    
-//    self.resumeLab.frame = cellFrame.resumeFrame;
+    self.resume.frame = CGRectMake(BKCustomMargin, CGRectGetMaxY(self.detailLab.frame) + BKCustomMargin, BKFullWidth, BKDefaultHeight);
+    
+    self.resumeLab.frame = cellFrame.resumeFrame;
     
     // 4.有效期 的frame
-    self.time.frame = CGRectMake(BKCustomMargin, CGRectGetMaxY(self.detailLab.frame) + BKCustomMargin, BKFullWidth, BKDefaultHeight);
+    self.time.frame = CGRectMake(BKCustomMargin, CGRectGetMaxY(self.resumeLab.frame) + BKCustomMargin, BKFullWidth, BKDefaultHeight);
     
     self.timeLab.frame = cellFrame.timeFrame;
     

@@ -18,7 +18,7 @@
 @property (nonatomic, assign) CGRect detailFrame;
 
 /** 应聘通道 */
-//@property (nonatomic, assign) CGRect resumeFrame;
+@property (nonatomic, assign) CGRect resumeFrame;
 
 /** 职位有效期 */
 @property (nonatomic, assign) CGRect timeFrame;

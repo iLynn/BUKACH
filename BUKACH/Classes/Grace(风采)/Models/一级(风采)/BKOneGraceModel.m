@@ -7,7 +7,7 @@
 //
 
 #import "BKOneGraceModel.h"
-#import "BKGracePhotoModel.h"
+//#import "BKGracePhotoModel.h"
 
 @implementation BKOneGraceModel
 
@@ -21,20 +21,6 @@
     if (self = [super init])
     {
         [self setValuesForKeysWithDictionary:dict];
-//        self.grace_id = dict[@"grace_id"];
-//        self.grace_title = dict[@"grace_title"];
-//        self.grace_photo = dict[@"grace_photo"];
-//        self.grace_photo_array = dict[@"grace_photo_array"];
-//        self.img_height
-        
-        //对数组的处理：依次转模型
-        NSMutableArray * objs = [NSMutableArray array];
-        for (NSDictionary * photoDict in _grace_photo_array)
-        {
-            BKGracePhotoModel * photo = [BKGracePhotoModel gracePhotoWithDict:photoDict];
-            [objs addObject:photo];
-        }
-        self.grace_photo_array = objs;
         
     }
     return self;

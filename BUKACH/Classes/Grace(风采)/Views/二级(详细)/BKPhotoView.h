@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-@class BKGracePhotoModel;
 
 @interface BKPhotoView : UIImageView
 
-@property (nonatomic, strong) BKGracePhotoModel * photo;
+@property (nonatomic, strong) NSString * photo_url;
 
 @end
