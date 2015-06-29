@@ -19,7 +19,6 @@
 /** 广告图片，是一个url地址的一部分 */
 @property (nonatomic, strong) NSString * ads_photo;
 
-#warning 是否提醒后台修改一致？
 //以下是详细时用的
 @property (nonatomic, strong) NSString * ad_text;
 

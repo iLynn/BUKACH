@@ -22,7 +22,7 @@
 /** 热门id */
 @property (nonatomic, strong) NSString * hot_id;
 
-#warning 是否提醒后台统一？
+
 /** 热门标题 */
 @property (nonatomic, strong) NSString * hot_name;
 

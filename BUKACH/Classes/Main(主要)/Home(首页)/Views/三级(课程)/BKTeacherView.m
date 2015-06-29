@@ -96,7 +96,7 @@
     
     //1.照片
     NSString * urlStr = [NSString stringWithFormat:@"%@%@", BKUrlStr, teacher.teacher_photo];
-    [self.iconView sd_setImageWithURL:[NSURL URLWithString:urlStr]];
+    [self.iconView sd_setImageWithURL:[NSURL URLWithString:urlStr] placeholderImage:[UIImage imageNamed:@"bukach_wait"]];
     
     //2.名字
     self.nameLab.text = teacher.teacher_name;

@@ -61,7 +61,7 @@
     _hot = hot;
     
     NSString * urlStr = [NSString stringWithFormat:@"%@%@", BKUrlStr, hot.hot_photo];
-    [self.imageView sd_setImageWithURL:[NSURL URLWithString:urlStr]];
+    [self.imageView sd_setImageWithURL:[NSURL URLWithString:urlStr] placeholderImage:[UIImage imageNamed:@"bukach_wait"]];
     
     self.titleLab.text = hot.hot_title;
     

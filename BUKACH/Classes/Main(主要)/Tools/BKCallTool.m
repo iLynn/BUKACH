@@ -23,7 +23,7 @@
     
 #warning 怎样让此webView显示出来？退出出去？
     
-    [vc.view addSubview:webView];
+    //[vc.view addSubview:webView];
     
     
 }

@@ -130,7 +130,7 @@
     [self.contentView addSubview:photoView];
     
     NSString * urlStr = [NSString stringWithFormat:@"%@%@", BKUrlStr, self.teacherDetail.teacher_photo];
-    [photoView sd_setImageWithURL:[NSURL URLWithString:urlStr]];
+    [photoView sd_setImageWithURL:[NSURL URLWithString:urlStr] placeholderImage:[UIImage imageNamed:@"bukach_wait"]];
     
     self.photoView = photoView;
     

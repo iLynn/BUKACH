@@ -31,7 +31,7 @@
     
     NSString * urlStr = [NSString stringWithFormat:@"%@%@", BKUrlStr, ad.ads_photo];
     
-    [self sd_setBackgroundImageWithURL:[NSURL URLWithString:urlStr] forState:UIControlStateNormal];
+    [self sd_setBackgroundImageWithURL:[NSURL URLWithString:urlStr] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"bukach_wait"]];
     
 }
 

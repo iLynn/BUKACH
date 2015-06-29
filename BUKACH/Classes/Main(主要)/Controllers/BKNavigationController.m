@@ -35,9 +35,13 @@
 {
     UINavigationBar * barApperence = [UINavigationBar appearance];
     
+    //设置导航背景
+    [barApperence setBackgroundImage:[UIImage imageNamed:@"NavBarBg"] forBarMetrics:UIBarMetricsDefault];
+    barApperence.tintColor = [UIColor whiteColor];
+    
     //设置文字属性
     NSMutableDictionary * dict = [NSMutableDictionary dictionary];
-    dict[NSForegroundColorAttributeName] = BKNavigationColor;
+    dict[NSForegroundColorAttributeName] = [UIColor whiteColor];
     dict[NSFontAttributeName] = BKNavigationFont;
     
     [barApperence setTitleTextAttributes:dict];
@@ -55,7 +59,7 @@
     
     //设置普通状态下的文字属性
     NSMutableDictionary * normalDict = [NSMutableDictionary dictionary];
-    normalDict[NSForegroundColorAttributeName] = [UIColor blackColor];
+    normalDict[NSForegroundColorAttributeName] = [UIColor whiteColor];
     normalDict[NSFontAttributeName] = [UIFont systemFontOfSize:18];
     [itemAppearence setTitleTextAttributes:normalDict forState:UIControlStateNormal];
     
@@ -79,6 +83,13 @@
     
 }
 
+#pragma mark 控制状态栏的样式
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
 /**
  *  拦截所有push进来的子控制器
  *
@@ -98,8 +109,8 @@
     
     //每一个vc的右边都是快捷联系
     //不想使用这个按钮，可在自己vc的viewDidLoad里重新设置
-#warning 顺序是：先push，再viewDidLoad，才能有效
-    viewController.navigationItem.rightBarButtonItem = [UIBarButtonItem buttonItemWithImageName:@"phone" andSelectedImageName:@"phone_hl" andTarget:self andAction:@selector(contactBUKACH)];
+    //顺序是：先push，再viewDidLoad，才能有效
+    //viewController.navigationItem.rightBarButtonItem = [UIBarButtonItem buttonItemWithImageName:@"phone" andSelectedImageName:@"phone_hl" andTarget:self andAction:@selector(contactBUKACH)];
     
     
     [super pushViewController:viewController animated:animated];

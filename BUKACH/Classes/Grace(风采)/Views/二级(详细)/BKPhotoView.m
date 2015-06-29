@@ -17,7 +17,7 @@
     
     NSString * urlStr = [NSString stringWithFormat:@"%@%@", BKUrlStr, photo_url];
 
-    [self sd_setImageWithURL:[NSURL URLWithString:urlStr]];
+    [self sd_setImageWithURL:[NSURL URLWithString:urlStr] placeholderImage:[UIImage imageNamed:@"bukach_wait"]];
     
 }
 

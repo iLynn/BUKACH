@@ -74,7 +74,7 @@
     
     NSString * urlStr = [NSString stringWithFormat:@"%@%@", BKUrlStr, grace.grace_photo];
     
-    [self.photoView sd_setImageWithURL:[NSURL URLWithString:urlStr]];
+    [self.photoView sd_setImageWithURL:[NSURL URLWithString:urlStr] placeholderImage:[UIImage imageNamed:@"bukach_wait"]];
     
 }
 
